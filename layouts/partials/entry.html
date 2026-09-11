@@ -1,0 +1,11 @@
+<article class="entry">
+{{ $images := where .Params.attachments "kind" "image" }}
+{{ if and (eq .Section "reusable") $images }}{{ with index $images 0 }}
+<a class="entry-thumbnail" href="{{ $.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ printf "media/%s" .path | relURL }}" alt="" width="220" height="150" loading="lazy"></a>
+{{ end }}{{ end }}
+<div class="entry-text">
+<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+<p>{{ .Params.summary }}</p>
+<div class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time><span>·</span>{{ .Params.kind | humanize }}<span>·</span>{{ .ReadingTime }} min read</div>
+</div>
+</article>

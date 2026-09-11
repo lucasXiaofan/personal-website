@@ -1,0 +1,33 @@
+baseURL = 'https://lucasxiaofan.github.io/personal-website/'
+title = "XiaoFan Lu"
+locale = 'en'
+hasCJKLanguage = true
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
+[params]
+description = 'Reusable ideas, systems, tutorials, and learning journals by XiaoFan Lu.'
+[outputs]
+home = ['HTML', 'RSS', 'JSON']
+[markup.goldmark.renderer]
+unsafe = false
+[markup.highlight]
+noClasses = false
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+[module]
+[[module.mounts]]
+source = 'content'
+target = 'content'
+files = ['! README.md', '! **/README.md']
+[[module.mounts]]
+source = '.generated'
+target = 'content'
+[[module.mounts]]
+source = 'static'
+target = 'static'
+files = ['! README.md', '! **/README.md']
+[[module.mounts]]
+source = 'layouts'
+target = 'layouts'
+files = ['! README.md', '! **/README.md']

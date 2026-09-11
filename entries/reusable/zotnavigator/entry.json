@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "zotnavigator",
+  "type": "reusable",
+  "kind": "project",
+  "title": "ZotNavigator",
+  "date": "2023-10-24",
+  "summary": "Project pitch and a look at ZotNavigator.",
+  "content": "content.md",
+  "tags": [],
+  "attachments": [
+    {
+      "path": "zotnavi.png",
+      "alt": "ZotNavigator project screenshot",
+      "kind": "image"
+    }
+  ],
+  "comments": {
+    "enabled": false,
+    "threads": []
+  },
+  "aliases": []
+}

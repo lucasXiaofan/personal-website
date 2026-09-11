@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "typical-sampling",
+  "type": "reusable",
+  "kind": "blog",
+  "title": "What is Typical Sampling",
+  "date": "2024-03-22",
+  "summary": "Journey from speculative sampling to typical sampling: learning notes on transformer inference and temperature.",
+  "content": "content.md",
+  "tags": ["Transformer Inference", "Truncate Sampling"],
+  "attachments": [
+    {
+      "path": "typical-sampling.jpg",
+      "alt": "Original Typical Sampling article cover",
+      "kind": "image"
+    }
+  ],
+  "comments": {
+    "enabled": false,
+    "threads": []
+  },
+  "aliases": [
+    "/post/typical-sampling/"
+  ]
+}

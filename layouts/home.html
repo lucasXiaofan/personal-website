@@ -1,0 +1,5 @@
+{{ define "main" }}
+<header class="page-heading"><h1>Reusable</h1>{{ .Content }}</header>
+{{ range where site.RegularPages "Section" "reusable" }}{{ partial "entry.html" . }}{{ end }}
+{{ end }}
+

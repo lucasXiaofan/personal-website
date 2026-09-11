@@ -1,0 +1,7 @@
+/public/
+/.generated/
+/.hugo_build.lock
+/resources/
+/node_modules/
+/.DS_Store
+

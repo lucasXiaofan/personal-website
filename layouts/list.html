@@ -1,0 +1,5 @@
+{{ define "main" }}
+<header class="page-heading"><h1>{{ .Title }}</h1>{{ .Content }}</header>
+{{ range .RegularPages.ByDate.Reverse }}{{ partial "entry.html" . }}{{ else }}<p class="empty">No entries yet.</p>{{ end }}
+{{ end }}
+
