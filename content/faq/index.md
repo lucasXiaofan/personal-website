@@ -10,7 +10,7 @@ I'm XiaoFan (Lucas) Lu. My work has focused on distributed transformer inference
 
 I'm sharing what I learn and build, making useful things easier to reuse, and opening up questions for discussion. Writing helps me understand my work and keep learning.
 
-**Reusable** holds my blog posts, systems, projects, and tutorials. **Journal** is for thoughts, experiments, and what I do along the way.
+**Reusable** holds my blog posts, systems, projects, and tutorials.
 
 ## What do I enjoy outside my work?
 

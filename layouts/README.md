@@ -24,4 +24,8 @@ Minimal Hugo page templates and rendering rules.
 
 ## Changelog
 
+- 2026-09-12 — `single.html` shows the entry kind and tags, and now opens the table of contents for any entry with five or more headings (`.Fragments.HeadingsMap`) instead of excluding projects by kind.
+
+- 2026-09-12 — Removed Journal navigation, page handling, and search indexing; `home.html` now reuses the Reusable section introduction.
+
 - 2026-09-11 — Established the minimal Hugo structure; important files: `baseof.html`, `home.html`, `list.html`, `single.html`, `home.json`.

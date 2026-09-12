@@ -6,8 +6,9 @@ const root = process.cwd();
 const ajv = new Ajv({allErrors: true});
 addFormats(ajv);
 const validate = ajv.compile(JSON.parse(fs.readFileSync('schemas/entry.schema.json','utf8')));
-const entries = [], ids = new Set(), routes = new Set(['/','/reusable/','/journal/','/faq/','/about_me/','/authors/admin/']);
-for (const section of ['reusable','journal']) {
+const format = JSON.parse(fs.readFileSync('reusable.config.json','utf8'));
+const entries = [], ids = new Set(), routes = new Set(['/','/reusable/','/faq/','/about_me/','/authors/admin/']);
+for (const section of ['reusable']) {
   const dir = path.join('entries',section);
   for (const item of fs.readdirSync(dir,{withFileTypes:true})) {
     if (!item.isDirectory()) continue;
@@ -23,10 +24,17 @@ for (const section of ['reusable','journal']) {
     }
     const body=fs.readFileSync(path.join(folder,entry.content),'utf8');
     if(!body.trim()) throw new Error(file+': empty Markdown');
-    for(const a of entry.attachments) {
+    // Reusable version 1: the Markdown body must carry the sections a reader and an agent rely on.
+    if((entry.tags||[]).includes(format.formatTag)) {
+      for(const section of format.requiredSections) {
+        if(!new RegExp('^## '+section+'$','m').test(body)) throw new Error(file+': missing "## '+section+'" section');
+      }
+    }
+    const attachments=entry.attachments||[];
+    for(const a of attachments) {
       if(!fs.existsSync(path.join('static/media',a.path))) throw new Error('Missing media: '+a.path);
     }
-    const known=new Set(entry.attachments.map(a=>a.path));
+    const known=new Set(attachments.map(a=>a.path));
     for(const match of body.matchAll(/\]\(\/media\/([^\s)]+)[^)]*\)/g)) {
       if(!known.has(match[1])) throw new Error(file+': undeclared media '+match[1]);
     }
@@ -46,4 +54,3 @@ if(!process.argv.includes('--check')) {
   }
 }
 console.log('Validated '+entries.length+' entries'+(process.argv.includes('--check')?'':'; generated Hugo content')+'.');
-

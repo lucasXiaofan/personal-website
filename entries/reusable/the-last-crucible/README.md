@@ -16,4 +16,8 @@ Store the The Last Crucible project as an independent Reusable entry.
 
 ## Changelog
 
+- 2026-09-12 — Rewritten as Reusable version 1; Description records that the game mimics Elden Ring.
+
+- 2026-09-12 — Migrated `entry.json` to the Reusable-only schema version 2.
+
 - 2026-09-11 — Split from the combined Projects entry into entry.json and content.md; retained existing image, links, and source date.

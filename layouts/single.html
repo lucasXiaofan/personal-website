@@ -1,11 +1,10 @@
 {{ define "main" }}
 <article>
 <header class="page-heading"><h1>{{ .Title }}</h1>
-{{ if in (slice "reusable" "journal") .Section }}<p class="summary">{{ .Params.summary }}</p><div class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time><span>·</span>{{ .ReadingTime }} min read</div>{{ end }}
+{{ if eq .Section "reusable" }}<p class="summary">{{ .Params.summary }}</p><div class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time><span>·</span>{{ .Params.kind | humanize }}<span>·</span>{{ .ReadingTime }} min read{{ with .Params.tags }}</div><ul class="tags">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ else }}</div>{{ end }}{{ end }}
 </header>
-{{ if and (eq .Section "reusable") (ne .Params.kind "project") }}<details class="toc"><summary>On this page</summary>{{ .TableOfContents }}</details>{{ end }}
+{{ if and (eq .Section "reusable") (ge (len .Fragments.HeadingsMap) 5) }}<details class="toc"><summary>On this page</summary>{{ .TableOfContents }}</details>{{ end }}
 <div class="prose">{{ .Content }}</div>
-{{ if in (slice "reusable" "journal") .Section }}<a class="back" href="{{ printf "%s/" .Section | relURL }}">← Back to {{ .Section | humanize }}</a>{{ end }}
+{{ if eq .Section "reusable" }}<a class="back" href="{{ "reusable/" | relURL }}">← Back to Reusable</a>{{ end }}
 </article>
 {{ end }}
-

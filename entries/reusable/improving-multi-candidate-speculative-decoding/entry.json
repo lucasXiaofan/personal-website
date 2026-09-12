@@ -1,14 +1,15 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "improving-multi-candidate-speculative-decoding",
   "type": "reusable",
   "kind": "paper",
   "title": "Improving Multi-candidate Speculative Decoding",
   "date": "2024-09-16",
-  "updated": "2024-12-14",
+  "updated": "2026-09-12",
   "summary": "My first paper: exploring target-initialized candidate trees and adaptive drafting for faster LLM inference.",
   "content": "content.md",
   "tags": [
+    "reusable_version_1",
     "LLM Inference",
     "Speculative Decoding"
   ],
@@ -19,10 +20,5 @@
       "kind": "image",
       "caption": "Figure 1 from arXiv:2409.10644v3."
     }
-  ],
-  "comments": {
-    "enabled": false,
-    "threads": []
-  },
-  "aliases": []
+  ]
 }

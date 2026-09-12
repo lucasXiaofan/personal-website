@@ -1,11 +1,8 @@
-**Xiaofan Lu, Yixiao Zeng, Feiyang Ma, Zixu Yu, and Marco Levorato**  
+## Description
+
+**Xiaofan Lu, Yixiao Zeng, Feiyang Ma, Zixu Yu, and Marco Levorato**
 University of California, Irvine · Xiaofan Lu and Yixiao Zeng contributed equally.
-
 Accepted at the **NeurIPS ENLSP 2024 Workshop**.
-
-[Read the paper (PDF)](https://arxiv.org/pdf/2409.10644) · [arXiv](https://arxiv.org/abs/2409.10644) · [Google Scholar](https://scholar.google.com/citations?user=SxcR5LkAAAAJ&hl=en)
-
-## Overview
 
 Speculative decoding speeds up language-model inference by asking a smaller draft model to propose tokens that a larger target model verifies. Multi-candidate decoding explores several candidate paths at once, increasing the chance that useful tokens are accepted.
 
@@ -15,8 +12,24 @@ Our static target-initialized approach achieved **up to 27.5% speedup over our M
 
 The experiments also reveal trade-offs: the full dynamic framework did not consistently improve both speed and output quality, and target-initialized generation does not guarantee preservation of the target model's output quality.
 
+## Use Guide
+
+[Read the paper (PDF)](https://arxiv.org/pdf/2409.10644) · [arXiv](https://arxiv.org/abs/2409.10644) · [Google Scholar](https://scholar.google.com/citations?user=SxcR5LkAAAAJ&hl=en)
+
+The abstract above is the summary; the full method, experiments, and limitations are in the linked PDF.
+
+## Relevant Reusables
+
+- [What is Typical Sampling](/reusable/typical-sampling/) — the learning notes that led into this work.
+
+## Change Logs
+
+- 2026-09-12 — Rewritten as Reusable version 1; the Description is now the abstract.
+- 2024-12-14 — Updated to match version 3 of the arXiv paper.
+- 2024-09-16 — Published.
+
+## Content
+
 ![Draft-initialized and target-initialized multi-candidate generation](/media/multi-candidate-decoding.png)
 
 *Figure 1 from [the paper, version 3](https://arxiv.org/pdf/2409.10644v3): comparing draft-initialized and target-initialized candidate generation.*
-
-This overview summarizes the paper; the full method, experiments, and limitations are available in the linked PDF.

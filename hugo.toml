@@ -5,7 +5,7 @@ hasCJKLanguage = true
 enableRobotsTXT = true
 disableKinds = ['taxonomy', 'term']
 [params]
-description = 'Reusable ideas, systems, tutorials, and learning journals by XiaoFan Lu.'
+description = 'Reusable ideas, systems, tutorials, and projects by XiaoFan Lu.'
 [outputs]
 home = ['HTML', 'RSS', 'JSON']
 [markup.goldmark.renderer]

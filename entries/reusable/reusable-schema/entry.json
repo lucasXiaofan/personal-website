@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "id": "reusable-schema",
+  "type": "reusable",
+  "kind": "system",
+  "title": "Reusable Version 1",
+  "date": "2026-09-12",
+  "updated": "2026-09-12",
+  "summary": "The shape every Reusable follows: Description, Use Guide, Relevant Reusables, Change Logs, Content — written once in Obsidian, imported with one command.",
+  "content": "content.md",
+  "tags": [
+    "reusable_version_1",
+    "system",
+    "meta"
+  ],
+  "attachments": []
+}

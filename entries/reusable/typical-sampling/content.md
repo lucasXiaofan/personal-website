@@ -1,20 +1,35 @@
-# 🎯Motivation:
-1. speculative sampling[[#🪙references| 2]] [[2| ]]是一个很麻烦的sampling 方法，其中最让我想要优化的方面就是speculative sampling需要比较target model和draft model的logits。由于我目前的研究是异构大模型推理加速，互相传输logits是一个可以被优化的点，而从medusa [[#🪙references| 1]]  论文提出的typical sampling就没有互相传输logits的必要，所以我想更深入的学习typical sampling看看它的数学解释，并希望未来能用LLM的benchmark来测试typical sampling和speculative sampling的差异
-2. 
-# ✅ Prerequisite：
+## Description
+
+1. speculative sampling[2] 是一个很麻烦的sampling 方法，其中最让我想要优化的方面就是speculative sampling需要比较target model和draft model的logits。由于我目前的研究是异构大模型推理加速，互相传输logits是一个可以被优化的点，而从medusa [1]  论文提出的typical sampling就没有互相传输logits的必要，所以我想更深入的学习typical sampling看看它的数学解释，并希望未来能用LLM的benchmark来测试typical sampling和speculative sampling的差异
+
+## Use Guide
+
+### ✅ Prerequisite
+
 1. 理解speculative sampling/decoding
 3. 理解transformer inference
 4. 基础的machine learning 知识
 	1. softmax
 	2. logits
-# 🤨Expectation： 
+
+### 🤨 Expectation
+
 1. 这只是我学习typical sampling的学习笔记，我还没有完全理解透彻typical sampling是什么，若有错误和不懂的，欢迎指正与讨论
 2. 这篇文章会很长，而且必需很长，因为这就是科研的厚重，短一点都会产生很多疑惑
 
----
-# Content: 
-## 使用typical sampling的动机：
-medusa [[#🪙references| 1]]  论文提出了typical acceptance这个概念，主要原因是: " speculative sampling results in diminished efficiency as the sampling temperature increases " 然后medusa 给这个原因的更深的解释是即时draft model 和target model一模一样，因为draft 和target model “sample independently” draft model的结果还是会被target model 拒绝掉。
+## Relevant Reusables
+
+- [Improving Multi-candidate Speculative Decoding](/reusable/improving-multi-candidate-speculative-decoding/) — 这些学习笔记后来变成的论文。
+
+## Change Logs
+
+- 2026-09-12 — 改写为 Reusable version 1；原文内容未改动。
+- 2024-03-22 — 首次发布。
+
+## Content
+
+### 使用typical sampling的动机：
+medusa [1]  论文提出了typical acceptance这个概念，主要原因是: " speculative sampling results in diminished efficiency as the sampling temperature increases " 然后medusa 给这个原因的更深的解释是即时draft model 和target model一模一样，因为draft 和target model “sample independently” draft model的结果还是会被target model 拒绝掉。
 
 这是文章中的原话
 ```
@@ -30,7 +45,7 @@ In speculative decoding papers [Leviathan et al., 2022, Chen et al., 2023], auth
 1. 什么temperature和transformer 的creativity有关啊
 2. temperature 在softmax里面有用到
 
-#### temperature 在transformer inference里面意味着什么： 
+##### temperature 在transformer inference里面意味着什么： 
 我们先来解释temperature，
 直接google “temperature in transformer inference” 就有一个很契合我们的来自huggingface forum的答案 https://discuss.huggingface.co/t/what-is-temperature/11924 ，在这个答案中有两个资源可以解释我们的答案
 1. stackoverflow的答案：

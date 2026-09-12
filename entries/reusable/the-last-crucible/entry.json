@@ -1,13 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "the-last-crucible",
   "type": "reusable",
   "kind": "project",
   "title": "The Last Crucible",
   "date": "2023-10-24",
-  "summary": "A game project: screenshots and trailer.",
+  "summary": "A game I built for fun, mimicking Elden Ring. Trailer and links to play.",
   "content": "content.md",
-  "tags": [],
+  "tags": [
+    "reusable_version_1",
+    "game"
+  ],
   "attachments": [
     {
       "path": "crucible.png",
@@ -15,9 +18,5 @@
       "kind": "image"
     }
   ],
-  "comments": {
-    "enabled": false,
-    "threads": []
-  },
-  "aliases": []
+  "updated": "2026-09-12"
 }

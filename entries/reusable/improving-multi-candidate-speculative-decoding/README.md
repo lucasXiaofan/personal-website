@@ -16,4 +16,8 @@ Introduce XiaoFan's first paper with a concise overview and original-paper links
 
 ## Changelog
 
+- 2026-09-12 — Rewritten as Reusable version 1; the paper's abstract is now the Description.
+
+- 2026-09-12 — Migrated `entry.json` to the Reusable-only schema version 2.
+
 - 2026-09-11 — Added entry.json and content.md from arXiv:2409.10644v3; retained the speedup baseline and quality limitations and linked the paper.

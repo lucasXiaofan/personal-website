@@ -1,0 +1,15 @@
+{{- $target := time (.Get "target") -}}
+{{- $deadline := .Get "deadline" -}}
+{{- $label := .Get "label" | default "Countdown" -}}
+{{- $note := .Get "note" -}}
+<section class="countdown" data-countdown data-target="{{ $target.Format "2006-01-02T15:04:05Z07:00" }}">
+<p class="countdown-label"><span class="countdown-wip">Work in progress</span> {{ $label }}</p>
+<p class="sr-only" data-countdown-status>Counting down to {{ $deadline }}.</p>
+<ol class="countdown-clock" aria-hidden="true">
+{{- range slice "days" "hours" "minutes" "seconds" }}
+<li><b data-unit="{{ . }}">--</b><small>{{ . }}</small></li>
+{{- end }}
+</ol>
+<p class="countdown-foot">Deadline: <b>{{ $deadline }}</b>. Eastern time now: <span data-countdown-now>--</span>, read from your device clock.{{ with $note }} {{ . }}{{ end }}</p>
+</section>
+<script defer src="{{ "js/countdown.js" | relURL }}"></script>

@@ -26,7 +26,7 @@ jobs:
       - uses: actions/configure-pages@v5
         id: pages
       - run: node scripts/build-content.mjs
-      - run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - run: hugo --gc --minify --cleanDestinationDir --baseURL "${{ steps.pages.outputs.base_url }}/"
       - run: npm run check
       - uses: actions/upload-pages-artifact@v3
         with:

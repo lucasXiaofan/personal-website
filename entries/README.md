@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Canonical content sources shared by Reusable and Journal.
+Canonical source bundles for Reusable entries.
 
 ## Current TODO
 
@@ -11,13 +11,18 @@ Canonical content sources shared by Reusable and Journal.
 ## Index
 
 - [reusable](reusable/README.md) — Blog posts, systems, tutorials, and projects.
-- [journal](journal/README.md) — Future thoughts, daily notes, and experiments.
 ## Authoring
 
-Create `reusable/<id>/` or `journal/<id>/`, with entry.json, content.md, and README.md. Copy the metadata shape of an existing entry, change id/type/kind/title/date/summary, then write Markdown. Add media to static/media and declare attachments. Run npm run validate, then npm run build. Update this index and the affected parent README when adding a folder. Do not edit .generated or public.
+Write the note in Obsidian from the template named in `reusable.config.json`, using the Reusable version 1 sections, then run `npm run import -- <note.md>` followed by `npm run build`. The importer creates `reusable/<id>/` with entry.json, content.md, and README.md, copies referenced images into static/media, and declares them as attachments. Re-run it to update; `entry.json` is generated and should not be hand-edited.
+
+Hand-authoring stays possible for entries with no Obsidian source: copy the shape of an existing entry, keep the required `## Description` and `## Use Guide` sections, and run `npm run validate`. Update this index and the affected parent README when adding a folder. Do not edit .generated or public.
 
 
 ## Changelog
+
+- 2026-09-12 — Entries are now imported from Obsidian rather than hand-authored; documented the `npm run import` path.
+
+- 2026-09-12 — Removed the unused `journal/` source section; entries now contain Reusable bundles only.
 
 - 2026-09-11 — Split the combined Reusable Projects bundle into two independent project entries.
 

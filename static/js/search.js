@@ -7,7 +7,7 @@ let entries, pending;
 async function search() {
   const query = input.value.trim().toLocaleLowerCase();
   list.replaceChildren();
-  if (!query) { status.textContent = 'Type to search across Reusable and Journal.'; return; }
+  if (!query) { status.textContent = 'Type to search Reusable.'; return; }
   status.textContent = 'Loading…';
   try {
     if (!entries) {
@@ -21,7 +21,7 @@ async function search() {
     status.textContent = results.length ? results.length + ' result' + (results.length === 1 ? '' : 's') : 'No results. Try another word.';
     for (const e of results) {
       const li=document.createElement('li'),a=document.createElement('a'),title=document.createElement('strong'),meta=document.createElement('small'),p=document.createElement('p');
-      a.href=e.url; title.textContent=e.title;meta.textContent=e.section==='reusable'?'Reusable':'Journal';p.textContent=e.summary;
+      a.href=e.url; title.textContent=e.title;meta.textContent='Reusable';p.textContent=e.summary;
       a.append(title,meta,p);li.append(a);list.append(li);
     }
   } catch { pending=null; status.textContent='Search is unavailable right now. Please try again.'; }

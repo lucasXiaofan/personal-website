@@ -1,5 +1,5 @@
 {{ define "main" }}
-<header class="page-heading"><h1>Reusable</h1>{{ .Content }}</header>
+{{ $reusable := site.GetPage "/reusable" }}
+<header class="page-heading"><h1>Reusable</h1>{{ with $reusable }}{{ .Content }}{{ end }}</header>
 {{ range where site.RegularPages "Section" "reusable" }}{{ partial "entry.html" . }}{{ end }}
 {{ end }}
-

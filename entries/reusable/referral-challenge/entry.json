@@ -1,0 +1,18 @@
+{
+  "schema_version": 3,
+  "id": "referral-challenge",
+  "type": "reusable",
+  "kind": "project",
+  "title": "ReferralChallenge",
+  "date": "2026-09-11",
+  "updated": "2026-09-12",
+  "summary": "A public deadline to motivate myself to ship more content: no job board applications until I graduate, $3000/mo net income instead.",
+  "content": "content.md",
+  "tags": [
+    "reusable_version_1",
+    "challenge",
+    "build-in-public",
+    "career"
+  ],
+  "attachments": []
+}

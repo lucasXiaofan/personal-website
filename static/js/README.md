@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Accessible site-wide search in a dialog.
+Accessible site-wide search in a dialog, and the client-side countdown clock.
 
 ## Current TODO
 
@@ -15,8 +15,13 @@ Accessible site-wide search in a dialog.
 ## Important files
 
 - [search.js](search.js)
+- [countdown.js](countdown.js)
 
 ## Changelog
+
+- 2026-09-12 — Updated search.js copy and result labels for the Reusable-only index.
+
+- 2026-09-11 — Added countdown.js; it drives every `[data-countdown]` block from the visitor's device clock and formats all labels in America/New_York.
 
 - 2026-09-11 — search.js explicitly closes the dialog on Escape even when the native search input would consume the key.
 

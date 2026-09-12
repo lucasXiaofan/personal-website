@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "typical-sampling",
   "type": "reusable",
   "kind": "blog",
@@ -7,7 +7,11 @@
   "date": "2024-03-22",
   "summary": "Journey from speculative sampling to typical sampling: learning notes on transformer inference and temperature.",
   "content": "content.md",
-  "tags": ["Transformer Inference", "Truncate Sampling"],
+  "tags": [
+    "reusable_version_1",
+    "Transformer Inference",
+    "Truncate Sampling"
+  ],
   "attachments": [
     {
       "path": "typical-sampling.jpg",
@@ -15,11 +19,8 @@
       "kind": "image"
     }
   ],
-  "comments": {
-    "enabled": false,
-    "threads": []
-  },
   "aliases": [
     "/post/typical-sampling/"
-  ]
+  ],
+  "updated": "2026-09-12"
 }

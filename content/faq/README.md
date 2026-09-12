@@ -18,6 +18,8 @@ Personal introduction, purpose, interests, and contact links.
 
 ## Changelog
 
+- 2026-09-12 — Removed the obsolete Journal description from `index.md`.
+
 - 2026-09-11 — index.md adds the supplied YouTube channel and Google Scholar profile.
 
 - 2026-09-11 — Established the minimal Hugo structure; important files: `index.md`.

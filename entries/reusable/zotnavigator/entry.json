@@ -1,13 +1,17 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "id": "zotnavigator",
   "type": "reusable",
   "kind": "project",
   "title": "ZotNavigator",
   "date": "2023-10-24",
-  "summary": "Project pitch and a look at ZotNavigator.",
+  "summary": "A project from my time at UC Irvine; the pitch deck is the fullest account of what it does.",
   "content": "content.md",
-  "tags": [],
+  "tags": [
+    "reusable_version_1",
+    "project",
+    "uci"
+  ],
   "attachments": [
     {
       "path": "zotnavi.png",
@@ -15,9 +19,5 @@
       "kind": "image"
     }
   ],
-  "comments": {
-    "enabled": false,
-    "threads": []
-  },
-  "aliases": []
+  "updated": "2026-09-12"
 }

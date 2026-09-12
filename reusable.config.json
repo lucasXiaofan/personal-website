@@ -1,0 +1,13 @@
+{
+  "template": "~/Documents/road/template/reusable.md",
+  "assetRoots": [
+    "~/Documents/road/problem-solving-library/reusable/asset",
+    "~/Documents/road"
+  ],
+  "entriesDir": "entries/reusable",
+  "mediaDir": "static/media",
+  "defaultKind": "knowledge",
+  "formatTag": "reusable_version_1",
+  "sections": ["Description", "Use Guide", "Relevant Reusables", "Change Logs", "Content"],
+  "requiredSections": ["Description", "Use Guide"]
+}
