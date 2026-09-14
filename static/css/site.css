@@ -5,3 +5,6 @@
 
 .page-heading .tags,.entry .tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:14px 0 0;font-size:12px}.page-heading .tags li,.entry .tags li{border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--muted)}
 .header nav{flex-wrap:wrap}
+[hidden]{display:none!important}
+html:not([data-reading-language=zh]) [data-reading-language=zh],html[data-reading-language=zh] [data-reading-language=en]{display:none}
+.language-switch{display:flex;gap:4px;margin:0 0 24px;width:fit-content;border:1px solid var(--line);border-radius:6px;padding:4px}.language-switch button{padding:6px 16px;border-radius:3px;font-size:16px}.language-switch button[aria-pressed=true]{background:var(--fg);color:var(--bg)}

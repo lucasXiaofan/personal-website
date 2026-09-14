@@ -18,6 +18,7 @@ Responsive typography, layout, and automatic dark appearance.
 
 ## Changelog
 
+- 2026-09-14 — Added the reading-language toggle and CSS that prevents both translations appearing together, including before JavaScript starts.
 - 2026-09-14 — Let navigation wrap on narrow screens with the additional Decision Log tab.
 - 2026-09-12 — Added tag pill styling for entry headers.
 

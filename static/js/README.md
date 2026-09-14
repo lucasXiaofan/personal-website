@@ -16,9 +16,11 @@ Accessible site-wide search in a dialog, and the client-side countdown clock.
 
 - [search.js](search.js)
 - [countdown.js](countdown.js)
+- [language.js](language.js) — Switches translated blocks, remembers a browser-local preference, supports existing language fragment links, and synchronizes giscus language. Defaults to English when storage is unavailable. Without JavaScript, the English version remains readable.
 
 ## Changelog
 
+- 2026-09-14 — Added `language.js` for Decision Log and bilingual Reusable pages.
 - 2026-09-12 — Updated search.js copy and result labels for the Reusable-only index.
 
 - 2026-09-11 — Added countdown.js; it drives every `[data-countdown]` block from the visitor's device clock and formats all labels in America/New_York.

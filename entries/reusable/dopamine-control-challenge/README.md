@@ -19,4 +19,5 @@ A smaller, 30-day challenge supporting my ReferralChallenge: protect my attentio
 
 ## Changelog
 
+- 2026-09-14 — Added the fixed October 14, 2026 00:00 Eastern deadline (30 days from September 14) and separate English/中文 blocks.
 - 2026-09-14 — Imported from Obsidian as Reusable version 1.

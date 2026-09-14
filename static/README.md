@@ -16,5 +16,5 @@ Browser assets copied to the published website.
 
 ## Changelog
 
+- 2026-09-14 — Added reading-language controls and styles, preserving the preference locally in the visitor's browser.
 - 2026-09-11 — Established this directory in the minimal Hugo refactor; documented its purpose and contents.
-

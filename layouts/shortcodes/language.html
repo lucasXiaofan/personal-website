@@ -1,0 +1,5 @@
+{{- $language := .Get 0 -}}
+{{- if not (in (slice "en" "zh") $language) -}}{{ errorf "language shortcode expects en or zh" }}{{- end -}}
+<div data-reading-language="{{ $language }}" lang="{{ $language }}">
+{{ .Inner | .Page.RenderString (dict "display" "block") }}
+</div>

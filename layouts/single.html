@@ -1,14 +1,30 @@
 {{ define "main" }}
 <article>
-<header class="page-heading"><h1>{{ .Title }}</h1>
-{{ if eq .Section "reusable" }}<p class="summary">{{ .Params.summary }}</p><div class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time><span>·</span>{{ .Params.kind | humanize }}<span>·</span>{{ .ReadingTime }} min read{{ with .Params.tags }}</div><ul class="tags">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ else }}</div>{{ end }}{{ end }}
+<header class="page-heading"><h1>{{ if eq .Params.id "dopamine-control-challenge" }}<span data-reading-language="en" lang="en">Dopamine Control Challenge</span><span data-reading-language="zh" lang="zh">控制多巴胺挑战</span>{{ else }}{{ .Title }}{{ end }}</h1>
+{{ if eq .Section "reusable" }}{{ if not (.HasShortcode "language") }}<p class="summary">{{ .Params.summary }}</p>{{ end }}<div class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time><span>·</span>{{ .Params.kind | humanize }}<span>·</span>{{ .ReadingTime }} min read{{ with .Params.tags }}</div><ul class="tags">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ else }}</div>{{ end }}{{ end }}
 </header>
-{{ if eq .Section "decision-log" }}<p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time> · <a href="#english" lang="en">English</a> · <a href="#中文" lang="zh">中文</a></p>{{ end }}
-{{ if and (eq .Section "reusable") (ge (len .Fragments.HeadingsMap) 5) }}<details class="toc"><summary>On this page</summary>{{ .TableOfContents }}</details>{{ end }}
-<div class="prose">{{ .Content }}</div>
+{{ $bilingual := or (eq .Section "decision-log") (.HasShortcode "language") }}
+{{ if $bilingual }}<div class="language-switch" role="group" aria-label="Reading language" hidden><button type="button" data-language="en" lang="en" aria-pressed="true">English</button><button type="button" data-language="zh" lang="zh" aria-pressed="false">中文</button></div><script defer src="{{ "js/language.js" | relURL }}"></script>{{ end }}
+{{ if eq .Section "decision-log" }}<p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>{{ end }}
+{{ if and (eq .Section "reusable") (not $bilingual) (ge (len .Fragments.HeadingsMap) 5) }}<details class="toc"><summary>On this page</summary>{{ .TableOfContents }}</details>{{ end }}
+<div class="prose" data-article-body>
+{{ if eq .Section "decision-log" }}
+{{ $parts := split .RawContent "## English" }}
+{{ if eq (len $parts) 2 }}
+{{ index $parts 0 | .RenderString (dict "display" "block") }}
+{{ $languages := split (index $parts 1) "## 中文" }}
+<section data-reading-language="en" lang="en" id="english">{{ index $languages 0 | .RenderString (dict "display" "block") }}</section>
+{{ if eq (len $languages) 2 }}<section data-reading-language="zh" lang="zh" id="中文">{{ index $languages 1 | .RenderString (dict "display" "block") }}</section>{{ end }}
+{{ else }}{{ .Content }}{{ end }}
+{{ else }}{{ .Content }}{{ end }}
+</div>
 {{ if eq .Section "decision-log" }}
 <section class="prose" aria-labelledby="discussion-heading"><h2 id="discussion-heading">Discussion / 讨论</h2>
-{{ with .Params.discussion }}<p><a href="{{ . }}">Join the discussion on GitHub / 在 GitHub 参与讨论 →</a></p><p>Comments and replies are hosted on GitHub. Sign in there to participate.</p>{{ else }}<p>The discussion link will appear when this entry is published.</p>{{ end }}
+{{ with .Params.discussion }}
+<div class="giscus"></div>
+<script src="https://giscus.app/client.js" data-repo="lucasXiaofan/personal-website" data-repo-id="R_kgDOLCxEXQ" data-category="General" data-category-id="DIC_kwDOLCxEXc4DFm5M" data-mapping="number" data-term="{{ path.Base . }}" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script>
+<p><a href="{{ . }}">Open discussion on GitHub →</a></p><p>If the embedded comments are unavailable, you can read and reply on GitHub.</p>
+{{ else }}<p>The discussion will appear when this entry is published.</p>{{ end }}
 </section>
 <a class="back" href="{{ "decision-log/" | relURL }}">← Back to Decision Log</a>
 {{ end }}

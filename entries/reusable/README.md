@@ -24,6 +24,7 @@ Blog posts, systems, tutorials, projects, papers, skills, knowledge, and charact
 
 ## Changelog
 
+- 2026-09-14 — Added a September 14–October 14 countdown and single-language reading to the dopamine challenge; source stays synchronized with Obsidian.
 - 2026-09-14 — Imported 控制多巴胺挑战 and Diary Plan → Decision Log from new Obsidian source notes.
 - 2026-09-14 — Section shape became Description / User Guide / Content / Relevant Reusables / Change Logs; every entry rewritten to that order and heading.
 

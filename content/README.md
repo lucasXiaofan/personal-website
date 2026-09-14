@@ -15,6 +15,7 @@ Section introductions, bilingual Decision Log pages, and the FAQ.
 - [reusable](reusable/README.md) — Reusable section introduction.
 ## Changelog
 
+- 2026-09-14 — Daily decisions now show one translation at a time, with inline discussion support.
 - 2026-09-14 — Added Decision Log and the first two dated pages.
 - 2026-09-12 — Removed the unused Journal section and redundant home `_index.md`; the homepage now reads the Reusable introduction directly.
 
