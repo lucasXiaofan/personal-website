@@ -89,15 +89,21 @@ Every entry is one folder holding one thing worth picking back up, written for m
 
 `entry.json` is generated, not written by hand.
 
-One command takes a note from the vault to the live site — it is runnable from any directory, so an agent working in `~/Documents/road` can publish without knowing this repository's layout:
+Publishing is two steps, runnable from any directory so an agent working in `~/Documents/road` never needs to know this repository's layout. First, stage:
 
 ```sh
 node ~/Documents/github_repos/personal-website/scripts/publish-reusable.mjs <note.md>
 ```
 
-It fills in the note's `reusable-id` when empty, imports the note and its attachments, validates, commits, and pushes. `--dry-run`, `--no-push`, and `--no-commit` stop it early.
+That fills in the note's `reusable-id` when empty, imports the note and its attachments, validates, and stops with the changes in the working tree. Read them. Then approve:
 
-The `reusable-id` in the note's front matter is the entry's identity: publishing a note that already carries one overwrites that entry rather than creating a second page, whatever the file has been renamed to.
+```sh
+node ~/Documents/github_repos/personal-website/scripts/publish-reusable.mjs <note.md> --push
+```
+
+The default can never publish, so `--push` is the recorded form of the author's permission — no agent puts unread writing on the site. `--commit` stops at the commit; `--dry-run` writes nothing.
+
+The `reusable-id` in the note's front matter is the entry's identity. It reads `<filename-slug>-<YYYYMMDD>-<HHMM>`, dated from when the note was created, so two notes that share a filename never share an entry. Publishing a note that already carries an id overwrites that entry rather than creating a second page, whatever the file has been renamed to.
 
 The steps underneath, when you want them one at a time:
 

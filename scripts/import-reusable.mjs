@@ -172,8 +172,10 @@ const firstSentence = text => {
   const plain = line.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/[*_`]/g, '').trim();
   return plain.length > 300 ? plain.slice(0, 297).trimEnd() + '…' : plain;
 };
+// Titled from the note's filename, not from the id — the id carries a timestamp
+// that belongs in the URL and nowhere on the page.
 const title = flags.title || front.title || (existing && existing.title)
-  || id.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  || path.basename(notePath).replace(/\.md$/i, '').replace(/[-_]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 const tags = [...new Set([config.formatTag, ...(Array.isArray(front.tags) ? front.tags : []).filter(t => t !== 'reusable'),
   ...((existing && existing.tags) || []).filter(t => !/^reusable_version_/.test(t))])];
 const entry = {

@@ -22,11 +22,11 @@ Import Obsidian notes, validate source entries, generate Hugo content, and check
 
 ## publish-reusable.mjs
 
-`node scripts/publish-reusable.mjs <note.md>` is the whole pipeline in one call: ensure the note's `reusable-id`, import the note and its attachments, run the same validation CI runs, commit just that entry's files, and push. It chdirs to the repository root first, so an agent working in `~/Documents/road` can run it by absolute path from anywhere. Nothing is committed when validation fails, and nothing is committed when the import changed no files. Flags: `--dry-run`, `--no-push`, `--no-commit`, `--message`, plus `--id`/`--kind`/`--title`/`--summary`/`--date`/`--draft` passed through to the importer.
+`node scripts/publish-reusable.mjs <note.md>` runs the pipeline in two deliberate phases. By default it ensures the note's `reusable-id`, imports the note and its attachments, runs the same validation CI runs, prints what changed, and **stops** — nothing committed, nothing pushed. Re-run it with `--push` to commit just that entry's files and push. Staging by default is the review gate: `--push` is the recorded form of the author's permission, so an agent cannot put unread writing on the site. It chdirs to the repository root first, so an agent working in `~/Documents/road` can run it by absolute path from anywhere. Flags: `--push`, `--commit` (commit without pushing), `--dry-run`, `--force-id`, `--message`, plus `--id`/`--kind`/`--title`/`--summary`/`--date`/`--draft` passed through to the importer.
 
 ## ensure-reusable-id.mjs
 
-`npm run id -- <note.md>` writes a `reusable-id` into the note's front matter when that field is empty or missing, and prints the id on stdout. The id is slugged from the filename and suffixed (`-2`, `-3`) if an entry already owns it. An id that is already set is never regenerated — it is the entry's identity, and changing it would fork the entry into a second page. `--dry-run` prints without writing; `--quiet` keeps stdout to the id alone.
+`npm run id -- <note.md>` writes a `reusable-id` into the note's front matter when that field is empty or missing, and prints the id on stdout. The shape is `<filename-slug>-<YYYYMMDD>-<HHMM>` — the filename alone would collide the first time two notes share a name, so the note's creation moment is folded in, read from `created_at`/`created`/`date` in the front matter when present and otherwise from the file's birth time. An id that is already set is never regenerated without `--force`: it is the entry's identity, and changing it orphans the published URL and forks the entry into a second page. `--dry-run` prints without writing; `--quiet` keeps stdout to the id alone.
 
 ## import-reusable.mjs
 
@@ -37,6 +37,8 @@ It reads the id from `reusable-id` in the front matter first (then `id`, then th
 Re-running on the same note is the update path: it preserves the existing `date`, `draft`, `aliases`, and `comments`, and refreshes everything else. Flags: `--dry-run`, `--id`, `--kind`, `--title`, `--summary`, `--date`, `--draft`. It warns about media it could not resolve and about images with no alt text. Only the importer reads `reusable.config.json` paths, so CI never touches the vault.
 
 ## Changelog
+
+- 2026-09-14 — `reusable-id` now carries the note's creation date and time (`<slug>-YYYYMMDD-HHMM`) so notes that share a filename cannot collide. `publish-reusable.mjs` stages by default and requires `--push` as explicit permission to publish.
 
 - 2026-09-14 — Added `publish-reusable.mjs` (one command from vault note to pushed site) and `ensure-reusable-id.mjs` (stable `reusable-id` for overwrite-on-republish). The importer now keys identity on `reusable-id`, accepts section aliases, and emits Content before Relevant Reusables and Change Logs; "Use Guide" became "User Guide".
 

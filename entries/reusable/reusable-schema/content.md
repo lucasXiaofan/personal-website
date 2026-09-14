@@ -6,18 +6,20 @@ This is version 1 of that shape. Every entry tagged `reusable_version_1` follows
 
 ## User Guide
 
-Write the note in Obsidian from `template/reusable.md`, then publish it with one command — from any directory, so an agent working in the vault never needs to know about Hugo:
+Write the note in Obsidian from `~/Documents/road/template/reusable.md` — that file is this schema, in the place where the writing actually happens. Then publish in two steps, from any directory, so an agent working in the vault never needs to know about Hugo.
+
+Stage:
 
 ```sh
 node ~/Documents/github_repos/personal-website/scripts/publish-reusable.mjs \
   ~/Documents/road/problem-solving-library/reusable/min-hash.md
 ```
 
-That fills in the note's `reusable-id`, imports the note and its images, validates every entry, then commits and pushes so the site rebuilds itself. Use `--dry-run` to see the result first, `--no-push` to stop at the commit, `--no-commit` to stop at the working tree.
+That fills in the note's `reusable-id`, imports the note and its images, validates every entry, and stops with the result sitting in the working tree. Read it, then approve by re-running with `--push`, which commits and pushes so the site rebuilds itself. The default can never publish: `--push` is what permission looks like, so nothing an agent rewrote reaches the site unread. `--commit` stops at the commit; `--dry-run` writes nothing.
 
 ### Identity
 
-Every note carries a `reusable-id` in its front matter. Leave it empty and the first publish fills it in from the filename, writing it back into the note. From then on that id is the entry: publishing the same note again **overwrites** `entries/reusable/<id>/` — new content, same URL, same date — even if the file has been renamed since. Two notes must never share an id, and an id is never edited by hand once published, or the entry forks into two pages.
+Every note carries a `reusable-id` in its front matter. Leave it empty and the first publish generates one — `<filename-slug>-<YYYYMMDD>-<HHMM>`, timestamped from when the note was created — and writes it back into the note. The timestamp matters: filenames repeat, entries must not. From then on that id is the entry: publishing the same note again **overwrites** `entries/reusable/<id>/` — new content, same URL, same date — even if the file has been renamed since. An id is never edited by hand once published, or the entry forks into two pages.
 
 To import without publishing:
 
@@ -72,6 +74,8 @@ Sections headings stay English so the format is one thing everywhere. Bodies are
 - [Improving Multi-candidate Speculative Decoding](/reusable/improving-multi-candidate-speculative-decoding/) — a `paper`, where Description is the abstract.
 
 ## Change Logs
+
+- 2026-09-14 — `reusable-id` gained the note's creation timestamp; publishing became a two-step stage-then-approve flow.
 
 - 2026-09-14 — Renamed Use Guide to User Guide, moved Content above Relevant Reusables and Change Logs, and added the `reusable-id` identity rule and the one-command publish.
 

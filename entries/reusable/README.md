@@ -10,7 +10,7 @@ Blog posts, systems, tutorials, projects, papers, skills, knowledge, and charact
 
 ## Index
 
-- [reusable-building-pipeline](reusable-building-pipeline/README.md) — give reusable building a standard, to ensure quality (I can understand after one year, other people can understand how to use it 70%), and creation speed
+- [reusable-building-pipeline-20260914-1043](reusable-building-pipeline-20260914-1043/README.md) — A standard for building reusables, so that quality and speed stop competing. Quality means I can still understand a reusable a year later, and someone else can work out how to use it about 70% of the way on their own. Speed means the distance from "the note is written" to "the note is on the site…
 - [reusable-schema](reusable-schema/README.md) — Reusable version 1, documented as a Reusable.
 - [referral-challenge](referral-challenge/README.md) — Ongoing no-job-board challenge with a graduation countdown.
 

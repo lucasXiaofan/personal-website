@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "id": "reusable-building-pipeline-20260914-1043",
+  "type": "reusable",
+  "kind": "system",
+  "title": "Reusable Building Pipeline",
+  "date": "2026-09-14",
+  "updated": "2026-09-14",
+  "summary": "A standard for building reusables, so that quality and speed stop competing. Quality means I can still understand a reusable a year later, and someone else can work out how to use it about 70% of the way on their own. Speed means the distance from \"the note is written\" to \"the note is on the site…",
+  "content": "content.md",
+  "tags": [
+    "reusable_version_1"
+  ],
+  "attachments": [
+    {
+      "path": "reusable-building-pipeline-20260914-1043-file-20260914104227199.png",
+      "alt": "The reusable building pipeline, by reusable type",
+      "kind": "image"
+    }
+  ]
+}
