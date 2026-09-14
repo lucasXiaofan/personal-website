@@ -16,7 +16,7 @@
 <a class="brand" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
 <nav aria-label="Main navigation">
 {{ $current := .Section }}{{ if .IsHome }}{{ $current = "reusable" }}{{ end }}
-{{ range slice "reusable" "faq" }}<a href="{{ printf "%s/" . | relURL }}" {{ if eq $current . }}aria-current="page"{{ end }}>{{ if eq . "faq" }}FAQ{{ else }}{{ . | humanize }}{{ end }}</a>{{ end }}
+{{ range slice "reusable" "decision-log" "faq" }}<a href="{{ printf "%s/" . | relURL }}" {{ if eq $current . }}aria-current="page"{{ end }}>{{ if eq . "faq" }}FAQ{{ else if eq . "decision-log" }}Decision Log{{ else }}{{ . | humanize }}{{ end }}</a>{{ end }}
 <button id="search-open" type="button" aria-haspopup="dialog">Search <kbd>/</kbd></button>
 </nav>
 </header>

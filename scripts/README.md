@@ -14,6 +14,8 @@ Import Obsidian notes, validate source entries, generate Hugo content, and check
 
 ## Important files
 
+- [publish-decision.mjs](publish-decision.mjs) — Extract exactly one diary Plan, accept reviewed bilingual Markdown, stage or publish a dated page and discussion link.
+- [test-publish-decision.mjs](test-publish-decision.mjs) — Privacy-boundary and bilingual-body checks (`node --test scripts/test-publish-decision.mjs`).
 - [publish-reusable.mjs](publish-reusable.mjs)
 - [ensure-reusable-id.mjs](ensure-reusable-id.mjs)
 - [import-reusable.mjs](import-reusable.mjs)
@@ -38,6 +40,7 @@ Re-running on the same note is the update path: it preserves the existing `date`
 
 ## Changelog
 
+- 2026-09-14 — Added `publish-decision.mjs`: `--extract` prints only Plan text, `--body` stages a reviewed translation, `--discussion` creates a public thread, and `--push` commits only the dated page and pushes. It never modifies diaries. Requires `gh` authentication and enabled Discussions for publication. Added Decision Log route verification.
 - 2026-09-14 — `reusable-id` now carries the note's creation date and time (`<slug>-YYYYMMDD-HHMM`) so notes that share a filename cannot collide. `publish-reusable.mjs` stages by default and requires `--push` as explicit permission to publish.
 
 - 2026-09-14 — Added `publish-reusable.mjs` (one command from vault note to pushed site) and `ensure-reusable-id.mjs` (stable `reusable-id` for overwrite-on-republish). The importer now keys identity on `reusable-id`, accepts section aliases, and emits Content before Relevant Reusables and Change Logs; "Use Guide" became "User Guide".

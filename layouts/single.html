@@ -3,8 +3,15 @@
 <header class="page-heading"><h1>{{ .Title }}</h1>
 {{ if eq .Section "reusable" }}<p class="summary">{{ .Params.summary }}</p><div class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time><span>·</span>{{ .Params.kind | humanize }}<span>·</span>{{ .ReadingTime }} min read{{ with .Params.tags }}</div><ul class="tags">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ else }}</div>{{ end }}{{ end }}
 </header>
+{{ if eq .Section "decision-log" }}<p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time> · <a href="#english" lang="en">English</a> · <a href="#中文" lang="zh">中文</a></p>{{ end }}
 {{ if and (eq .Section "reusable") (ge (len .Fragments.HeadingsMap) 5) }}<details class="toc"><summary>On this page</summary>{{ .TableOfContents }}</details>{{ end }}
 <div class="prose">{{ .Content }}</div>
+{{ if eq .Section "decision-log" }}
+<section class="prose" aria-labelledby="discussion-heading"><h2 id="discussion-heading">Discussion / 讨论</h2>
+{{ with .Params.discussion }}<p><a href="{{ . }}">Join the discussion on GitHub / 在 GitHub 参与讨论 →</a></p><p>Comments and replies are hosted on GitHub. Sign in there to participate.</p>{{ else }}<p>The discussion link will appear when this entry is published.</p>{{ end }}
+</section>
+<a class="back" href="{{ "decision-log/" | relURL }}">← Back to Decision Log</a>
+{{ end }}
 {{ if eq .Section "reusable" }}<a class="back" href="{{ "reusable/" | relURL }}">← Back to Reusable</a>{{ end }}
 </article>
 {{ end }}

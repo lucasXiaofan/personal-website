@@ -10,6 +10,8 @@ Blog posts, systems, tutorials, projects, papers, skills, knowledge, and charact
 
 ## Index
 
+- [decision-log-publishing-pipeline](decision-log-publishing-pipeline/README.md) — Turn one diary's Plan section into a public, bilingual Decision Log entry with a GitHub discussion. Keep the priority order, reasons, and task status while making the writing easier to review. The rest of the diary stays private.
+- [dopamine-control-challenge](dopamine-control-challenge/README.md) — A smaller, 30-day challenge supporting my ReferralChallenge: protect my attention so I spend more time learning, building, and moving. The aim is to make room for at least five hours of work in progress each day. “控制多巴胺” is my shorthand for changing my media habits.
 - [reusable-building-pipeline-20260914-1043](reusable-building-pipeline-20260914-1043/README.md) — A standard for building reusables, so that quality and speed stop competing. Quality means I can still understand a reusable a year later, and someone else can work out how to use it about 70% of the way on their own. Speed means the distance from "the note is written" to "the note is on the site…
 - [reusable-schema](reusable-schema/README.md) — Reusable version 1, documented as a Reusable.
 - [referral-challenge](referral-challenge/README.md) — Ongoing no-job-board challenge with a graduation countdown.
@@ -22,6 +24,7 @@ Blog posts, systems, tutorials, projects, papers, skills, knowledge, and charact
 
 ## Changelog
 
+- 2026-09-14 — Imported 控制多巴胺挑战 and Diary Plan → Decision Log from new Obsidian source notes.
 - 2026-09-14 — Section shape became Description / User Guide / Content / Relevant Reusables / Change Logs; every entry rewritten to that order and heading.
 
 - 2026-09-12 — Rewrote every entry as Reusable version 1 (Description / Use Guide / Relevant Reusables / Change Logs / Content) and tagged each `reusable_version_1`. Added `reusable-schema/` as the format's own reference page.

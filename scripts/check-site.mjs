@@ -3,7 +3,7 @@ import path from 'node:path';
 const index=JSON.parse(fs.readFileSync('public/index.json','utf8'));
 if(!index.some(e=>e.id==='typical-sampling')) throw new Error('Missing preserved article');
 if(index.some(e=>e.section!=='reusable')) throw new Error('Unexpected search section');
-for(const url of ['index.html','reusable/index.html','faq/index.html','post/typical-sampling/index.html']) {
+for(const url of ['index.html','reusable/index.html','decision-log/index.html','faq/index.html','post/typical-sampling/index.html']) {
   if(!fs.existsSync(path.join('public',url))) throw new Error('Missing route '+url);
 }
 if(fs.existsSync('public/journal')) throw new Error('Removed Journal route is still published');

@@ -18,6 +18,7 @@ Reusable article-list markup.
 
 ## Changelog
 
+- 2026-09-14 — Handle missing attachments for text-only Decision Log entries in the shared listing.
 - 2026-09-11 — entry.html displays the first image attachment beside Reusable entries; entries without images remain text-only.
 
 - 2026-09-11 — Established the minimal Hugo structure; important files: `entry.html`.

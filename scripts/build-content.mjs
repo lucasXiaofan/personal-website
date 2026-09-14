@@ -7,7 +7,7 @@ const ajv = new Ajv({allErrors: true});
 addFormats(ajv);
 const validate = ajv.compile(JSON.parse(fs.readFileSync('schemas/entry.schema.json','utf8')));
 const format = JSON.parse(fs.readFileSync('reusable.config.json','utf8'));
-const entries = [], ids = new Set(), routes = new Set(['/','/reusable/','/faq/','/about_me/','/authors/admin/']);
+const entries = [], ids = new Set(), routes = new Set(['/','/reusable/','/decision-log/','/faq/','/about_me/','/authors/admin/']);
 for (const section of ['reusable']) {
   const dir = path.join('entries',section);
   for (const item of fs.readdirSync(dir,{withFileTypes:true})) {

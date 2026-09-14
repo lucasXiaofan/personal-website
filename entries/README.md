@@ -20,6 +20,7 @@ Hand-authoring stays possible for entries with no Obsidian source: copy the shap
 
 ## Changelog
 
+- 2026-09-14 — Added Reusable challenge and diary-plan publication guides. Dated decisions live in `content/decision-log/` rather than Reusable bundles.
 - 2026-09-12 — Entries are now imported from Obsidian rather than hand-authored; documented the `npm run import` path.
 
 - 2026-09-12 — Removed the unused `journal/` source section; entries now contain Reusable bundles only.

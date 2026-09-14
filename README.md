@@ -2,12 +2,12 @@
 
 ## Purpose
 
-Publish reusable knowledge, projects, and a personal FAQ through a minimal Hugo website.
+Publish reusable knowledge, projects, bilingual daily decisions, and a personal FAQ through a minimal Hugo website.
 
 ## Current TODO
 
 - Review and maintain personal information in FAQ and the existing resume.
-- Design the future comments pipeline separately; no comment integration is implemented.
+- Review daily priorities and publish selected diary plans through the Decision Log helper.
 
 ## Index
 
@@ -32,7 +32,7 @@ Every maintained source directory, including hidden automation directories, must
 3. **Index:** link to every immediate subfolder's README and briefly explain its role. Mention important files when useful.
 4. **Changelog:** date (YYYY-MM-DD; time with timezone when useful), concise change summary, and important changed filenames. Move completed TODOs here.
 
-Apply this recursively when adding or moving folders. Exempt .git, node_modules, public, .generated, caches, and temporary tool output: these are machine-managed, not authored source. Keep those outputs ignored. Never publish README files as pages or static downloads. Preserve original article wording unless the user requests editorial changes. Comment metadata is reserved; do not implement a comments pipeline until requested.
+Apply this recursively when adding or moving folders. Exempt .git, node_modules, public, .generated, caches, and temporary tool output: these are machine-managed, not authored source. Keep those outputs ignored. Never publish README files as pages or static downloads. Preserve original article wording unless the user requests editorial changes. Reusable comment metadata remains reserved; Decision Log pages use a direct GitHub discussion link.
 
 The project check verifies README coverage for maintained source directories.
 
@@ -119,16 +119,19 @@ Only the importer reads those vault paths, so CI never needs the Obsidian folder
 
 ## Content and media
 
+Decision Log lives in `content/decision-log/`, separate from Reusable bundles. Use `node scripts/publish-decision.mjs <YYYY-MM-DD.md> --extract` to extract only the diary's Plan. Reword and translate that text into a reviewed file with `## English` and `## 中文`, then use `--body <file>` to stage it. Add `--push` to create/reuse a GitHub discussion, commit the dated page, and push. The helper does not translate automatically or modify diaries. See the [pipeline guide](entries/reusable/decision-log-publishing-pipeline/content.md). Only the September 13 and 14 plans were imported initially.
+
 Each Reusable bundle contains entry.json, content.md, and README.md. The content property points to Markdown; JSON contains metadata, tags, attachment references, and reserved comment fields. The immutable id matches the folder name.
 
 All media live in static/media. Reference an image in Markdown as `![descriptive alt text](/media/filename.png)` and declare it in attachments. The image render hook adds the GitHub project subpath correctly. For a document link use the media shortcode (see FAQ). Long-form Markdown stays readable in Obsidian.
 
-Homepage and /reusable/ show Reusable; /faq/ contains the personal introduction. Search is a keyboard-accessible dialog on every page (Search button or /; Escape closes). It indexes published Reusable text, including Chinese, and excludes FAQ, drafts, and README files. Search is a literal case-insensitive substring search, not fuzzy/semantic search.
+Homepage and /reusable/ show Reusable; /decision-log/ lists bilingual daily decisions; /faq/ contains the personal introduction. Search is a keyboard-accessible dialog on every page (Search button or /; Escape closes). It indexes published Reusable text, including Chinese, and excludes Decision Log, FAQ, drafts, and README files. Search is a literal case-insensitive substring search, not fuzzy/semantic search.
 
 Old /post/typical-sampling/ redirects to its new Reusable URL; /about_me/ redirects to FAQ. ZotNavigator and The Last Crucible are separate Reusable entries. The former /game/ and /reusable/projects/ addresses redirect to the Reusable listing.
 
 ## Changelog
 
+- 2026-09-14 — Added 控制多巴胺挑战, bilingual Decision Log pages for September 13–14 with GitHub Discussions, and the diary-plan publishing helper and reusable guide. New reusable source notes live in the Obsidian vault.
 - 2026-09-12 — Defined Reusable version 1 and rewrote all five existing entries to it, each tagged `reusable_version_1`; added `/reusable/reusable-schema/` as the format's own page. Added `scripts/import-reusable.mjs` and `reusable.config.json` so entries are imported from Obsidian instead of hand-authored, with Obsidian image and wikilink resolution. Released schema version 3. Important files: `reusable.config.json`, `scripts/import-reusable.mjs`, `schemas/entry.schema.json`, `entries/reusable/`, `layouts/single.html`.
 
 - 2026-09-12 — Removed the unused Journal section and its navigation/search support. Removed the duplicate homepage content stub; the homepage now reuses the Reusable section introduction. Migrated Reusable metadata to schema version 2 and made builds clean stale output so removed routes cannot remain in `public/`. Important files: `content/`, `entries/`, `layouts/`, `scripts/`, `schemas/entry.schema.json`, `package.json`, `.github/workflows/publish.yaml`.

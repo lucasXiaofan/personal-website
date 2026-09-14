@@ -1,5 +1,5 @@
 <article class="entry">
-{{ $images := where .Params.attachments "kind" "image" }}
+{{ $images := where (.Params.attachments | default slice) "kind" "image" }}
 {{ if and (eq .Section "reusable") $images }}{{ with index $images 0 }}
 <a class="entry-thumbnail" href="{{ $.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ printf "media/%s" .path | relURL }}" alt="" width="220" height="150" loading="lazy"></a>
 {{ end }}{{ end }}

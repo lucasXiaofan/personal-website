@@ -24,6 +24,7 @@ Minimal Hugo page templates and rendering rules.
 
 ## Changelog
 
+- 2026-09-14 — Added the Decision Log navigation tab and daily-page GitHub discussion links in `baseof.html` and `single.html`.
 - 2026-09-12 — `single.html` shows the entry kind and tags, and now opens the table of contents for any entry with five or more headings (`.Fragments.HeadingsMap`) instead of excluding projects by kind.
 
 - 2026-09-12 — Removed Journal navigation, page handling, and search indexing; `home.html` now reuses the Reusable section introduction.

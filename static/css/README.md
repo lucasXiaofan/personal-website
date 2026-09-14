@@ -18,6 +18,7 @@ Responsive typography, layout, and automatic dark appearance.
 
 ## Changelog
 
+- 2026-09-14 — Let navigation wrap on narrow screens with the additional Decision Log tab.
 - 2026-09-12 — Added tag pill styling for entry headers.
 
 - 2026-09-11 — site.css adds the countdown block: work-in-progress badge, four-cell clock, and a stacked mobile layout.
