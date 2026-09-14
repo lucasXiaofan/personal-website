@@ -6,14 +6,14 @@ The JSON contract for Reusable entries.
 
 ## Current TODO
 
-- Extend reserved comment metadata when the future integration is designed.
+- None. Optional comment metadata remains reserved; the template-level giscus integration does not require it.
 
 ## Index
 
 - No subfolders. See the files in this directory.
 ## Contract
 
-Each entry folder contains `entry.json`, `content.md`, and `README.md`. The JSON content property must be `content.md`; type is `reusable`, and id matches its folder. IDs are immutable, globally unique, lowercase slugs. Dates use YYYY-MM-DD. Optional draft=true prevents publishing. Use attachments[].path as a filename inside static/media, and Markdown images as /media/filename. Declare all body media in attachments with alt text and kind. Comments are reserved metadata only; no fetching, posting, scheduling, or rendering exists. Never put credentials in content.
+Each entry folder contains `entry.json`, `content.md`, and `README.md`. The JSON content property must be `content.md`; type is `reusable`, and id matches its folder. IDs are immutable, globally unique, lowercase slugs. Dates use YYYY-MM-DD. Optional draft=true prevents publishing. Use attachments[].path as a filename inside static/media, and Markdown images as /media/filename. Declare all body media in attachments with alt text and kind. The optional comments object is reserved metadata and is stripped from generated front matter. The shared page template enables giscus independently for every Reusable, keyed by immutable id. Never put credentials in content.
 
 Kinds: blog, system, tutorial, project, paper, skill, knowledge, character. Optional aliases preserve earlier URLs. The first image in attachments is the Reusable listing thumbnail; put the preferred cover first. Entries without an image remain text-only. Changing the schema requires updating its version and migration guidance when incompatible.
 
@@ -36,6 +36,7 @@ Version 2 removed Journal support. Journal bundles are no longer valid sources; 
 
 ## Changelog
 
+- 2026-09-14 — Clarified that automatic giscus comments are template-level and do not activate or change the reserved JSON comment fields.
 - 2026-09-12 — Released schema version 3: optional `attachments`/`comments`, and the skill, knowledge, and character kinds. Documented the Reusable version 1 Markdown section contract that `build-content.mjs` enforces.
 
 - 2026-09-12 — Released schema version 2, removing Journal types and Journal-only kinds from `entry.schema.json`.

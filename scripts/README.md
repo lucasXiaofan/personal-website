@@ -40,6 +40,7 @@ Re-running on the same note is the update path: it preserves the existing `date`
 
 ## Changelog
 
+- 2026-09-14 — `publish-decision.mjs` now derives each summary from the first 20 English words of the first decision, stripping task markers and Markdown; short decisions remain complete and longer ones end with an ellipsis. Added summary regression tests.
 - 2026-09-14 — Added `publish-decision.mjs`: `--extract` prints only Plan text, `--body` stages a reviewed translation, `--discussion` creates a public thread, and `--push` commits only the dated page and pushes. It never modifies diaries. Requires `gh` authentication and enabled Discussions for publication. Added Decision Log route verification.
 - 2026-09-14 — `reusable-id` now carries the note's creation date and time (`<slug>-YYYYMMDD-HHMM`) so notes that share a filename cannot collide. `publish-reusable.mjs` stages by default and requires `--push` as explicit permission to publish.
 

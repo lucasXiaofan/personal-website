@@ -18,14 +18,8 @@
 {{ else }}{{ .Content }}{{ end }}
 {{ else }}{{ .Content }}{{ end }}
 </div>
+{{ if in (slice "reusable" "decision-log") .Section }}{{ partial "comments.html" . }}{{ end }}
 {{ if eq .Section "decision-log" }}
-<section class="prose" aria-labelledby="discussion-heading"><h2 id="discussion-heading">Discussion / 讨论</h2>
-{{ with .Params.discussion }}
-<div class="giscus"></div>
-<script src="https://giscus.app/client.js" data-repo="lucasXiaofan/personal-website" data-repo-id="R_kgDOLCxEXQ" data-category="General" data-category-id="DIC_kwDOLCxEXc4DFm5M" data-mapping="number" data-term="{{ path.Base . }}" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script>
-<p><a href="{{ . }}">Open discussion on GitHub →</a></p><p>If the embedded comments are unavailable, you can read and reply on GitHub.</p>
-{{ else }}<p>The discussion will appear when this entry is published.</p>{{ end }}
-</section>
 <a class="back" href="{{ "decision-log/" | relURL }}">← Back to Decision Log</a>
 {{ end }}
 {{ if eq .Section "reusable" }}<a class="back" href="{{ "reusable/" | relURL }}">← Back to Reusable</a>{{ end }}

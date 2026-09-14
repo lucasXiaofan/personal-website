@@ -1,0 +1,19 @@
+{{- $reusable := eq .Section "reusable" -}}
+{{- $mapping := "number" -}}
+{{- $term := "" -}}
+{{- $link := .Params.discussion -}}
+{{- if $reusable -}}
+  {{- $mapping = "specific" -}}
+  {{- $term = printf "reusable/%s" .Params.id -}}
+  {{- $link = printf "https://github.com/lucasXiaofan/personal-website/discussions?discussions_q=%s" (urlquery $term) -}}
+{{- else -}}
+  {{- with $link -}}{{- $term = path.Base . -}}{{- end -}}
+{{- end -}}
+<section class="prose" aria-labelledby="discussion-heading"><h2 id="discussion-heading">Discussion / 讨论</h2>
+{{ if $term }}
+<div class="giscus"></div>
+<script src="https://giscus.app/client.js" data-repo="lucasXiaofan/personal-website" data-repo-id="R_kgDOLCxEXQ" data-category="General" data-category-id="DIC_kwDOLCxEXc4DFm5M" data-mapping="{{ $mapping }}" data-term="{{ $term }}" data-strict="{{ if $reusable }}1{{ else }}0{{ end }}" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script>
+{{ if $reusable }}<p>Sign in with GitHub to comment. The first comment or reaction creates this page’s discussion.</p><p><a href="{{ $link }}">Find this discussion on GitHub →</a></p>
+{{ else }}<p><a href="{{ $link }}">Open discussion on GitHub →</a></p><p>If the embedded comments are unavailable, you can read and reply on GitHub.</p>{{ end }}
+{{ else }}<p>The discussion will appear when this entry is published.</p>{{ end }}
+</section>

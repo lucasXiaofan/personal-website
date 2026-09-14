@@ -32,7 +32,7 @@ Every maintained source directory, including hidden automation directories, must
 3. **Index:** link to every immediate subfolder's README and briefly explain its role. Mention important files when useful.
 4. **Changelog:** date (YYYY-MM-DD; time with timezone when useful), concise change summary, and important changed filenames. Move completed TODOs here.
 
-Apply this recursively when adding or moving folders. Exempt .git, node_modules, public, .generated, caches, and temporary tool output: these are machine-managed, not authored source. Keep those outputs ignored. Never publish README files as pages or static downloads. Preserve original article wording unless the user requests editorial changes. Reusable comment metadata remains reserved; Decision Log pages embed their existing GitHub discussions through giscus, with a direct-link fallback.
+Apply this recursively when adding or moving folders. Exempt .git, node_modules, public, .generated, caches, and temporary tool output: these are machine-managed, not authored source. Keep those outputs ignored. Never publish README files as pages or static downloads. Preserve original article wording unless the user requests editorial changes. All Reusable and Decision Log detail pages embed GitHub discussions through giscus. Reusables use their immutable IDs for strict thread matching and create threads on the first comment or reaction; decisions retain their existing numbered threads. The optional JSON comment metadata remains reserved and is not used by this integration.
 
 The project check verifies README coverage for maintained source directories.
 
@@ -131,6 +131,8 @@ Old /post/typical-sampling/ redirects to its new Reusable URL; /about_me/ redire
 
 ## Changelog
 
+- 2026-09-14 — Decision Log summaries use the first 20 words of the first English decision, automatically refreshed by the publishing helper.
+- 2026-09-14 — Enabled inline comments for every current and future Reusable through a shared giscus partial. Confirmed the giscus app is now installed and can read the existing Decision Log discussion.
 - 2026-09-14 — Added remembered English/中文 reading controls, a September 14–October 14 countdown for the dopamine challenge, and inline giscus comments on Decision Log pages. The repository owner must install the giscus GitHub app for the embed to work; existing discussion links remain usable.
 - 2026-09-14 — Added 控制多巴胺挑战, bilingual Decision Log pages for September 13–14 with GitHub Discussions, and the diary-plan publishing helper and reusable guide. New reusable source notes live in the Obsidian vault.
 - 2026-09-12 — Defined Reusable version 1 and rewrote all five existing entries to it, each tagged `reusable_version_1`; added `/reusable/reusable-schema/` as the format's own page. Added `scripts/import-reusable.mjs` and `reusable.config.json` so entries are imported from Obsidian instead of hand-authored, with Obsidian image and wikilink resolution. Released schema version 3. Important files: `reusable.config.json`, `scripts/import-reusable.mjs`, `schemas/entry.schema.json`, `entries/reusable/`, `layouts/single.html`.

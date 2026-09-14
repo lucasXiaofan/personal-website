@@ -42,6 +42,21 @@ export function validateBody(body) {
   if (/^(?:---|\{)\s*\n/.test(body)) throw new Error('Pass a Markdown body without front matter.');
 }
 
+export function decisionSummary(body, k = 20) {
+  if (!Number.isInteger(k) || k < 1) throw new Error('Summary word limit must be a positive integer.');
+  const english = body.replace(/\r\n/g, '\n').match(/^## English[ \t]*\n([\s\S]*?)(?=^## |$(?![\s\S]))/m)?.[1] || '';
+  const first = english.match(/^\s{0,3}(?:\d+[.)]|[-+*])\s+(?:\[[ xX]\]\s*)?([^\n]*(?:\n(?!\s*(?:\d+[.)]|[-+*])\s|\s*\n)[^\n]+)*)/m)?.[1];
+  if (!first) throw new Error('The English section needs a list of decisions to generate its summary.');
+  const plain = first.replace(/!?\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/<[^>]*>/g, '').replace(/[*_`~]/g, '').trim();
+  const words = plain.split(/\s+/);
+  // A standalone dash separates clauses; it is not itself a word.
+  let count = 0, end = words.length;
+  for (let i = 0; i < words.length; i++) {
+    if (/[\p{L}\p{N}]/u.test(words[i]) && ++count > k) { end = i; break; }
+  }
+  return words.slice(0, end).join(' ') + (end < words.length ? '…' : '');
+}
+
 function run(command, args, capture = false) {
   const result = spawnSync(command, args, { cwd: repo, encoding: 'utf8', stdio: capture ? ['ignore', 'pipe', 'pipe'] : 'inherit' });
   if (result.status !== 0) throw new Error(`${command} failed. ${capture ? result.stderr || result.stdout : ''}`);
@@ -114,7 +129,7 @@ function main() {
     if (!match) throw new Error('Existing page has unrecognized front matter; refusing to overwrite.');
     previous = JSON.parse(match[1]);
   }
-  const meta = { ...previous, title: `Decision Log · ${date}`, date, summary: 'Priorities, reasons, and decisions / 每日优先级、原因与决策', kind: 'decision', draft: false };
+  const meta = { ...previous, title: `Decision Log · ${date}`, date, summary: decisionSummary(body), kind: 'decision', draft: false };
   const write = () => {
     fs.mkdirSync(path.dirname(target), { recursive: true });
     fs.writeFileSync(target, JSON.stringify(meta, null, 2) + '\n\n' + body + '\n');
