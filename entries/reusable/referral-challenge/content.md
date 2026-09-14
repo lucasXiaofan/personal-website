@@ -6,18 +6,9 @@ A public deadline to motivate myself to ship more content.
 
 My first job came from a referral, not a job board application. I want to see if I can do it again — and get better at it on purpose this time. So: no job board applications until I graduate. Everything that would have gone into applications goes into work other people can see instead.
 
-## Use Guide
+## User Guide
 
 Check this page every day. Then either ship the content I planned, or plan what ships next.
-
-## Relevant Reusables
-
-- [Reusable Version 1](/reusable/reusable-schema/) — every shipped entry follows this format.
-
-## Change Logs
-
-- 2026-09-12 — Rewritten as Reusable version 1.
-- 2026-09-11 — Started, with a live countdown to graduation.
 
 ## Content
 
@@ -43,3 +34,12 @@ I go back to mass-applying like everyone else 😂
 ### Cadence
 
 Updates every 1–2 days.
+
+## Relevant Reusables
+
+- [Reusable Version 1](/reusable/reusable-schema/) — every shipped entry follows this format.
+
+## Change Logs
+
+- 2026-09-12 — Rewritten as Reusable version 1.
+- 2026-09-11 — Started, with a live countdown to graduation.

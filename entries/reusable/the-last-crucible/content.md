@@ -4,7 +4,7 @@
 
 A game I built for fun, mimicking Elden Ring.
 
-## Use Guide
+## User Guide
 
 [Watch the trailer](https://www.youtube.com/watch?v=-2P9AQb82lQ) first — it is the fastest look at what the game is. To play this or anything else I have made, [view my games on itch.io](https://langzhezr.itch.io/).
 

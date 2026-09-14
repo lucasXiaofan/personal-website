@@ -15,7 +15,7 @@ Canonical source bundles for Reusable entries.
 
 Write the note in Obsidian from the template named in `reusable.config.json`, using the Reusable version 1 sections, then run `npm run import -- <note.md>` followed by `npm run build`. The importer creates `reusable/<id>/` with entry.json, content.md, and README.md, copies referenced images into static/media, and declares them as attachments. Re-run it to update; `entry.json` is generated and should not be hand-edited.
 
-Hand-authoring stays possible for entries with no Obsidian source: copy the shape of an existing entry, keep the required `## Description` and `## Use Guide` sections, and run `npm run validate`. Update this index and the affected parent README when adding a folder. Do not edit .generated or public.
+Hand-authoring stays possible for entries with no Obsidian source: copy the shape of an existing entry, keep the required `## Description` and `## User Guide` sections (in the order Description, User Guide, Content, Relevant Reusables, Change Logs), and run `npm run validate`. Update this index and the affected parent README when adding a folder. Do not edit .generated or public.
 
 
 ## Changelog

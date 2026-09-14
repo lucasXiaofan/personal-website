@@ -45,7 +45,10 @@ const body = matched ? raw.slice(matched[0].length) : raw;
 // --- identity ---
 const slug = value => String(value).toLowerCase().normalize('NFKD')
   .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-const id = slug(flags.id || front.id || path.basename(notePath).replace(/\.md$/i, ''));
+// The note's `reusable-id` is the identity: re-importing a note that carries one overwrites
+// that entry, whatever the file was renamed to. `ensure-reusable-id.mjs` fills it in when empty.
+const text = key => (typeof front[key] === 'string' && front[key].trim()) ? front[key].trim() : '';
+const id = slug(flags.id || text(config.idKey) || text('id') || path.basename(notePath).replace(/\.md$/i, ''));
 if (!id) die('cannot derive an id; pass --id');
 const folder = path.join(config.entriesDir, id);
 const existing = fs.existsSync(path.join(folder, 'entry.json'))
@@ -55,14 +58,21 @@ const asDate = value => (String(value || '').match(/^\d{4}-\d{2}-\d{2}/) || [])[
 
 // --- split the note into Reusable v1 sections ---
 const names = config.sections;
-const heading = new RegExp('^(#{1,6})\\s*(' + names.join('|') + ')\\s*:?\\s*$', 'i');
+// Every spelling a section may appear under in a note, mapped back to its canonical name, so
+// renaming a section on the site (Use Guide -> User Guide) never orphans a note written earlier.
+const aliases = new Map();
+for (const name of names) {
+  aliases.set(name.toLowerCase(), name);
+  for (const alias of (config.sectionAliases || {})[name] || []) aliases.set(alias.toLowerCase(), name);
+}
+const heading = new RegExp('^(#{1,6})\\s*(' + [...aliases.keys()].join('|') + ')\\s*:?\\s*$', 'i');
 const sections = Object.fromEntries(names.map(n => [n, []]));
 const preamble = [];
 let current = null, fenced = false;
 for (const line of body.split('\n')) {
   if (/^\s*(```|~~~)/.test(line)) fenced = !fenced;
   const match = fenced ? null : line.match(heading);
-  if (match) { current = names.find(n => n.toLowerCase() === match[2].toLowerCase()); continue; }
+  if (match) { current = aliases.get(match[2].toLowerCase()); continue; }
   (current ? sections[current] : preamble).push(line);
 }
 if (!current && preamble.length) { sections.Content = preamble.splice(0); }

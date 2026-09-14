@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "id": "reusable-building-pipeline",
+  "type": "reusable",
+  "kind": "system",
+  "title": "Reusable Building Pipeline",
+  "date": "2026-09-14",
+  "updated": "2026-09-14",
+  "summary": "give reusable building a standard, to ensure quality (I can understand after one year, other people can understand how to use it 70%), and creation speed",
+  "content": "content.md",
+  "tags": [
+    "reusable_version_1"
+  ],
+  "attachments": [
+    {
+      "path": "reusable-building-pipeline-file-20260914104227199.png",
+      "alt": "The reusable building pipeline, by reusable type",
+      "kind": "image"
+    }
+  ]
+}

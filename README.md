@@ -83,13 +83,26 @@ The development server is at http://127.0.0.1:1313/personal-website/. When editi
 
 ## Reusable version 1
 
-Every entry is one folder holding one thing worth picking back up, written for me and for an agent at the same time. Its Markdown carries five sections — **Description**, **Use Guide**, **Relevant Reusables**, **Change Logs**, **Content** — of which the first two are required and enforced by the build. Description is why it exists and what it solved (for a paper, the abstract); Use Guide is the command, habit, or question that puts it to work; Content is optional. Kinds are blog, system, tutorial, project, paper, skill, knowledge, and character. The format documents itself at [/reusable/reusable-schema/](entries/reusable/reusable-schema/content.md).
+Every entry is one folder holding one thing worth picking back up, written for me and for an agent at the same time. Its Markdown carries five sections, in this order — **Description**, **User Guide**, **Content**, **Relevant Reusables**, **Change Logs** — of which the first two are required and enforced by the build. Description is why it exists and what it solved (for a paper, the abstract); User Guide is the command, habit, or question that puts it to work; Content is optional. Relevant Reusables and Change Logs come last because a reader needs them least. Kinds are blog, system, tutorial, project, paper, skill, knowledge, and character. The format documents itself at [/reusable/reusable-schema/](entries/reusable/reusable-schema/content.md).
 
 ## Authoring from Obsidian
 
 `entry.json` is generated, not written by hand.
 
+One command takes a note from the vault to the live site — it is runnable from any directory, so an agent working in `~/Documents/road` can publish without knowing this repository's layout:
+
 ```sh
+node ~/Documents/github_repos/personal-website/scripts/publish-reusable.mjs <note.md>
+```
+
+It fills in the note's `reusable-id` when empty, imports the note and its attachments, validates, commits, and pushes. `--dry-run`, `--no-push`, and `--no-commit` stop it early.
+
+The `reusable-id` in the note's front matter is the entry's identity: publishing a note that already carries one overwrites that entry rather than creating a second page, whatever the file has been renamed to.
+
+The steps underneath, when you want them one at a time:
+
+```sh
+npm run id -- ~/Documents/road/problem-solving-library/reusable/min-hash.md
 npm run import -- ~/Documents/road/problem-solving-library/reusable/min-hash.md
 npm run build
 ```

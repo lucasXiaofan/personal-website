@@ -21,7 +21,7 @@ Kinds: blog, system, tutorial, project, paper, skill, knowledge, character. Opti
 
 ## Reusable version 1
 
-The Markdown body carries the shape; the JSON carries only what Hugo needs. An entry tagged `reusable_version_1` must contain `## Description` and `## Use Guide`, and may contain `## Relevant Reusables`, `## Change Logs`, and `## Content`, in that order. `build-content.mjs` enforces the required sections and fails the build when one is missing. A cover image or shortcode may precede `## Description`. The live reference is [/reusable/reusable-schema/](../entries/reusable/reusable-schema/content.md).
+The Markdown body carries the shape; the JSON carries only what Hugo needs. An entry tagged `reusable_version_1` must contain `## Description` and `## User Guide`, and may contain `## Content`, `## Relevant Reusables`, and `## Change Logs`, in that order. A note still headed `# Use Guide:` imports correctly: `sectionAliases` in `reusable.config.json` maps the old spelling onto `User Guide`. `build-content.mjs` enforces the required sections and fails the build when one is missing. A cover image or shortcode may precede `## Description`. The live reference is [/reusable/reusable-schema/](../entries/reusable/reusable-schema/content.md).
 
 ## Migration
 

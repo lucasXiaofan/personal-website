@@ -2,7 +2,7 @@
 
 1. speculative sampling[2] 是一个很麻烦的sampling 方法，其中最让我想要优化的方面就是speculative sampling需要比较target model和draft model的logits。由于我目前的研究是异构大模型推理加速，互相传输logits是一个可以被优化的点，而从medusa [1]  论文提出的typical sampling就没有互相传输logits的必要，所以我想更深入的学习typical sampling看看它的数学解释，并希望未来能用LLM的benchmark来测试typical sampling和speculative sampling的差异
 
-## Use Guide
+## User Guide
 
 ### ✅ Prerequisite
 
@@ -16,15 +16,6 @@
 
 1. 这只是我学习typical sampling的学习笔记，我还没有完全理解透彻typical sampling是什么，若有错误和不懂的，欢迎指正与讨论
 2. 这篇文章会很长，而且必需很长，因为这就是科研的厚重，短一点都会产生很多疑惑
-
-## Relevant Reusables
-
-- [Improving Multi-candidate Speculative Decoding](/reusable/improving-multi-candidate-speculative-decoding/) — 这些学习笔记后来变成的论文。
-
-## Change Logs
-
-- 2026-09-12 — 改写为 Reusable version 1；原文内容未改动。
-- 2024-03-22 — 首次发布。
 
 ## Content
 
@@ -104,3 +95,12 @@ t = 0.5
 exp(6/0.5) ~ 162754.791419
 exp(3/0.5) ~ 403.428793493
 ```
+
+## Relevant Reusables
+
+- [Improving Multi-candidate Speculative Decoding](/reusable/improving-multi-candidate-speculative-decoding/) — 这些学习笔记后来变成的论文。
+
+## Change Logs
+
+- 2026-09-12 — 改写为 Reusable version 1；原文内容未改动。
+- 2024-03-22 — 首次发布。

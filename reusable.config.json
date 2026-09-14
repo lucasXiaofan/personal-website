@@ -8,6 +8,8 @@
   "mediaDir": "static/media",
   "defaultKind": "knowledge",
   "formatTag": "reusable_version_1",
-  "sections": ["Description", "Use Guide", "Relevant Reusables", "Change Logs", "Content"],
-  "requiredSections": ["Description", "Use Guide"]
+  "idKey": "reusable-id",
+  "sections": ["Description", "User Guide", "Content", "Relevant Reusables", "Change Logs"],
+  "sectionAliases": { "User Guide": ["Use Guide"] },
+  "requiredSections": ["Description", "User Guide"]
 }

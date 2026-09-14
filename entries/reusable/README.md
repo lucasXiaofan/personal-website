@@ -10,6 +10,7 @@ Blog posts, systems, tutorials, projects, papers, skills, knowledge, and charact
 
 ## Index
 
+- [reusable-building-pipeline](reusable-building-pipeline/README.md) — give reusable building a standard, to ensure quality (I can understand after one year, other people can understand how to use it 70%), and creation speed
 - [reusable-schema](reusable-schema/README.md) — Reusable version 1, documented as a Reusable.
 - [referral-challenge](referral-challenge/README.md) — Ongoing no-job-board challenge with a graduation countdown.
 
@@ -20,6 +21,8 @@ Blog posts, systems, tutorials, projects, papers, skills, knowledge, and charact
 - [typical-sampling](typical-sampling/README.md) — Preserved first blog post about Typical Sampling.
 
 ## Changelog
+
+- 2026-09-14 — Section shape became Description / User Guide / Content / Relevant Reusables / Change Logs; every entry rewritten to that order and heading.
 
 - 2026-09-12 — Rewrote every entry as Reusable version 1 (Description / Use Guide / Relevant Reusables / Change Logs / Content) and tagged each `reusable_version_1`. Added `reusable-schema/` as the format's own reference page.
 
