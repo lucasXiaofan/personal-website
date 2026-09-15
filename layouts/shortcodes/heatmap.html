@@ -1,0 +1,51 @@
+{{- /* Daily-result heatmap. Dates are YYYY-MM-DD, comma separated.
+       {{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14,2026-09-15" passed="" label="Dopamine Control Challenge" >}} */ -}}
+{{- $start := time.AsTime (.Get "start") -}}
+{{- $end := time.AsTime (.Get "end") -}}
+{{- $label := .Get "label" | default "Daily results" -}}
+{{- $note := .Get "note" -}}
+{{- $today := now.Format "2006-01-02" -}}
+
+{{- $status := dict -}}
+{{- range (split (.Get "passed" | default "") ",") -}}
+  {{- with (strings.TrimSpace .) }}{{ $status = merge $status (dict . "passed") }}{{ end -}}
+{{- end -}}
+{{- range (split (.Get "failed" | default "") ",") -}}
+  {{- with (strings.TrimSpace .) }}{{ $status = merge $status (dict . "failed") }}{{ end -}}
+{{- end -}}
+
+{{- $span := int (math.Round (div ($end.Sub $start).Hours 24)) -}}
+{{- $names := slice "Sun" "Mon" "Tue" "Wed" "Thu" "Fri" "Sat" -}}
+{{- $pad := 0 -}}
+{{- range $i, $n := $names -}}{{ if eq $n ($start.Format "Mon") }}{{ $pad = $i }}{{ end }}{{ end -}}
+
+{{- $nFailed := 0 -}}{{- $nPassed := 0 -}}
+{{- range $d := seq 0 $span -}}
+  {{- $key := ($start.AddDate 0 0 $d).Format "2006-01-02" -}}
+  {{- $s := index $status $key -}}
+  {{- if eq $s "failed" }}{{ $nFailed = add $nFailed 1 }}{{ else if eq $s "passed" }}{{ $nPassed = add $nPassed 1 }}{{ end -}}
+{{- end -}}
+
+<section class="heatmap" aria-label="{{ $label }}">
+<p class="heatmap-label">{{ $label }}<span class="heatmap-range">{{ $start.Format "Jan 2" }} – {{ $end.Format "Jan 2, 2006" }}</span></p>
+<ol class="heatmap-grid" role="list">
+{{- range $i := seq 1 $pad }}<li class="heatmap-pad" aria-hidden="true"></li>{{ end }}
+{{- range $d := seq 0 $span }}
+  {{- $day := $start.AddDate 0 0 $d -}}
+  {{- $key := $day.Format "2006-01-02" -}}
+  {{- $s := index $status $key -}}
+  {{- $state := cond (ne $s nil) (printf "%v" $s) (cond (gt $key $today) "future" (cond (eq $key $today) "today" "unlogged")) -}}
+  {{- $word := index (dict "failed" "failed" "passed" "held" "future" "not yet" "today" "today, unrecorded" "unlogged" "no record") $state -}}
+<li class="heatmap-day" data-state="{{ $state }}"{{ if eq $key $today }} data-today="true"{{ end }} title="{{ $day.Format "Mon, Jan 2" }} — {{ $word }}"><span class="sr-only">{{ $day.Format "January 2" }}: {{ $word }}</span><b aria-hidden="true">{{ $day.Format "2" }}</b></li>
+{{- end }}
+</ol>
+<ul class="heatmap-legend" role="list">
+<li><i data-state="passed"></i>held ({{ $nPassed }})</li>
+<li><i data-state="failed"></i>failed ({{ $nFailed }})</li>
+<li><i data-state="unlogged"></i>no record</li>
+<li><i data-state="future"></i>not yet</li>
+</ul>
+{{- with $note }}
+<p class="heatmap-foot">{{ . }}</p>
+{{- end }}
+</section>
