@@ -5,6 +5,8 @@
 {{- $label := .Get "label" | default "Daily results" -}}
 {{- $note := .Get "note" -}}
 {{- $today := now.Format "2006-01-02" -}}
+{{- $passedWord := .Get "passed-label" | default "held" -}}
+{{- $failedWord := .Get "failed-label" | default "failed" -}}
 
 {{- $status := dict -}}
 {{- range (split (.Get "passed" | default "") ",") -}}
@@ -35,13 +37,13 @@
   {{- $key := $day.Format "2006-01-02" -}}
   {{- $s := index $status $key -}}
   {{- $state := cond (ne $s nil) (printf "%v" $s) (cond (gt $key $today) "future" (cond (eq $key $today) "today" "unlogged")) -}}
-  {{- $word := index (dict "failed" "failed" "passed" "held" "future" "not yet" "today" "today, unrecorded" "unlogged" "no record") $state -}}
+  {{- $word := index (dict "failed" $failedWord "passed" $passedWord "future" "not yet" "today" "today, unrecorded" "unlogged" "no record") $state -}}
 <li class="heatmap-day" data-state="{{ $state }}"{{ if eq $key $today }} data-today="true"{{ end }} title="{{ $day.Format "Mon, Jan 2" }} — {{ $word }}"><span class="sr-only">{{ $day.Format "January 2" }}: {{ $word }}</span><b aria-hidden="true">{{ $day.Format "2" }}</b></li>
 {{- end }}
 </ol>
 <ul class="heatmap-legend" role="list">
-<li><i data-state="passed"></i>held ({{ $nPassed }})</li>
-<li><i data-state="failed"></i>failed ({{ $nFailed }})</li>
+<li><i data-state="passed"></i>{{ $passedWord }} ({{ $nPassed }})</li>
+<li><i data-state="failed"></i>{{ $failedWord }} ({{ $nFailed }})</li>
 <li><i data-state="unlogged"></i>no record</li>
 <li><i data-state="future"></i>not yet</li>
 </ul>
