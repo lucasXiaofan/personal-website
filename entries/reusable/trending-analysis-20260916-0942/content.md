@@ -79,7 +79,7 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 ## Relevant Reusables
 
 - [dopamine-control-challenge](/reusable/dopamine-control-challenge/) — the other daily habit, tracked the same way. That one protects the attention this one spends.
-- reusable-building-pipeline — how this page gets from the vault to the site.
+- [reusable-building-pipeline](/reusable/reusable-building-pipeline-20260914-1043/) — how this page gets from the vault to the site.
 - [decision-log-publishing-pipeline](/reusable/decision-log-publishing-pipeline/) — publishing a day's decision log is what fills in the square above.
 
 ## Change Logs
