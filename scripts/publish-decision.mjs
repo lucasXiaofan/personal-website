@@ -89,6 +89,13 @@ function discussion(date) {
   return graphql('mutation($repositoryId:ID!,$categoryId:ID!,$title:String!,$body:String!){createDiscussion(input:{repositoryId:$repositoryId,categoryId:$categoryId,title:$title,body:$body}){discussion{url}}}', {repositoryId:data.id, categoryId:category.id, title, body}).createDiscussion.discussion.url;
 }
 
+function syncHabits(diary, publish) {
+  const args = ['scripts/sync-habits.mjs', diary, '--write', ...(publish ? ['--publish'] : [])];
+  const result = spawnSync(process.execPath, args, { cwd: repo, stdio: 'inherit' });
+  // A habit line that cannot be read must not silently skip the tracker.
+  if (result.status !== 0) throw new Error('sync-habits failed. Fix the habit line in the diary, then retry.');
+}
+
 function main() {
   const argv = process.argv.slice(2), flags = {}, positional = [];
   for (let i = 0; i < argv.length; i++) {
@@ -100,7 +107,7 @@ function main() {
     else positional.push(argv[i]);
   }
   if (flags.help) {
-    console.log('Usage: node scripts/publish-decision.mjs <YYYY-MM-DD.md> --extract\n       node scripts/publish-decision.mjs <YYYY-MM-DD.md> --body <reviewed.md> [--discussion] [--push]\nDefault: stage and verify locally. --discussion creates a public thread. --push also commits and pushes.');
+    console.log('Usage: node scripts/publish-decision.mjs <YYYY-MM-DD.md> --extract\n       node scripts/publish-decision.mjs <YYYY-MM-DD.md> --body <reviewed.md> [--discussion] [--push]\nDefault: stage and verify locally, and sync the habit trackers into the vault notes.\n--discussion creates a public thread. --push also commits and pushes, and publishes the habit pages.');
     return;
   }
   if (positional.length !== 1) throw new Error('Provide exactly one diary file. Use --help for usage.');
@@ -144,6 +151,11 @@ function main() {
     run('npm', ['run', 'check']);
   }
   console.log('Prepared: ' + target);
+
+  // The daily habits are recorded in the same Plan section this page comes from, so the
+  // habit pages move on the same pass. Without --push this only rewrites the vault notes.
+  syncHabits(diary, flags.push);
+
   if (!flags.push) return;
   run('git', ['add', '--', relative]);
   if (run('git', ['diff', '--cached', '--name-only', '--', relative], true)) {
