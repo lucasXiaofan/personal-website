@@ -129,6 +129,18 @@ function adopt(reference, alt) {
 // --- rewrite Obsidian syntax into site Markdown ---
 const entryIds = fs.existsSync(config.entriesDir)
   ? new Set(fs.readdirSync(config.entriesDir, { withFileTypes: true }).filter(e => e.isDirectory()).map(e => e.name)) : new Set();
+// An id carries a timestamp (`pipeline-20260914-1043`), but a note links by name
+// (`[[pipeline]]`). Accept the bare slug when exactly one entry starts with it; refuse when
+// two do, because guessing between them would point the reader at the wrong page.
+const deadLinks = [], ambiguousLinks = [];
+function resolveEntry(key) {
+  if (entryIds.has(key)) return key;
+  const matches = [...entryIds].filter(e => new RegExp('^' + key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '-\\d{8}-\\d{4}$').test(e));
+  if (matches.length === 1) return matches[0];
+  (matches.length ? ambiguousLinks : deadLinks).push(key);
+  return null;
+}
+
 function rewrite(text) {
   return text
     .replace(/!\[\[([^\]|]+?)(?:\|([^\]]*))?\]\]/g, (_, target, alt) => {
@@ -141,8 +153,8 @@ function rewrite(text) {
     })
     .replace(/(^|[^!])\[\[([^\]|]+?)(?:\|([^\]]*))?\]\]/g, (_, before, target, label) => {
       const text = (label || target).trim();
-      const key = slug(target);
-      return before + (entryIds.has(key) && key !== id ? `[${text}](/reusable/${key}/)` : text);
+      const key = resolveEntry(slug(target));
+      return before + (key && key !== id ? `[${text}](/reusable/${key}/)` : text);
     });
 }
 // Shift a section's own headings below the `## Section` heading this importer emits.
@@ -198,6 +210,10 @@ const markdown = names.filter(n => rendered[n]).map(n => `## ${n}\n\n${rendered[
 
 if (missing.length) console.warn('  ! unresolved media (left as written): ' + missing.join(', '));
 if (unlabelled.length) console.warn('  ! no alt text, named from the filename — write ![description](…) in Obsidian: ' + [...new Set(unlabelled)].join(', '));
+// A wikilink to a note that is not published renders as plain text. That is the right
+// fallback, but silently — so say it, or a dead cross-reference ships unnoticed.
+if (deadLinks.length) console.warn('  ! wikilink has no published entry, rendered as plain text: ' + [...new Set(deadLinks)].join(', '));
+if (ambiguousLinks.length) console.warn('  ! wikilink matches more than one entry, rendered as plain text — link the full id: ' + [...new Set(ambiguousLinks)].join(', '));
 if (flags['dry-run']) {
   console.log(JSON.stringify(entry, null, 2) + '\n---\n' + markdown);
   process.exit(0);
