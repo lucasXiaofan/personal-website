@@ -128,12 +128,12 @@ That is worth writing down, because it is a different mechanism from the evening
 
 {{< language en >}}
 - [ReferralChallenge](https://lucasxiaofan.github.io/personal-website/reusable/referral-challenge/) — the larger challenge this supports.
-- trending-analysis — the other daily habit. This one protects the attention that one spends.
+- [trending-analysis](/reusable/trending-analysis-20260916-0942/) — the other daily habit. This one protects the attention that one spends.
 - [decision-log-publishing-pipeline](/reusable/decision-log-publishing-pipeline/) — publishing a day's decision log is what fills in the square above.
 {{< /language >}}
 {{< language zh >}}
 - [ReferralChallenge](https://lucasxiaofan.github.io/personal-website/reusable/referral-challenge/) — 这个小挑战所支持的长期挑战。
-- trending-analysis — 另一个每日习惯。这个守住注意力，那个花掉它。
+- [trending-analysis](/reusable/trending-analysis-20260916-0942/) — 另一个每日习惯。这个守住注意力，那个花掉它。
 - [decision-log-publishing-pipeline](/reusable/decision-log-publishing-pipeline/) — 发布当天的决策日志，就是上面那个方格被填上的时刻。
 {{< /language >}}
 
