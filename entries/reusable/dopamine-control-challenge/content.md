@@ -2,7 +2,7 @@
 
 {{< countdown target="2026-10-14T00:00:00-04:00" deadline="October 14, 2026 · 00:00 ET" label="30-day Dopamine Control Challenge" note="September 14–October 14, 2026." >}}
 
-{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15" passed="" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
+{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15" passed="2026-09-16" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
 
 {{< language en >}}
 A smaller, 30-day challenge supporting my ReferralChallenge: protect my attention so I spend more time learning, building, and moving. The aim is to make room for at least five hours of work in progress each day. “控制多巴胺” is my shorthand for changing my media habits.
@@ -27,7 +27,9 @@ Read the rules each morning. Use a seven-minute timer when selecting study video
 Dopamine-Control-Challenge: 2026-09-15 failed, watched over two hours of YouTube and Bilibili.
 ```
 
-The verdict word is `failed` or `held`. When I publish this reusable, those verdicts go into the heatmap's `failed=` and `passed=` lists, so the diary stays the single source of truth and the site is only a rendering of it.
+The verdict word goes before the first comma: `success`, `held`, `passed`, `done` all count as held; `failed` or `missed` count as failed. A date or date range may lead the line (`9/14 - 9/15 failed, ...`); with no date it means today.
+
+I do not edit the heatmap by hand. Publishing the day's decision log runs `sync-habits.mjs`, which reads this line and moves the date into the shortcode's `failed=` or `passed=` list. The diary is the single source of truth; the site is a rendering of it.
 {{< /language >}}
 
 {{< language zh >}}
@@ -39,7 +41,9 @@ The verdict word is `failed` or `held`. When I publish this reusable, those verd
 Dopamine-Control-Challenge: 2026-09-15 failed, 看了两个多小时 YouTube 和 B 站。
 ```
 
-结论只有 `failed` 或 `held` 两种。发布这个 reusable 时，把这些结论填进热力图的 `failed=` 和 `passed=`，日记始终是唯一的事实来源，网站只是它的呈现。
+结论词写在第一个逗号之前：`success`、`held`、`passed`、`done` 都算守住；`failed`、`missed` 算失败。行首可以带日期或日期区间（`9/14 - 9/15 failed, ...`）；不写日期就是当天。
+
+热力图不用手改。发布当天的决策日志时会运行 `sync-habits.mjs`，它读这一行，把日期放进 shortcode 的 `failed=` 或 `passed=`。日记是唯一的事实来源，网站只是它的呈现。
 {{< /language >}}
 
 ## Content
@@ -65,9 +69,16 @@ Two failures in two days both started the same way: the apartment, in the mornin
 - **Eat without a screen.** No YouTube with breakfast, no drafting a novel in my head instead of eating.
 - **Leave for campus early.** The apartment is where this challenge gets lost; the building where it gets won.
 
+### What actually worked, once
+
+The first day I held the rule, 2026-09-16, I did not hold it by resisting. I held it because I had a question I wanted to answer more than I wanted to watch anything — how to compute L1 and L2 distances between differently shaped matrices with vectorized operations. I was stuck, and being stuck was more interesting than YouTube.
+
+That is worth writing down, because it is a different mechanism from the evening routine above. The routine removes the opportunity. This removes the appetite. **A good enough open question does the work that willpower was failing to do** — so on a day with no such question, the routine has to carry it, and on a day with one, I should notice and protect it.
+
 ### Daily review
 
 - Did I avoid shorts at home, entertainment video, manga, and games?
+- Was there a question I actually wanted to chase today? If not, that is the risk.
 - Did I keep video selection within seven minutes?
 - Did I eat without a screen and leave the apartment early?
 - What did I learn or build?
@@ -96,9 +107,16 @@ Two failures in two days both started the same way: the apartment, in the mornin
 - **吃饭不看屏幕。** 不边吃边看 YouTube，也不在吃饭时构思小说。
 - **早点去学校。** 这个挑战是在公寓里输掉的，在教学楼里赢回来的。
 
+### 第一次真正做到的那天
+
+第一次守住规则是 2026 年 9 月 16 日，靠的不是忍。是因为有个问题比看视频更想弄明白——怎么用向量化运算算不同形状矩阵之间的 L1、L2 距离。我卡住了，而卡住比 YouTube 有意思。
+
+这值得写下来，因为它和上面那套流程是两种机制。流程拿掉的是机会，这个拿掉的是胃口。**一个足够好的开放问题，能完成意志力没做到的事**——所以没有这种问题的日子，只能靠流程扛；有的日子，我应该认出来并且保护好它。
+
 ### 每日回顾
 
 - 有没有做到在家不刷短视频、不看娱乐视频、不看漫画、不玩游戏？
+- 今天有没有一个我真的想追下去的问题？如果没有，那就是风险所在。
 - 挑选视频有没有控制在七分钟内？
 - 有没有专心吃饭、早点离开公寓？
 - 今天学习或推进了什么？
@@ -110,20 +128,26 @@ Two failures in two days both started the same way: the apartment, in the mornin
 
 {{< language en >}}
 - [ReferralChallenge](https://lucasxiaofan.github.io/personal-website/reusable/referral-challenge/) — the larger challenge this supports.
+- trending-analysis — the other daily habit. This one protects the attention that one spends.
+- [decision-log-publishing-pipeline](/reusable/decision-log-publishing-pipeline/) — publishing a day's decision log is what fills in the square above.
 {{< /language >}}
 {{< language zh >}}
 - [ReferralChallenge](https://lucasxiaofan.github.io/personal-website/reusable/referral-challenge/) — 这个小挑战所支持的长期挑战。
+- trending-analysis — 另一个每日习惯。这个守住注意力，那个花掉它。
+- [decision-log-publishing-pipeline](/reusable/decision-log-publishing-pipeline/) — 发布当天的决策日志，就是上面那个方格被填上的时刻。
 {{< /language >}}
 
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-16 — First day held. Added what actually worked: an open question I wanted to answer more than I wanted to watch anything. The heatmap now updates automatically when the day's decision log is published.
 - 2026-09-15 — Added a 30-day heatmap driven by the diary's `Dopamine-Control-Challenge:` line. September 14 and 15 are both recorded as failed: over two hours of YouTube and Bilibili each day.
 - 2026-09-15 — Tightened the rules: video is for study only, no entertainment video at home, no manga or web novels, leisure is reading and podcasts. Added the evening routine — plan by 10 p.m., laptop in the bag, phone limited to weather, bus, and Duolingo, eat without a screen, leave early.
 - 2026-09-14 — Added language switching and a 30-day countdown from September 14 to October 14 (Eastern time).
 - 2026-09-14 — Published the rules with a seven-minute selection limit. The September 13 diary proposed five minutes; this version uses the updated rule.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-16 — 第一天守住。补上真正起作用的东西：一个比看视频更想弄明白的问题。热力图现在会在当天决策日志发布时自动更新。
 - 2026-09-15 — 新增 30 天热力图，数据来自日记里的 `Dopamine-Control-Challenge:` 一行。9 月 14 日和 15 日都记为失败：两天都看了两个多小时的 YouTube 和 B 站。
 - 2026-09-15 — 收紧规则：视频只用于学习，在家不看娱乐视频，不看漫画和网络小说，娱乐只有阅读和播客。新增前一晚的流程——10 点前写好 plan、电脑装进书包、手机只看天气和公交车加 Duolingo、吃饭不看屏幕、早点出门。
 - 2026-09-14 — 添加语言切换和 30 天倒计时：美东时间 9 月 14 日至 10 月 14 日。
