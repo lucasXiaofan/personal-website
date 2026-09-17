@@ -78,7 +78,7 @@ If GitHub access fails, the staged page remains local. Sign in with `gh auth log
 
 - [Reusable Building Pipeline](https://lucasxiaofan.github.io/personal-website/reusable/reusable-building-pipeline-20260914-1043/) — the corresponding workflow for full reusable notes.
 - [dopamine-control-challenge](/reusable/dopamine-control-challenge/) — the habit tracker this pipeline fills in from the `Dopamine-Control-Challenge:` line.
-- trending-analysis — the habit tracker this pipeline fills in from the `trending-analysis:` line.
+- [trending-analysis](/reusable/trending-analysis-20260916-0942/) — the habit tracker this pipeline fills in from the `trending-analysis:` line.
 
 ## Change Logs
 
