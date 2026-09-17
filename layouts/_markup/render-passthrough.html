@@ -1,0 +1,18 @@
+{{- /*
+  Renders LaTeX math preserved by the goldmark passthrough extension.
+
+  transform.ToMath runs KaTeX at build time and emits MathML, so no CDN
+  script, no client-side JS, and no flash of raw TeX before render.
+  Requires [markup.goldmark.extensions.passthrough] in hugo.toml.
+
+  errorlevel "warning" keeps a bad formula from failing the whole build;
+  it renders in red and prints a warning instead.
+*/ -}}
+{{- $opts := dict "displayMode" (eq .Type "block") "errorColor" "#cc0000" "throwOnError" false -}}
+{{- with try (transform.ToMath .Inner $opts) -}}
+  {{- with .Err -}}
+    {{- warnf "KaTeX: %s (in %s)" . $.Page.File.Path -}}
+  {{- else -}}
+    {{- .Value -}}
+  {{- end -}}
+{{- end -}}

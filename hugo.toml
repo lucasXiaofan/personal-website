@@ -10,6 +10,11 @@ description = 'Reusable ideas, systems, tutorials, and projects by XiaoFan Lu.'
 home = ['HTML', 'RSS', 'JSON']
 [markup.goldmark.renderer]
 unsafe = false
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['$$', '$$'], ['\\[', '\\]']]
+inline = [['$', '$'], ['\\(', '\\)']]
 [markup.highlight]
 noClasses = false
 [markup.tableOfContents]
