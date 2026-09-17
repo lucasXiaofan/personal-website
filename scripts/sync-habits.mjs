@@ -28,7 +28,7 @@ export const HABITS = {
   },
   'trending-analysis': {
     marker: /^trending-analysis:/i,
-    note: 'problem-solving-library/reusable/trending-analysis.md',
+    note: 'problem-solving-library/reusable/habit-trending-analysis.md',
     // Writing the line is the habit; there is no failing verdict to parse.
     verdicts: null,
     entries: true,
