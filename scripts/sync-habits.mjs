@@ -21,7 +21,7 @@ const vault = path.join(process.env.HOME || '', 'Documents/road');
 export const HABITS = {
   'dopamine-control-challenge': {
     marker: /^Dopamine-Control-Challenge:/i,
-    note: 'problem-solving-library/reusable/dopamine-control-challenge.md',
+    note: 'problem-solving-library/reusable/challenge-dopamine-control.md',
     // A verdict word is required; this habit records both outcomes.
     verdicts: { passed: /\b(success|succeeded|held|hold|pass(?:ed)?|done|ok)\b/i, failed: /\b(fail(?:ed)?|missed|broke|broken|lost)\b/i },
     entries: false,

@@ -133,10 +133,24 @@ const entryIds = fs.existsSync(config.entriesDir)
 // (`[[pipeline]]`). Accept the bare slug when exactly one entry starts with it; refuse when
 // two do, because guessing between them would point the reader at the wrong page.
 const deadLinks = [], ambiguousLinks = [];
+// A vault note keeps its `reusable-id` across renames, but a wikilink points at the current
+// filename. Read the sibling note's id so renaming a note in Obsidian does not silently turn
+// every link to it into plain text.
+function idOfSiblingNote(key) {
+  const sibling = path.join(path.dirname(notePath), key + '.md');
+  if (!fs.existsSync(sibling)) return null;
+  const head = fs.readFileSync(sibling, 'utf8').replace(/\r\n/g, '\n').match(/^---\n([\s\S]*?)\n---/);
+  const found = head && head[1].match(new RegExp('^' + config.idKey + ':\\s*(.+)$', 'm'));
+  return found ? slug(strip(found[1])) : null;
+}
 function resolveEntry(key) {
   if (entryIds.has(key)) return key;
   const matches = [...entryIds].filter(e => new RegExp('^' + key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '-\\d{8}-\\d{4}$').test(e));
   if (matches.length === 1) return matches[0];
+  if (!matches.length) {
+    const renamed = idOfSiblingNote(key);
+    if (renamed && entryIds.has(renamed)) return renamed;
+  }
   (matches.length ? ambiguousLinks : deadLinks).push(key);
   return null;
 }
