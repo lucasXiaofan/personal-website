@@ -71,7 +71,9 @@ export function parseDates(text, fallback) {
 export function parseHabitLines(raw, date) {
   const found = {};
   for (const line of raw.replace(/\r\n/g, '\n').split('\n')) {
-    const text = line.trim().replace(/^[-*+]\s+(?:\[[ xX]\]\s*)?/, '');
+    // Strip a list/checkbox prefix, then a leading '#': the diary writes these as tags
+    // (#trending-analysis:) so Obsidian can index them, and the tag form must still sync.
+    const text = line.trim().replace(/^[-*+]\s+(?:\[[ xX]\]\s*)?/, '').replace(/^#(?=[A-Za-z])/, '');
     for (const [name, habit] of Object.entries(HABITS)) {
       if (!habit.marker.test(text)) continue;
       const body = text.slice(text.indexOf(':') + 1).trim();

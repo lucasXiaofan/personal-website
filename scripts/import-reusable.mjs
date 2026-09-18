@@ -194,7 +194,10 @@ for (const required of config.requiredSections) {
 
 // --- metadata ---
 const firstSentence = text => {
-  const line = text.split('\n').find(l => l.trim() && !/^[#>\-*|!]/.test(l.trim())) || text.split('\n')[0] || '';
+  // Skip headings, lists, quotes, tables, images — and Hugo shortcodes ({{< heatmap >}},
+  // {{< language en >}}), which open most Descriptions and are not prose.
+  const isProse = l => l.trim() && !/^[#>\-*|!]/.test(l.trim()) && !/^\{\{[<%]/.test(l.trim()) && !/^</.test(l.trim());
+  const line = text.split('\n').find(isProse) || text.split('\n').find(l => l.trim()) || '';
   const plain = line.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/[*_`]/g, '').trim();
   return plain.length > 300 ? plain.slice(0, 297).trimEnd() + '…' : plain;
 };
@@ -212,7 +215,10 @@ const entry = {
   title,
   date: flags.date || asDate(front.date || front.created_at) || (existing && existing.date) || today,
   updated: asDate(front.updated_at || front.updated) || today,
-  summary: flags.summary || front.summary || (existing && existing.summary) || firstSentence(rendered.Description),
+  // The note is the source of truth: re-deriving beats an existing summary, or the
+  // site keeps the first publish's summary forever. Pin one with `summary:` in the
+  // note's front matter (or --summary) when the derived line is not what you want.
+  summary: flags.summary || front.summary || firstSentence(rendered.Description) || (existing && existing.summary),
   content: 'content.md',
   tags,
   attachments,

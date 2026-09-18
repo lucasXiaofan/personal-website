@@ -28,6 +28,13 @@ test('trending lines need no verdict and survive a checkbox prefix', () => {
   assert.deepEqual(found['trending-analysis'][0].dates, ['2026-09-16']);
   assert.equal(found['trending-analysis'][0].verdict, 'passed');
 });
+test('a habit line written as an Obsidian tag still syncs', () => {
+  const found = parseHabitLines('#trending-analysis: keysake is today\u2019s product hunt pick (https://keysake.ai)', '2026-09-18');
+  assert.deepEqual(found['trending-analysis'][0].dates, ['2026-09-18']);
+  assert.equal(found['trending-analysis'][0].verdict, 'passed');
+  const checked = parseHabitLines('- [ ] #Dopamine-Control-Challenge: success, no video', '2026-09-18');
+  assert.equal(checked['dopamine-control-challenge'][0].verdict, 'passed');
+});
 test('merges dates, keeps them sorted, and reports no change when current', () => {
   const first = updateHeatmap(heatmap('', '2026-09-14'), { passed: [], failed: ['2026-09-15'] });
   assert.equal(params(first.note).failed, '2026-09-14, 2026-09-15');
