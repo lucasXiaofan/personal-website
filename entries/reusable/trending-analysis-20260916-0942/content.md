@@ -1,6 +1,6 @@
 ## Description
 
-{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17" failed="" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
+{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18" failed="" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
 
 {{< language en >}}
 A habit tracker, started 2026-09-16. Every day I read the top of all four trending sources — GitHub Trending, Product Hunt, Hacker News, Google Trends — then pick whichever ones I actually want to think about and write down what I could do with them: join it, build something similar, or steal the shape of it for my own work.
@@ -36,9 +36,9 @@ For each thing I write up, three questions, briefly:
 
 {{< language zh >}}
 **每天把四个来源都扫一遍，然后为每个值得写的东西写一行 `trending-analysis:`——最少一个，值得写就多写几个。**
-
+#trending-analysis use trending-analysis tag
 ```
-trending-analysis: <产品> 是今天 <来源> 上的热门项目（<链接>）。<它是什么，我能拿它做什么>
+#trending-analysis: <产品> 是今天 <来源> 上的热门项目（<链接>）。<它是什么，我能拿它做什么>
 ```
 
 要扫的来源：GitHub Trending、Product Hunt、Hacker News、Google Trends。
@@ -53,6 +53,30 @@ trending-analysis: <产品> 是今天 <来源> 上的热门项目（<链接>）�
 {{< /language >}}
 
 ## Content
+
+### 2026-09-18 · Keysake
+
+[Keysake](https://keysake.ai/?ref=producthunt) — from Product Hunt today.
+
+{{< language en >}}
+**Learn English as you type Chinese.** One sentence, and I already knew what it did and why I might want it. That is the whole trick: the pitch and the feature are the same object, and it hands you a fantasy — the version of me who picks up English for free, out of typing I was going to do anyway. I felt the urge to download it before I evaluated it. The design is good and does not get in the way.
+
+Then I used it, and it was mediocre — for a reason worth naming. I type in bursts: one or two characters at a time, committing fragments. The translation gets no full-sentence context, so what comes back is choppy English that teaches me very little. **The product assumes a typing rhythm most people do not have.** The idea is not wrong; the input boundary is. The fix is in the same place the flaw is: buffer to a sentence or clause boundary, translate that, and show it when it can be a real sentence.
+
+Who loves it: people already in the two-language life, who want learning to be a side effect rather than a session. Not big — intense.
+
+What I do with it: **steal the shape, not the product.** Two things to keep. First, a pitch that is one sentence long, where the mechanism and the promise are the same words — "Learn English as you type Chinese" is the bar my own pitches should clear. Second, the failure mode: a feature riding on an existing behavior must match that behavior's actual rhythm, not the idealized one. Same trap as my screenshot action and the trajectory-record work — the unit of capture has to match the unit the user actually produces. Third day in a row the lesson is the same: small, sharp, one sentence, 1,000 users.
+{{< /language >}}
+
+{{< language zh >}}
+**Learn English as you type Chinese.**（打中文的同时学英文。）一句话，我就知道它是什么、为什么可能想要它。这就是全部的技巧：卖点和功能是同一个东西，而且它给出了一个幻想——那个"反正要打字，顺手把英文学了"的我。我是在评估它之前就先有了下载的冲动。design 也好，不挡路。
+
+然后我用了，效果一般——而且原因值得写下来。我打字是断断续续的：一个两个字地敲，一截一截地上屏。翻译拿不到 full sentence context，回来的就是断续的英文，几乎教不了我什么。**这个产品假设了一种大多数人没有的打字节奏。** idea 没错，错的是输入的切分边界。而修法就在出错的同一个地方：缓冲到句子或从句边界，再翻，凑得成一个真正的句子时才显示。
+
+谁会爱它：本来就活在双语里的人，想让"学"变成副作用而不是一场专门的学习。不多——但够在乎。
+
+我能拿它做什么：**借形态，不抄产品。** 留两点。第一，一句话的 pitch，机制和承诺用的是同一批词——"Learn English as you type Chinese" 是我自己的 pitch 应该够到的线。第二，这个失败模式：搭在既有行为上的功能，必须匹配那个行为的真实节奏，而不是理想化的节奏。和我的 screenshot action、trajectory record 是同一个坑——捕捉的单位必须等于用户真正产出的单位。连续第三天，结论是同一个：小、锋利、一句话、1000 个用户。
+{{< /language >}}
 
 ### 2026-09-17 · NovaSynth by Noveum
 
@@ -109,11 +133,13 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-18 — Third entry: Keysake, "Learn English as you type Chinese" — a one-sentence pitch worth stealing, and the input-boundary flaw underneath it.
 - 2026-09-17 — Second entry: NovaSynth by Noveum, a voice-agent testing platform, and the triple it points at — versioning, evaluation, error localization.
 - 2026-09-16 — Clarified the rule: read all four sources daily, write up one or more — one is the floor, not the quota.
 - 2026-09-16 — Started the habit and published the first entry: fugleramme, a niche bird-identifying photo frame, and the case for building small.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-18 — 第三条：Keysake，"Learn English as you type Chinese"——值得借用的一句话 pitch，以及它底下的输入边界问题。
 - 2026-09-17 — 第二条：NovaSynth by Noveum，一个测试 voice agent 的平台，以及它指向的三件套——versioning、evaluation、error localization。
 - 2026-09-16 — 明确规则：每天四个来源都读，写一个或多个——一个是下限，不是定额。
 - 2026-09-16 — 开始这个习惯，发布第一条：fugleramme，一个小众的识鸟相框，以及"做小东西"的理由。
