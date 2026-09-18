@@ -2,7 +2,7 @@
 
 {{< countdown target="2026-10-14T00:00:00-04:00" deadline="October 14, 2026 · 00:00 ET" label="30-day Dopamine Control Challenge" note="September 14–October 14, 2026." >}}
 
-{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15" passed="2026-09-16" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
+{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
 
 {{< language en >}}
 A smaller, 30-day challenge supporting my ReferralChallenge: protect my attention so I spend more time learning, building, and moving. The aim is to make room for at least five hours of work in progress each day. “控制多巴胺” is my shorthand for changing my media habits.
@@ -69,11 +69,23 @@ Two failures in two days both started the same way: the apartment, in the mornin
 - **Eat without a screen.** No YouTube with breakfast, no drafting a novel in my head instead of eating.
 - **Leave for campus early.** The apartment is where this challenge gets lost; the building where it gets won.
 
-### What actually worked, once
+### What works (1): a question better than the screen
 
 The first day I held the rule, 2026-09-16, I did not hold it by resisting. I held it because I had a question I wanted to answer more than I wanted to watch anything — how to compute L1 and L2 distances between differently shaped matrices with vectorized operations. I was stuck, and being stuck was more interesting than YouTube.
 
 That is worth writing down, because it is a different mechanism from the evening routine above. The routine removes the opportunity. This removes the appetite. **A good enough open question does the work that willpower was failing to do** — so on a day with no such question, the routine has to carry it, and on a day with one, I should notice and protect it.
+
+### What works (2): the shape of the day, and the last two hours
+
+Day two held, 2026-09-17, and it held on a different mechanism again — not an open question this time, but the **shape of the whole day**, decided in advance so no moment has to be decided in the moment:
+
+- Breakfast, then **wash up immediately** — no gap for the screen to fill.
+- **Leave for campus.** Try not to touch the phone, ideally not the laptop either. Get to the building first; everything else is decided there.
+- **Stay on campus as long as I can stay.** Then home, wash up, and sleep is already allowed.
+
+The part that matters most is not in the schedule, though — it is the **mindset at night**. Do not litigate the day: not how much I learned, not whether I am ahead of anyone, not whether I got enough fun. That accounting is what sends me looking for a reward at 10 p.m.
+
+And the brain needs a **push** to make the turn. Home at 8, sit still for five minutes, and tell myself: two more hours and it is a disciplined day — that is doable. Those two hours are the whole hinge. Holding them is how the brain learns that **plain is survivable** — that an ordinary evening does not have to be paid for with something bright.
 
 ### Daily review
 
@@ -107,11 +119,23 @@ That is worth writing down, because it is a different mechanism from the evening
 - **吃饭不看屏幕。** 不边吃边看 YouTube，也不在吃饭时构思小说。
 - **早点去学校。** 这个挑战是在公寓里输掉的，在教学楼里赢回来的。
 
-### 第一次真正做到的那天
+### 起作用的东西（一）：一个比屏幕更好的问题
 
 第一次守住规则是 2026 年 9 月 16 日，靠的不是忍。是因为有个问题比看视频更想弄明白——怎么用向量化运算算不同形状矩阵之间的 L1、L2 距离。我卡住了，而卡住比 YouTube 有意思。
 
 这值得写下来，因为它和上面那套流程是两种机制。流程拿掉的是机会，这个拿掉的是胃口。**一个足够好的开放问题，能完成意志力没做到的事**——所以没有这种问题的日子，只能靠流程扛；有的日子，我应该认出来并且保护好它。
+
+### 起作用的东西（二）：一天的形状，和最后那两小时
+
+第二天也守住了，2026 年 9 月 17 日，而且靠的又是另一套机制——这次不是一个开放问题，而是**整天的形状**，提前定好，于是没有哪个瞬间需要当场做决定：
+
+- 吃完早餐**直接洗漱**——不留给屏幕可以钻进来的空隙。
+- **出门去学校。** 尽量不碰手机，最好电脑也别开。先到学校再说，别的到了那儿再决定。
+- **在学校能呆多久呆多久。** 然后回家、洗漱，这时候睡觉已经是被允许的了。
+
+但最关键的那部分不在日程里，而在**晚上的心态**。不要给这一天算账：不算学了多少、不算有没有超过谁、也不算娱乐够没够。正是这套账，会在十点钟把我推去找一份奖励。
+
+而大脑要完成这个转变，需要一个 **push**。八点到家，静坐五分钟，然后告诉自己：再坚持两小时，这一天就是自律的一天——这是做得到的。那两个小时就是整个枢纽。守住它们，大脑才学会**平淡是能活的**——一个平平淡淡的晚上，不必用点什么刺激的东西来抵。
 
 ### 每日回顾
 
@@ -128,18 +152,19 @@ That is worth writing down, because it is a different mechanism from the evening
 
 {{< language en >}}
 - [ReferralChallenge](https://lucasxiaofan.github.io/personal-website/reusable/referral-challenge/) — the larger challenge this supports.
-- [trending-analysis](/reusable/trending-analysis-20260916-0942/) — the other daily habit. This one protects the attention that one spends.
-- [decision-log-publishing-pipeline](/reusable/decision-log-publishing-pipeline/) — publishing a day's decision log is what fills in the square above.
+- habit-trending-analysis — the other daily habit. This one protects the attention that one spends.
+- pipeline-decision-log-publishing — publishing a day's decision log is what fills in the square above.
 {{< /language >}}
 {{< language zh >}}
 - [ReferralChallenge](https://lucasxiaofan.github.io/personal-website/reusable/referral-challenge/) — 这个小挑战所支持的长期挑战。
-- [trending-analysis](/reusable/trending-analysis-20260916-0942/) — 另一个每日习惯。这个守住注意力，那个花掉它。
-- [decision-log-publishing-pipeline](/reusable/decision-log-publishing-pipeline/) — 发布当天的决策日志，就是上面那个方格被填上的时刻。
+- habit-trending-analysis — 另一个每日习惯。这个守住注意力，那个花掉它。
+- pipeline-decision-log-publishing — 发布当天的决策日志，就是上面那个方格被填上的时刻。
 {{< /language >}}
 
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-17 — Second day held, on a different mechanism: the shape of the day decided in advance, and the two-hour push after getting home. Added the mindset rule — do not audit the evening for how much was learned or how much fun was had.
 - 2026-09-16 — First day held. Added what actually worked: an open question I wanted to answer more than I wanted to watch anything. The heatmap now updates automatically when the day's decision log is published.
 - 2026-09-15 — Added a 30-day heatmap driven by the diary's `Dopamine-Control-Challenge:` line. September 14 and 15 are both recorded as failed: over two hours of YouTube and Bilibili each day.
 - 2026-09-15 — Tightened the rules: video is for study only, no entertainment video at home, no manga or web novels, leisure is reading and podcasts. Added the evening routine — plan by 10 p.m., laptop in the bag, phone limited to weather, bus, and Duolingo, eat without a screen, leave early.
@@ -147,6 +172,7 @@ That is worth writing down, because it is a different mechanism from the evening
 - 2026-09-14 — Published the rules with a seven-minute selection limit. The September 13 diary proposed five minutes; this version uses the updated rule.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-17 — 第二天守住，靠的是另一套机制：提前定好一天的形状，以及到家后那两小时的 push。补上心态那条——晚上不要给自己算账，不算学了多少，也不算娱乐够没够。
 - 2026-09-16 — 第一天守住。补上真正起作用的东西：一个比看视频更想弄明白的问题。热力图现在会在当天决策日志发布时自动更新。
 - 2026-09-15 — 新增 30 天热力图，数据来自日记里的 `Dopamine-Control-Challenge:` 一行。9 月 14 日和 15 日都记为失败：两天都看了两个多小时的 YouTube 和 B 站。
 - 2026-09-15 — 收紧规则：视频只用于学习，在家不看娱乐视频，不看漫画和网络小说，娱乐只有阅读和播客。新增前一晚的流程——10 点前写好 plan、电脑装进书包、手机只看天气和公交车加 Duolingo、吃饭不看屏幕、早点出门。
