@@ -1,6 +1,6 @@
 ## Description
 
-{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18" failed="" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
+{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19" failed="" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
 
 {{< language en >}}
 A habit tracker, started 2026-09-16. Every day I read the top of all four trending sources — GitHub Trending, Product Hunt, Hacker News, Google Trends — then pick whichever ones I actually want to think about and write down what I could do with them: join it, build something similar, or steal the shape of it for my own work.
@@ -53,6 +53,34 @@ For each thing I write up, three questions, briefly:
 {{< /language >}}
 
 ## Content
+
+### 2026-09-19 · ruanyf/weekly
+
+[ruanyf/weekly — issue 412](https://github.com/ruanyf/weekly/blob/master/docs/issue-412.md) — found on GitHub Trending.
+
+{{< language en >}}
+阮一峰's **科技爱好者周刊**, running for years, published as a plain GitHub repo. I read issue 412 straight through, which is the tell — this is not a feed I skim, it is one I actually read. Who loves it: Chinese developers who want a weekly edited signal instead of an infinite one. Small audience by internet standards, but they come back every week, which is the only loyalty that counts.
+
+Why it is trending is almost funny: it trends because it is *old*. Nothing about it is novel — a repo, some markdown, a human picking links. What it has is years of showing up. That is the part I cannot shortcut and the part I keep underrating.
+
+Two things I take from it. First, **a concrete distribution channel I can actually use.** The weekly takes reader submissions as issues — [#11790](https://github.com/ruanyf/weekly/issues/11790) is someone doing exactly that, self-recommending their own project. So when I have a small tool worth showing, there is a real door with real traffic behind it, and the cost of knocking is one issue. Self-recommendation is not embarrassing; it is the mechanism.
+
+Second, and larger: **this is the shape my personal-website is reaching for.** The weekly does not sell anything. What it trades is information, and it earns attention by being edited — someone read everything so you do not have to. That is a return worth wanting on its own, separate from money. Three days of these entries have circled the same conclusion from three directions — niche is fine, one sentence is enough, showing up beats novelty — and this one adds the missing half: the reward does not have to be revenue.
+
+(Also noted, off to the side: issue 412 mentions a **tombstone reaper** skill for finding dead code. I have a lot of dead files and half-abandoned helpers — the same pain as today's note about not being able to explain my own repo in ten minutes. Filed, not started.)
+{{< /language >}}
+
+{{< language zh >}}
+阮一峰的**科技爱好者周刊**，做了好多年，就是一个普通的 GitHub repo。我把 issue 412 从头读完了——这件事本身就是信号：这不是我随手刷的东西，是我真的读进去了。谁在爱它：想要"每周一份被筛过的信号"而不是无限信息流的中文开发者。按互联网的标准受众不大，但他们每周都回来，而这是唯一算数的忠诚。
+
+它为什么会火，几乎有点好笑：它火是因为它**老**。没有一点新鲜的——一个 repo，几篇 markdown，一个人在挑链接。它有的是"年复一年地出现"。这恰恰是我没法抄近道的那部分，也是我一直低估的那部分。
+
+我拿两样东西走。第一，**一个我真的能用的分发渠道。** 周刊接受读者投稿，形式就是提 issue——[#11790](https://github.com/ruanyf/weekly/issues/11790) 就是有人在毛遂自荐自己的项目。所以等我有了一个值得拿出手的小工具，是有一扇真实的门、门后有真实流量的，而敲门的成本只是一个 issue。毛遂自荐不丢人，它就是机制本身。
+
+第二点更大：**这就是我的 personal-website 想成为的形态。** 周刊不卖东西。它交换的是信息，它赚到注意力靠的是"编辑"——有人替你把所有东西读了一遍。这种回报本身就值得要，和钱是两回事。连着三天，这些条目从三个方向绕回了同一个结论——小众没关系、一句话就够、持续出现胜过新颖——而这一条补上了缺的那一半：回报不一定得是收入。
+
+（另外顺手记一笔：issue 412 里提到一个找死代码的 **tombstone reaper** skill。我的死文件和半途而废的 helper 很多——这和今天那条"十分钟讲不清自己的 repo"是同一种疼。先存档，不开工。）
+{{< /language >}}
 
 ### 2026-09-18 · Keysake
 
@@ -133,12 +161,14 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-19 — Fourth entry: ruanyf/weekly — a years-old curated weekly living as a GitHub repo, a submission door I can actually knock on, and the case that information exchange is a return worth wanting without revenue.
 - 2026-09-18 — Third entry: Keysake, "Learn English as you type Chinese" — a one-sentence pitch worth stealing, and the input-boundary flaw underneath it.
 - 2026-09-17 — Second entry: NovaSynth by Noveum, a voice-agent testing platform, and the triple it points at — versioning, evaluation, error localization.
 - 2026-09-16 — Clarified the rule: read all four sources daily, write up one or more — one is the floor, not the quota.
 - 2026-09-16 — Started the habit and published the first entry: fugleramme, a niche bird-identifying photo frame, and the case for building small.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-19 — 第四条：ruanyf/weekly——一个做了多年、以 GitHub repo 形式存在的周刊，一扇我真能敲的投稿门，以及"信息交换本身就是值得要的回报"这个想法。
 - 2026-09-18 — 第三条：Keysake，"Learn English as you type Chinese"——值得借用的一句话 pitch，以及它底下的输入边界问题。
 - 2026-09-17 — 第二条：NovaSynth by Noveum，一个测试 voice agent 的平台，以及它指向的三件套——versioning、evaluation、error localization。
 - 2026-09-16 — 明确规则：每天四个来源都读，写一个或多个——一个是下限，不是定额。
