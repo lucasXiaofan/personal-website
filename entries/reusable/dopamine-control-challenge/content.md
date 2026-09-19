@@ -2,7 +2,7 @@
 
 {{< countdown target="2026-10-14T00:00:00-04:00" deadline="October 14, 2026 · 00:00 ET" label="30-day Dopamine Control Challenge" note="September 14–October 14, 2026." >}}
 
-{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
+{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
 
 {{< language en >}}
 A smaller, 30-day challenge supporting my ReferralChallenge: protect my attention so I spend more time learning, building, and moving. The aim is to make room for at least five hours of work in progress each day. “控制多巴胺” is my shorthand for changing my media habits.
@@ -36,9 +36,10 @@ I do not edit the heatmap by hand. Publishing the day's decision log runs `sync-
 每天早上看一遍规则；挑选学习视频时设定七分钟计时器，到时关闭 YouTube。晚上回顾有没有遵守规则，以及当天实际推进了什么。
 
 **如何记录一天。** 每篇日记里写一行：
+#Dopamine-Control-Challenge recognized by the tag
 
 ```
-Dopamine-Control-Challenge: 2026-09-15 failed, 看了两个多小时 YouTube 和 B 站。
+#Dopamine-Control-Challenge: 2026-09-15 failed, 看了两个多小时 YouTube 和 B 站。
 ```
 
 结论词写在第一个逗号之前：`success`、`held`、`passed`、`done` 都算守住；`failed`、`missed` 算失败。行首可以带日期或日期区间（`9/14 - 9/15 failed, ...`）；不写日期就是当天。
@@ -86,6 +87,16 @@ Day two held, 2026-09-17, and it held on a different mechanism again — not an 
 The part that matters most is not in the schedule, though — it is the **mindset at night**. Do not litigate the day: not how much I learned, not whether I am ahead of anyone, not whether I got enough fun. That accounting is what sends me looking for a reward at 10 p.m.
 
 And the brain needs a **push** to make the turn. Home at 8, sit still for five minutes, and tell myself: two more hours and it is a disciplined day — that is doable. Those two hours are the whole hinge. Holding them is how the brain learns that **plain is survivable** — that an ordinary evening does not have to be paid for with something bright.
+
+### What fails: 6 p.m., and the ledger I open too early
+
+2026-09-18 broke the streak, and it broke in a way worth recording precisely. Not at 10 p.m. — at **6 p.m.**, wanting video and games to unwind. And the reason was not the evening at all: I had already stopped wanting to work *while still on campus*. The routine above assumes the apartment is where the day is lost. This day was lost earlier, in the building, when the wanting ran out.
+
+Underneath it was the ledger — the exact thing the mindset rule says not to open. It went: at UCI I worked until 10 most nights on machine learning and game dev, produced nothing I can point at, and the knowledge I learned I have mostly forgotten. Then it jumped to the comparison — that I am far from a senior engineer, that I do not deeply understand anything, not git, not CI/CD. **That accounting is not a diagnosis, it is the craving wearing a serious face.** Day two held partly because I refused to audit the day; day five failed because I audited it at dinner.
+
+The honest counter-thought, kept because it is true and not because it is comforting: *now is already the far shore.* Nothing I did before and nothing I do later changes that the only place I can arrive is here. The doubt attached to it is fair — maybe this calm is only affordable because my parents support me, and if that went away the suffering would arrive with a bill for every hour I did not spend getting stronger. But that fear is a stack of assumptions, and it cannot be answered by feeling worse tonight.
+
+What it can be answered with is an **MVP**. If what I want is engineering discipline, go get it. If my own code has become unreadable to me, refactor it and then work out how to stop it happening again. Go for a walk, buy food, sleep early. **The concrete small thing is the reply to the abstract large fear** — and it is also, on the evidence of 09-16, the open question that makes the screen uninteresting. The two mechanisms are the same mechanism.
 
 ### Daily review
 
@@ -137,6 +148,16 @@ And the brain needs a **push** to make the turn. Home at 8, sit still for five m
 
 而大脑要完成这个转变，需要一个 **push**。八点到家，静坐五分钟，然后告诉自己：再坚持两小时，这一天就是自律的一天——这是做得到的。那两个小时就是整个枢纽。守住它们，大脑才学会**平淡是能活的**——一个平平淡淡的晚上，不必用点什么刺激的东西来抵。
 
+### 失败的样子：六点钟，和我打开得太早的那本账
+
+2026 年 9 月 18 日断了连胜，而且断的方式值得精确记下来。不是晚上十点——是**六点**，想看视频、想玩游戏放松一下。原因也根本不在晚上：我**还在学校的时候**就已经不想做事了。上面那套流程假设"这个挑战是在公寓里输掉的"。这一天输得更早，输在教学楼里，输在"想做"耗光的那一刻。
+
+底下压着的是那本账——正是心态那条说不要打开的东西。它是这么走的：在 UCI 经常做到十点多，搞 machine learning、game dev，没做出拿得出手的成绩，学过的知识也大都忘了。然后它跳到比较——我离 senior engineer 差太远，对什么都没有深刻的了解，git 不懂，CI/CD 也不懂。**这套账不是诊断，是渴望披了一张严肃的脸。** 第二天守住，有一部分原因是我拒绝给那天算账；第五天失败，是因为我在晚饭时候就开始算了。
+
+诚实的反驳，留在这里是因为它是真的，不是因为它安慰人：*现在就是彼岸。* 我过去做了什么、未来做什么，都改变不了"我唯一能抵达的地方就是此刻"。附着在它上面的怀疑也是公平的——也许这份安宁只是因为父母还在支持我，如果这个没了，受苦就会带着一张账单来，上面写满我没有用来变强的每一个小时。但那个恐惧是一摞 assumption，而它没法靠"今晚更难受一点"来回答。
+
+能回答它的是一个 **MVP**。如果我要的是 engineering 的 discipline，那就去拿。如果我的代码自己都快看不懂了，那就去 refactor，然后再想怎么避免下次。出去走走，买饭，早点睡觉。**具体的小事，才是对抽象的大恐惧的回答**——而且按 9 月 16 日那天的证据看，它也正是那个让屏幕变得没意思的开放问题。这两套机制，其实是同一套。
+
 ### 每日回顾
 
 - 有没有做到在家不刷短视频、不看娱乐视频、不看漫画、不玩游戏？
@@ -164,6 +185,7 @@ And the brain needs a **push** to make the turn. Home at 8, sit still for five m
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-18 — Failed. Added what failure looks like: it started at 6 p.m., not 10, and it started on campus when the wanting ran out. The trigger was opening the ledger early — the accounting the mindset rule already warns against — and the reply to it is a concrete MVP, not a worse evening.
 - 2026-09-17 — Second day held, on a different mechanism: the shape of the day decided in advance, and the two-hour push after getting home. Added the mindset rule — do not audit the evening for how much was learned or how much fun was had.
 - 2026-09-16 — First day held. Added what actually worked: an open question I wanted to answer more than I wanted to watch anything. The heatmap now updates automatically when the day's decision log is published.
 - 2026-09-15 — Added a 30-day heatmap driven by the diary's `Dopamine-Control-Challenge:` line. September 14 and 15 are both recorded as failed: over two hours of YouTube and Bilibili each day.
@@ -172,6 +194,7 @@ And the brain needs a **push** to make the turn. Home at 8, sit still for five m
 - 2026-09-14 — Published the rules with a seven-minute selection limit. The September 13 diary proposed five minutes; this version uses the updated rule.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-18 — 失败。补上失败的样子：从六点开始，不是十点；而且是在学校里"想做"先耗光的。触发点是过早打开那本账——正是心态那条已经警告过的算账——而对它的回答是一个具体的 MVP，不是让晚上更难受。
 - 2026-09-17 — 第二天守住，靠的是另一套机制：提前定好一天的形状，以及到家后那两小时的 push。补上心态那条——晚上不要给自己算账，不算学了多少，也不算娱乐够没够。
 - 2026-09-16 — 第一天守住。补上真正起作用的东西：一个比看视频更想弄明白的问题。热力图现在会在当天决策日志发布时自动更新。
 - 2026-09-15 — 新增 30 天热力图，数据来自日记里的 `Dopamine-Control-Challenge:` 一行。9 月 14 日和 15 日都记为失败：两天都看了两个多小时的 YouTube 和 B 站。
