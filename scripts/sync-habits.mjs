@@ -20,14 +20,14 @@ const vault = path.join(process.env.HOME || '', 'Documents/road');
 
 export const HABITS = {
   'dopamine-control-challenge': {
-    marker: /^Dopamine-Control-Challenge:/i,
+    marker: /^Dopamine-Control-Challenge\s*:/i,
     note: 'problem-solving-library/reusable/challenge-dopamine-control.md',
     // A verdict word is required; this habit records both outcomes.
     verdicts: { passed: /\b(success|succeeded|held|hold|pass(?:ed)?|done|ok)\b/i, failed: /\b(fail(?:ed)?|missed|broke|broken|lost)\b/i },
     entries: false,
   },
   'trending-analysis': {
-    marker: /^trending-analysis:/i,
+    marker: /^trending-analysis\s*:/i,
     note: 'problem-solving-library/reusable/habit-trending-analysis.md',
     // Writing the line is the habit; there is no failing verdict to parse.
     verdicts: null,
@@ -77,7 +77,10 @@ export function parseHabitLines(raw, date) {
     for (const [name, habit] of Object.entries(HABITS)) {
       if (!habit.marker.test(text)) continue;
       const body = text.slice(text.indexOf(':') + 1).trim();
-      if (!body) throw new Error(`${name}: the line for ${date} has no content.`);
+      // An empty line is the habit written down but not yet decided — a day in progress,
+      // typically the challenge line placed in the morning. Record it as pending so the
+      // day still publishes, and leave the square uncoloured rather than guessing.
+      if (!body) { (found[name] ||= []).push({ dates: [date], verdict: null, body: '', pending: true }); continue; }
       const opening = head(body);
       let verdict = 'passed';
       if (habit.verdicts) {
@@ -164,10 +167,13 @@ function main() {
     if (!fs.existsSync(notePath)) throw new Error(`${name}: missing note ${habit.note}`);
     const before = fs.readFileSync(notePath, 'utf8');
     const add = { passed: [], failed: [] };
-    for (const record of records) add[record.verdict].push(...record.dates);
+    for (const record of records) if (!record.pending) add[record.verdict].push(...record.dates);
     const { note, changed } = updateHeatmap(before, add);
 
     console.log(`\n${name}`);
+    for (const record of records.filter(r => r.pending)) {
+      console.log(`  · ${record.dates[0]} pending — the line has no verdict yet, so the square stays empty.`);
+    }
     if (!changed.length) console.log('  = heatmap already current');
     else changed.forEach(c => console.log('  ✓ ' + c));
     if (habit.entries) {

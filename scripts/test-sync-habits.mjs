@@ -19,7 +19,7 @@ test('expands ranges and both date spellings, defaulting to the diary date', () 
   assert.throws(() => parseDates('9/16 - 9/14', '2026-09-16'));
 });
 test('rejects a line with no verdict, both verdicts, or no content', () => {
-  for (const bad of ['Dopamine-Control-Challenge: watched some video', 'Dopamine-Control-Challenge: success and failed', 'Dopamine-Control-Challenge:   ']) {
+  for (const bad of ['Dopamine-Control-Challenge: watched some video', 'Dopamine-Control-Challenge: success and failed']) {
     assert.throws(() => parseHabitLines(bad, '2026-09-16'));
   }
 });
@@ -34,6 +34,17 @@ test('a habit line written as an Obsidian tag still syncs', () => {
   assert.equal(found['trending-analysis'][0].verdict, 'passed');
   const checked = parseHabitLines('- [ ] #Dopamine-Control-Challenge: success, no video', '2026-09-18');
   assert.equal(checked['dopamine-control-challenge'][0].verdict, 'passed');
+});
+test('an empty habit line is pending, not an error, and colours nothing', () => {
+  const found = parseHabitLines('#Dopamine-Control-Challenge :   ', '2026-09-19');
+  assert.equal(found['dopamine-control-challenge'][0].pending, true);
+  assert.equal(found['dopamine-control-challenge'][0].verdict, null);
+});
+test('a space before the colon still matches the habit marker', () => {
+  const found = parseHabitLines('#Dopamine-Control-Challenge : failed, watched video at 6pm', '2026-09-18');
+  assert.equal(found['dopamine-control-challenge'][0].verdict, 'failed');
+  const t = parseHabitLines('#trending-analysis : ruanyf weekly issue-412 (https://github.com/ruanyf/weekly)', '2026-09-19');
+  assert.deepEqual(t['trending-analysis'][0].dates, ['2026-09-19']);
 });
 test('merges dates, keeps them sorted, and reports no change when current', () => {
   const first = updateHeatmap(heatmap('', '2026-09-14'), { passed: [], failed: ['2026-09-15'] });
