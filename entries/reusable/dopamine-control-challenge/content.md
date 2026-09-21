@@ -2,7 +2,7 @@
 
 {{< countdown target="2026-10-14T00:00:00-04:00" deadline="October 14, 2026 · 00:00 ET" label="30-day Dopamine Control Challenge" note="September 14–October 14, 2026." >}}
 
-{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
+{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
 
 {{< language en >}}
 A smaller, 30-day challenge supporting my ReferralChallenge: protect my attention so I spend more time learning, building, and moving. The aim is to make room for at least five hours of work in progress each day. “控制多巴胺” is my shorthand for changing my media habits.
@@ -98,6 +98,31 @@ The honest counter-thought, kept because it is true and not because it is comfor
 
 What it can be answered with is an **MVP**. If what I want is engineering discipline, go get it. If my own code has become unreadable to me, refactor it and then work out how to stop it happening again. Go for a walk, buy food, sleep early. **The concrete small thing is the reply to the abstract large fear** — and it is also, on the evidence of 09-16, the open question that makes the screen uninteresting. The two mechanisms are the same mechanism.
 
+### What fails (2): the cue is the meal, and the excuse arrives first
+
+Two more failures, 2026-09-19 and 2026-09-20, and together with 09-18 they show one mechanism wearing three costumes.
+
+**The trigger is concrete, and it is eating.** On 09-19 I found it: when I eat at the apartment, I want something on the screen alongside it. That is not a mood, it is a **cue** — a specific moment that reliably starts the slide. It is the first trigger in this challenge I can point at rather than describe, which makes it the first one I can engineer around. Two fixes, both structural, both in the same family as packing the laptop into the bag:
+
+- **Put a podcast on with the meal** — the appetite is for accompaniment, not for video, so give it the allowed form.
+- **Or do not eat at the apartment at all.**
+
+**The excuse arrives before the craving does.** Three days, three permission slips, each one plausible:
+
+- 09-18 — *the ledger.* I have achieved nothing, I am behind. (The craving in a serious face.)
+- 09-19 — *it is Saturday, I need rest.* (Rest is real. Rest is also reading, walking, sleeping — none of which I chose.)
+- 09-20 — *I have a hard stop.* I was leaving at 11 for gymnastics, so the damage was bounded.
+
+The third one is the most interesting, because the reasoning is *almost* sound and still wrong. A hard stop limits the minutes; it does not limit what the minutes do to me. Provoking content inside a bounded window still sets up something I will regret later. **A time limit is not a content rule, and I keep trying to substitute one for the other.**
+
+So the thing to watch for is not the urge. It is the **sentence that shows up just before it** — the one that sounds reasonable. When I catch myself holding a good reason, that is the cue, the same way the meal is.
+
+### What helps: gymnastics
+
+Also on 09-20, and worth recording as an asset rather than an aside: I went to a gymnastics gym. Good space, friendly people, and I can already do a round-off and a backflip. Worth continuing.
+
+This matters to the challenge specifically. Rule 7 says leisure is reading and podcasts *plus more exercise* — but "more exercise" has been an instruction, not a place. This is a place, with people in it, at a fixed time, outside the apartment. **The apartment is where this challenge gets lost; a standing appointment somewhere else is the strongest version of leaving it.** The one caution is the 09-20 lesson above: the appointment is not a licence for the hours before it.
+
 ### Daily review
 
 - Did I avoid shorts at home, entertainment video, manga, and games?
@@ -158,6 +183,31 @@ What it can be answered with is an **MVP**. If what I want is engineering discip
 
 能回答它的是一个 **MVP**。如果我要的是 engineering 的 discipline，那就去拿。如果我的代码自己都快看不懂了，那就去 refactor，然后再想怎么避免下次。出去走走，买饭，早点睡觉。**具体的小事，才是对抽象的大恐惧的回答**——而且按 9 月 16 日那天的证据看，它也正是那个让屏幕变得没意思的开放问题。这两套机制，其实是同一套。
 
+### 失败的样子（二）：线索是吃饭，而借口比渴望先到
+
+又是两次失败，2026 年 9 月 19 日和 9 月 20 日。它们和 18 号放在一起看，是同一套机制换了三身衣服。
+
+**触发点是具体的，就是吃饭。** 19 号我找到了它：在公寓里吃饭的时候，我就想同时有个屏幕在放东西。这不是一种情绪，这是一个 **cue**——一个可靠地启动下滑的具体时刻。这是这个挑战里第一个我能指出来、而不是只能描述的触发点，也因此是第一个我能用设计去绕开的。两个解法，都是结构性的，和「把电脑装进书包」是同一类：
+
+- **吃饭的时候放播客**——胃口要的是「有东西陪着」，不是视频，那就给它允许的那种形式。
+- **或者干脆不在公寓吃饭。**
+
+**借口比渴望先到。** 三天，三张许可证，每一张都说得通：
+
+- 09-18 —— *那本账。* 我什么都没做成，我落后了。（渴望披了一张严肃的脸。）
+- 09-19 —— *今天是周六，我需要休息。*（休息是真的需要。但休息也可以是阅读、散步、睡觉——而这些我一个都没选。）
+- 09-20 —— *我有一个硬性的截止。* 十一点要去体操馆，所以损失是有上限的。
+
+第三个最有意思，因为它的推理**几乎**成立，却仍然是错的。硬性截止限制的是分钟数，它限制不了这些分钟对我做了什么。在一个有边界的时间窗里看有刺激性的内容，照样会埋下我之后会后悔的东西。**时间限制不是内容规则，而我一直想用前者顶替后者。**
+
+所以要盯的不是那股冲动。要盯的是**它出现之前的那句话**——那句听起来很合理的话。当我发现自己手里正握着一个很好的理由时，那本身就是线索，和吃饭一样。
+
+### 起作用的东西：体操
+
+同样是 9 月 20 日，值得当作一项资产记下来，而不是当作顺带一提：我去了体操馆。场地好，人也友善，我已经能做 round-off 和后空翻。值得继续。
+
+这件事对这个挑战有特别的意义。规则第 7 条说娱乐是阅读和播客，**外加多运动**——但「多运动」一直是一条指令，不是一个地方。这是一个地方，里面有人，有固定的时间，而且在公寓之外。**这个挑战是在公寓里输掉的，而在别处有一个固定的约会，是「离开公寓」最强的版本。** 唯一要警惕的还是上面 20 号那条教训：这个约会不是它之前那几个小时的通行证。
+
 ### 每日回顾
 
 - 有没有做到在家不刷短视频、不看娱乐视频、不看漫画、不玩游戏？
@@ -185,6 +235,8 @@ What it can be answered with is an **MVP**. If what I want is engineering discip
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-20 — Failed, and added what helps: gymnastics as a standing appointment outside the apartment, which is the strongest form of leaving it. The excuse this time was a hard stop at 11 — but a time limit is not a content rule.
+- 2026-09-19 — Failed. Found the first concrete cue in this challenge: eating at the apartment is what starts the slide. Fixes are structural — a podcast with the meal, or not eating at home. Also named the pattern across three days: the excuse arrives before the craving does.
 - 2026-09-18 — Failed. Added what failure looks like: it started at 6 p.m., not 10, and it started on campus when the wanting ran out. The trigger was opening the ledger early — the accounting the mindset rule already warns against — and the reply to it is a concrete MVP, not a worse evening.
 - 2026-09-17 — Second day held, on a different mechanism: the shape of the day decided in advance, and the two-hour push after getting home. Added the mindset rule — do not audit the evening for how much was learned or how much fun was had.
 - 2026-09-16 — First day held. Added what actually worked: an open question I wanted to answer more than I wanted to watch anything. The heatmap now updates automatically when the day's decision log is published.
@@ -194,6 +246,8 @@ What it can be answered with is an **MVP**. If what I want is engineering discip
 - 2026-09-14 — Published the rules with a seven-minute selection limit. The September 13 diary proposed five minutes; this version uses the updated rule.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-20 — 失败，同时补上起作用的东西：体操——一个在公寓之外的固定约会，是「离开公寓」最强的形式。这次的借口是十一点有硬性截止，但时间限制不是内容规则。
+- 2026-09-19 — 失败。找到了这个挑战里第一个具体的 cue：在公寓吃饭就是下滑的起点。解法是结构性的——吃饭时放播客，或者不在家吃。也给三天的共同模式命了名：借口比渴望先到。
 - 2026-09-18 — 失败。补上失败的样子：从六点开始，不是十点；而且是在学校里"想做"先耗光的。触发点是过早打开那本账——正是心态那条已经警告过的算账——而对它的回答是一个具体的 MVP，不是让晚上更难受。
 - 2026-09-17 — 第二天守住，靠的是另一套机制：提前定好一天的形状，以及到家后那两小时的 push。补上心态那条——晚上不要给自己算账，不算学了多少，也不算娱乐够没够。
 - 2026-09-16 — 第一天守住。补上真正起作用的东西：一个比看视频更想弄明白的问题。热力图现在会在当天决策日志发布时自动更新。
