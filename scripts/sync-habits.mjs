@@ -20,17 +20,22 @@ const vault = path.join(process.env.HOME || '', 'Documents/road');
 
 export const HABITS = {
   'dopamine-control-challenge': {
-    marker: /^Dopamine-Control-Challenge\s*:/i,
+    marker: /^Dopamine-Control-Challenge(?:\s*:\s*|\s+)/i,
     note: 'problem-solving-library/reusable/challenge-dopamine-control.md',
     // A verdict word is required; this habit records both outcomes.
     verdicts: { passed: /\b(success|succeeded|held|hold|pass(?:ed)?|done|ok)\b/i, failed: /\b(fail(?:ed)?|missed|broke|broken|lost)\b/i },
     entries: false,
   },
   'trending-analysis': {
-    marker: /^trending-analysis\s*:/i,
+    marker: /^trending-analysis(?:\s*:\s*|\s+)/i,
     note: 'problem-solving-library/reusable/habit-trending-analysis.md',
     // Writing the line is the habit; there is no failing verdict to parse.
     verdicts: null,
+    // ...but a day can be honestly skipped. "None, found nothing interesting" is the
+    // diary saying the analysis did not happen, which belongs in the heatmap's skipped
+    // list rather than nowhere. Only the opening clause votes, so a write-up that merely
+    // mentions "nothing" later in the prose still counts as written.
+    skipped: /^(?:none|nothing|no\b|skip)/i,
     entries: true,
   },
 };
@@ -75,15 +80,19 @@ export function parseHabitLines(raw, date) {
     // (#trending-analysis:) so Obsidian can index them, and the tag form must still sync.
     const text = line.trim().replace(/^[-*+]\s+(?:\[[ xX]\]\s*)?/, '').replace(/^#(?=[A-Za-z])/, '');
     for (const [name, habit] of Object.entries(HABITS)) {
-      if (!habit.marker.test(text)) continue;
-      const body = text.slice(text.indexOf(':') + 1).trim();
+      const prefix = text.match(habit.marker);
+      if (!prefix) continue;
+      // Slice past the marker itself, not past the first colon: the colon is optional
+      // ("#trending-analysis None") and a URL in the body carries colons of its own.
+      const body = text.slice(prefix[0].length).trim();
       // An empty line is the habit written down but not yet decided — a day in progress,
       // typically the challenge line placed in the morning. Record it as pending so the
       // day still publishes, and leave the square uncoloured rather than guessing.
       if (!body) { (found[name] ||= []).push({ dates: [date], verdict: null, body: '', pending: true }); continue; }
       const opening = head(body);
       let verdict = 'passed';
-      if (habit.verdicts) {
+      if (habit.skipped && habit.skipped.test(opening)) verdict = 'failed';
+      else if (habit.verdicts) {
         const failed = habit.verdicts.failed.test(opening), passed = habit.verdicts.passed.test(opening);
         if (failed === passed) throw new Error(`${name}: the ${date} line needs exactly one verdict word (e.g. success or failed) before the first comma, got "${opening}".`);
         verdict = failed ? 'failed' : 'passed';
@@ -177,7 +186,8 @@ function main() {
     if (!changed.length) console.log('  = heatmap already current');
     else changed.forEach(c => console.log('  ✓ ' + c));
     if (habit.entries) {
-      for (const day of missingEntries(note, [...add.passed, ...add.failed])) {
+      // Only a day counted as done needs a written section; a skipped day has none by definition.
+      for (const day of missingEntries(note, add.passed)) {
         console.log(`  ! ${day} has no "## ${day}" section under # Content: — write the analysis before publishing.`);
       }
     }

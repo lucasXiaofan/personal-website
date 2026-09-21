@@ -46,6 +46,19 @@ test('a space before the colon still matches the habit marker', () => {
   const t = parseHabitLines('#trending-analysis : ruanyf weekly issue-412 (https://github.com/ruanyf/weekly)', '2026-09-19');
   assert.deepEqual(t['trending-analysis'][0].dates, ['2026-09-19']);
 });
+test('a trending day recorded as None is skipped, not written', () => {
+  const found = parseHabitLines('#trending-analysis None, find nothing interesting', '2026-09-20');
+  assert.equal(found['trending-analysis'][0].verdict, 'failed');
+  assert.deepEqual(found['trending-analysis'][0].dates, ['2026-09-20']);
+});
+test('a written analysis whose prose says nothing still counts as done', () => {
+  const found = parseHabitLines('#trending-analysis: ruanyf weekly, nothing novel about it at all', '2026-09-19');
+  assert.equal(found['trending-analysis'][0].verdict, 'passed');
+});
+test('the body starts after the marker, so a URL keeps its colons', () => {
+  const found = parseHabitLines('#trending-analysis: https://github.com/ruanyf/weekly is the pick', '2026-09-19');
+  assert.match(found['trending-analysis'][0].body, /^https:\/\/github\.com/);
+});
 test('merges dates, keeps them sorted, and reports no change when current', () => {
   const first = updateHeatmap(heatmap('', '2026-09-14'), { passed: [], failed: ['2026-09-15'] });
   assert.equal(params(first.note).failed, '2026-09-14, 2026-09-15');
