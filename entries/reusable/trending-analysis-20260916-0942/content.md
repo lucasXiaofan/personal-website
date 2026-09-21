@@ -1,6 +1,6 @@
 ## Description
 
-{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19" failed="" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
+{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19" failed="2026-09-20" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
 
 {{< language en >}}
 A habit tracker, started 2026-09-16. Every day I read the top of all four trending sources — GitHub Trending, Product Hunt, Hacker News, Google Trends — then pick whichever ones I actually want to think about and write down what I could do with them: join it, build something similar, or steal the shape of it for my own work.
@@ -31,6 +31,14 @@ For each thing I write up, three questions, briefly:
 2. **Why is it trending today?** The hook, not the feature list.
 3. **What do I do with it?** Join it, copy the shape, or file it. "Nothing" is a valid answer, but say it out loud.
 
+**A day with nothing.** If I read the four sources and write nothing up, the line says so:
+
+```
+#trending-analysis None, found nothing interesting
+```
+
+That records the day as **skipped** rather than leaving it blank. The floor is one analysis a day, so a day below the floor is a missed day and the heatmap shows it — same principle as the dopamine challenge, where a failure is recorded rather than hidden. Only the opening of the line votes, so an actual write-up that happens to use the word "nothing" later still counts as written.
+
 **Publishing.** This page updates on the same pass as the decision log: when the day's diary goes up, every `trending-analysis:` line from that day comes here, the date turns green in the heatmap, and the entries are appended to the log below. The square is green if I wrote at least one — writing three does not make it greener, and that is on purpose: the habit is showing up, not volume.
 {{< /language >}}
 
@@ -48,6 +56,14 @@ For each thing I write up, three questions, briefly:
 1. **它是什么，谁在爱它？** 不看市场规模，看在乎的人有多在乎。
 2. **它今天为什么会火？** 看钩子，不是功能列表。
 3. **我能拿它做什么？** 加入、借形态、还是存档。"什么都不做"也是有效答案，但要说出口。
+
+**什么都没写的一天。** 如果四个来源都读了，但没有写任何东西，那就把这件事写下来：
+
+```
+#trending-analysis None, 没找到有意思的
+```
+
+这会把那天记为**跳过**，而不是留白。下限是一天一篇，所以低于下限的一天就是缺席的一天，热力图要显示出来——和控制多巴胺挑战是同一个原则：失败要记下来，不藏起来。只有开头那一小段参与判定，所以一篇真的写了的分析，哪怕正文里出现「没什么」这样的词，仍然算写了。
 
 **发布方式。** 这一页和决策日志同一趟更新：当天的日记发布时，那天所有的 `trending-analysis:` 行都搬到这里，热力图上那天变绿，条目追加到下面的日志里。只要写了至少一个，那天就是绿的——写三个不会更绿，这是故意的：这个习惯考的是出现，不是产量。
 {{< /language >}}
@@ -161,6 +177,7 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-20 — Skipped: read the sources, found nothing worth writing about. Added the rule for it — `None` records the day as skipped instead of leaving the square blank, so a day below the floor is visible.
 - 2026-09-19 — Fourth entry: ruanyf/weekly — a years-old curated weekly living as a GitHub repo, a submission door I can actually knock on, and the case that information exchange is a return worth wanting without revenue.
 - 2026-09-18 — Third entry: Keysake, "Learn English as you type Chinese" — a one-sentence pitch worth stealing, and the input-boundary flaw underneath it.
 - 2026-09-17 — Second entry: NovaSynth by Noveum, a voice-agent testing platform, and the triple it points at — versioning, evaluation, error localization.
@@ -168,6 +185,7 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 - 2026-09-16 — Started the habit and published the first entry: fugleramme, a niche bird-identifying photo frame, and the case for building small.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-20 — 跳过：来源读了，但没有找到值得写的东西。补上对应的规则——写 `None` 会把那天记为跳过，而不是留白，让低于下限的一天能被看见。
 - 2026-09-19 — 第四条：ruanyf/weekly——一个做了多年、以 GitHub repo 形式存在的周刊，一扇我真能敲的投稿门，以及"信息交换本身就是值得要的回报"这个想法。
 - 2026-09-18 — 第三条：Keysake，"Learn English as you type Chinese"——值得借用的一句话 pitch，以及它底下的输入边界问题。
 - 2026-09-17 — 第二条：NovaSynth by Noveum，一个测试 voice agent 的平台，以及它指向的三件套——versioning、evaluation、error localization。
