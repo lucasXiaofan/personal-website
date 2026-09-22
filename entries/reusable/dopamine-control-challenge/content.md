@@ -2,7 +2,7 @@
 
 {{< countdown target="2026-10-14T00:00:00-04:00" deadline="October 14, 2026 · 00:00 ET" label="30-day Dopamine Control Challenge" note="September 14–October 14, 2026." >}}
 
-{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
+{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
 
 {{< language en >}}
 A smaller, 30-day challenge supporting my ReferralChallenge: protect my attention so I spend more time learning, building, and moving. The aim is to make room for at least five hours of work in progress each day. “控制多巴胺” is my shorthand for changing my media habits.
@@ -123,6 +123,21 @@ Also on 09-20, and worth recording as an asset rather than an aside: I went to a
 
 This matters to the challenge specifically. Rule 7 says leisure is reading and podcasts *plus more exercise* — but "more exercise" has been an instruction, not a place. This is a place, with people in it, at a fixed time, outside the apartment. **The apartment is where this challenge gets lost; a standing appointment somewhere else is the strongest version of leaving it.** The one caution is the 09-20 lesson above: the appointment is not a licence for the hours before it.
 
+### What fails (3): five days straight, and the craving names itself
+
+2026-09-21 and 2026-09-22 make it five failures in a row, and 09-21 is the day the pattern finally said what it actually wants, in its own words: *"我甚至不想就单纯的吃饭，看看书，需要吃饭时看视频，需要有不同的刺激，放松就是找不同的刺激，平淡是我想要逃离的"* — even eating plainly and reading is not enough; there has to be a different stimulus. **What I am avoiding is not boredom, it is the ordinary.** That is a sharper diagnosis than anything in the rules above, and it means rule 7 ("leisure is reading and podcasts") is fighting the wrong battle if the actual craving is for novelty itself, not for video specifically.
+
+That night, 09-21 relapsed further than any day before it — Bilibili, an NSFW skin, and then the thought that chased it: *no girlfriend, watching someone else being treated well, so keep watching.* Comparison turned the screen into a wound instead of a distraction. The honest counter-thought showed up again, unprompted, at 23:49, nearly verbatim from 09-18: **"there is nothing you can ever do or attain that will get you closer to salvation than it is at this moment."** It keeps returning because it keeps being true, and it keeps not being enough on its own — it is a thought to have, not a plan.
+
+09-22 is where a plan actually starts. The diary rejects the framing this whole page has used: *"self-control is not desirable... advice ai about how atomic habit will deal with it."* That is a fair complaint about a page whose rules have been mostly willpower dressed as structure. Taking the request seriously, in Atomic Habits terms:
+
+- **The cue is not the phone. It is the meal**, already identified on 09-19 — eating alone at the apartment is the moment the craving activates.
+- **The craving is for novelty, not video** — named plainly on 09-21. Video is just the cheapest supply of it.
+- **Make the craving obtainable in an allowed form, at the meal, so it never has to compete with the rule.** The diary's own fix on 09-22 is exactly this: *talking is allowed while eating, video and phone are not — watch things at a separate, chosen time.* A friend, a call, a podcast are stimulus, too; they just are not attention-that-runs-away.
+- **Make the forbidden response harder to reach at the cue, not just morally worse.** Phone face-down, or in another room, during the meal — not because willpower should be stronger, but because the whole point of habit design is not needing willpower at the exact moment it is weakest.
+
+This is not a new rule to add on top of the old ones. It is the same rule from 09-19, made precise: not "podcast during meals" as a nice option, but **no screen at all during meals, phone included, talking allowed** — because the craving under the video craving is for someone or something to be present, and a conversation satisfies that more honestly than a feed does.
+
 ### Daily review
 
 - Did I avoid shorts at home, entertainment video, manga, and games?
@@ -208,6 +223,21 @@ This matters to the challenge specifically. Rule 7 says leisure is reading and p
 
 这件事对这个挑战有特别的意义。规则第 7 条说娱乐是阅读和播客，**外加多运动**——但「多运动」一直是一条指令，不是一个地方。这是一个地方，里面有人，有固定的时间，而且在公寓之外。**这个挑战是在公寓里输掉的，而在别处有一个固定的约会，是「离开公寓」最强的版本。** 唯一要警惕的还是上面 20 号那条教训：这个约会不是它之前那几个小时的通行证。
 
+### 失败的样子（三）：连续五天，渴望终于自己说出了名字
+
+2026 年 9 月 21 日和 9 月 22 日，连续五次失败，而 09-21 是这个模式第一次用自己的话说出它到底要什么："我甚至不想就单纯的吃饭，看看书，需要吃饭时看视频，需要有不同的刺激，放松就是找不同的刺激，平淡是我想要逃离的。"**我在躲的不是无聊，是平淡本身。** 这比上面所有规则加起来都更准，也意味着，如果真正的渴望是"新鲜刺激"本身，而不是"视频"这个具体形式，那规则第 7 条（"娱乐只有阅读和播客"）打的其实是错的靶子。
+
+那天晚上，09-21 破戒破得比之前任何一天都深——B 站，一个 sts 的 nsfw 皮肤，然后是追着它来的那个念头：没有女朋友，看别人被美女热情对待，觉得难过，于是继续看下去。比较把屏幕变成了一道伤口，而不是一个分心。那句诚实的反驳又一次不请自来地出现，23:49，几乎和 09-18 一字不差："此刻就是我能抵达的、离救赎最近的地方，没有任何我能做的事、能得到的东西，比这一刻更接近它。"它一直回来，是因为它一直是真的；也一直不够，因为它是一个该有的念头，不是一个计划。
+
+真正的计划从 09-22 才开始。日记直接反驳了这一整页一直在用的框架："自我控制不是我想要的……问问 AI，atomic habit 会怎么处理这个。"这个抱怨是公平的——这一页的规则，大半是意志力披着流程的外衣。认真接下这个要求，用 Atomic Habits 的语言说：
+
+- **线索不是手机，是吃饭这件事本身**——09-19 已经指认过：一个人在公寓吃饭，就是渴望被激活的那一刻。
+- **渴望要的是新鲜感，不是视频**——09-21 说得很直白。视频只是获取它最便宜的供给。
+- **在吃饭这个线索出现的时候，就给渴望一个被允许的满足方式，让它根本不用和规则对抗。** 日记 09-22 自己给出的解法正是这个：吃饭的时候可以聊天，但不能看视频、不能玩手机——想看什么，另找一个专门的时间看。朋友、一通电话、一段对话，同样是刺激，只是不是那种会一路跑远的注意力。
+- **让被禁止的那个反应在线索出现时更难够到，而不只是道德上更差。** 吃饭的时候手机扣着放，或者干脆放在另一个房间——不是因为意志力应该更强，而是因为习惯设计的全部意义，就是不需要在意志力最弱的那一刻依赖它。
+
+这不是在旧规则上面再加一条新的。这是把 09-19 的那条规则说精确了：不是"吃饭时放播客"这种可选的美化，而是**吃饭时完全不看屏幕，手机也算，但可以说话**——因为视频渴望底下真正的渴望，是想要有人、有什么东西在场，而一段对话比一个信息流更诚实地满足这一点。
+
 ### 每日回顾
 
 - 有没有做到在家不刷短视频、不看娱乐视频、不看漫画、不玩游戏？
@@ -235,6 +265,8 @@ This matters to the challenge specifically. Rule 7 says leisure is reading and p
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-22 — Failed, fifth in a row. The diary rejected the self-control framing and asked for an Atomic Habits fix instead. Rewrote the meal rule precisely: no screen at all during meals, phone included — talking is allowed, because the craving is for presence, not footage.
+- 2026-09-21 — Failed, and named the real target: not boredom, the ordinary itself — "平淡是我想要逃离的." Relapsed further that night into comparison and regret; the same counter-thought from 09-18 returned almost verbatim.
 - 2026-09-20 — Failed, and added what helps: gymnastics as a standing appointment outside the apartment, which is the strongest form of leaving it. The excuse this time was a hard stop at 11 — but a time limit is not a content rule.
 - 2026-09-19 — Failed. Found the first concrete cue in this challenge: eating at the apartment is what starts the slide. Fixes are structural — a podcast with the meal, or not eating at home. Also named the pattern across three days: the excuse arrives before the craving does.
 - 2026-09-18 — Failed. Added what failure looks like: it started at 6 p.m., not 10, and it started on campus when the wanting ran out. The trigger was opening the ledger early — the accounting the mindset rule already warns against — and the reply to it is a concrete MVP, not a worse evening.
@@ -246,6 +278,8 @@ This matters to the challenge specifically. Rule 7 says leisure is reading and p
 - 2026-09-14 — Published the rules with a seven-minute selection limit. The September 13 diary proposed five minutes; this version uses the updated rule.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-22 — 失败，连续第五天。日记直接反对了「自我控制」这个框架，要求换成 atomic habits 式的解法。把吃饭那条规则改精确了：吃饭时完全不看屏幕，手机也算——但可以说话，因为渴望要的是陪伴，不是画面。
+- 2026-09-21 — 失败，第一次说出真正在躲的东西：不是无聊，是平淡本身——「平淡是我想要逃离的」。那天晚上破戒得更深，陷入比较和后悔；09-18 出现过的那句反驳几乎一字不差地又回来了。
 - 2026-09-20 — 失败，同时补上起作用的东西：体操——一个在公寓之外的固定约会，是「离开公寓」最强的形式。这次的借口是十一点有硬性截止，但时间限制不是内容规则。
 - 2026-09-19 — 失败。找到了这个挑战里第一个具体的 cue：在公寓吃饭就是下滑的起点。解法是结构性的——吃饭时放播客，或者不在家吃。也给三天的共同模式命了名：借口比渴望先到。
 - 2026-09-18 — 失败。补上失败的样子：从六点开始，不是十点；而且是在学校里"想做"先耗光的。触发点是过早打开那本账——正是心态那条已经警告过的算账——而对它的回答是一个具体的 MVP，不是让晚上更难受。
