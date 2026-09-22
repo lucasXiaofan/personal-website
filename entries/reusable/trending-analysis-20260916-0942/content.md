@@ -1,6 +1,6 @@
 ## Description
 
-{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19" failed="2026-09-20" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
+{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-21, 2026-09-22" failed="2026-09-20" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
 
 {{< language en >}}
 A habit tracker, started 2026-09-16. Every day I read the top of all four trending sources — GitHub Trending, Product Hunt, Hacker News, Google Trends — then pick whichever ones I actually want to think about and write down what I could do with them: join it, build something similar, or steal the shape of it for my own work.
@@ -69,6 +69,50 @@ That records the day as **skipped** rather than leaving it blank. The floor is o
 {{< /language >}}
 
 ## Content
+
+### 2026-09-22 · Clueso
+
+[Clueso](https://www.clueso.io/mcp) — found today.
+
+{{< language en >}}
+An AI video-editing tool, pitched as an MCP. The pitch is a subscription to "AI does video making," and I want it for a specific, unglamorous reason: sayname needs a marketing video, an Instagram short, something — and video editing is a task I keep deferring because I have no lightweight way to do it. Who loves it: anyone shipping a product that needs a demo reel or a short and does not want to learn an editor to get one.
+
+Why it is trending for me today is not about the product's own traction — it is that it landed exactly on an open want. I do not know yet whether it is any good; the plan is to try the free tier and see what it actually produces before believing the pitch.
+
+What I do with it: **try it once, on the actual sayname video**, rather than filing it away. This is the first trending entry in a week that is not "steal the shape" — it might be a tool I use this week. If it is not lightweight enough, the fallback is the same one I keep reaching for across these entries: a small, boring, one-purpose script beats a subscription to a general platform.
+{{< /language >}}
+
+{{< language zh >}}
+一个 AI 视频剪辑工具，以 MCP 的形式包装。卖点是"订阅 AI 帮你做视频"，而我想要它的理由很具体、也不光鲜：sayname 需要一个宣传视频、一个 Instagram short，什么都行——而视频剪辑是我一直在往后拖的任务，因为没有一个 lightweight 的做法。谁会爱它：任何要交付产品、需要一个 demo 或短片、又不想专门学一个剪辑软件的人。
+
+它今天对我来说会火，不是因为这个产品本身有多少势头——而是它恰好砸中了一个我一直存在的需要。我还不知道它好不好用；打算先试免费版，看它实际产出什么，再相信卖点。
+
+我能拿它做什么：**直接拿它试一次 sayname 的视频**，而不是存档了事。这是一周以来第一条不是"借形态"的趋势条目——它可能就是这周会用上的工具。如果它不够 lightweight，退路还是这几条条目里反复出现的那个：一个小的、无聊的、单一用途的脚本，胜过订阅一个通用平台。
+{{< /language >}}
+
+### 2026-09-21 · ai-memory
+
+[akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory) — found today.
+
+{{< language en >}}
+A README doing real work: it compares several memory approaches for AI agents, names what is similar and what differs, and is convincing enough that I read the whole thing. The **handoff problem** it names is one I am living through today — sayname is built with Claude Code, and I do not know whether Codex could pick it up cleanly, or whether the two could hand off to each other at all.
+
+Who loves it: people building multi-agent or multi-tool workflows where no single AI stays on a project end to end — which, on current form, is everyone.
+
+Why it is trending for me: it names a pain precisely, then reaches for more machinery than I want. I will not use this project. It is not lightweight enough — memory and the project's own wiki belong in the same place, as plain files, and if the keywords are defined clearly, BM25 is enough search. I do not want to stand up a server just to have memory.
+
+What I do with it: **the gap it leaves is the project.** I think it is worth spending real time on — for a hackathon, or for something with actual reach — building a genuinely super-lightweight memory: a handful of files plus helper functions, for both AI and humans, living inside the project rather than beside it, usable by whichever agent shows up next. Not a copy of ai-memory — the opposite instinct: keep everything a file, keep it in the repo, keep the dependency count at zero.
+{{< /language >}}
+
+{{< language zh >}}
+一个真正在做事的 README：对比了好几种给 AI agent 用的 memory 方案，说清楚了相似点和差异点，写得很有说服力，我把它整篇读完了。它提到的 **handoff 问题**正是我今天正在经历的：sayname 现在用 Claude Code 在写，我不知道 codex 能不能顺利接管，或者两边能不能互相接管。
+
+谁会爱它：任何在做多 agent、多工具工作流的人——没有一个 AI 会从头到尾跟完一个项目，而按现在的形势，这几乎是所有人。
+
+它今天对我来说会火，是因为它把一个痛点说得很准，但给出的方案比我想要的重了。我不会去用这个项目。它不够 lightweight——memory 和项目自己的 wiki 应该在同一个地方，就是一堆普通文件，只要关键词定义清楚，BM25 就够用了。我不想为了一个 memory 专门起一个 server。
+
+我能拿它做什么：**它留下的空白就是那个项目本身。** 我觉得值得花点真时间——为了 hackathon，或者为了某个真正有影响力的东西——做一个真正超轻量的 memory：一堆文件加一些 helper function，给 AI 也给人用，就活在项目里而不是项目旁边，换哪个 agent 来接手都能用。不是照抄 ai-memory——是反过来的直觉：一切都是文件，都留在 repo 里，依赖数保持为零。
+{{< /language >}}
 
 ### 2026-09-19 · ruanyf/weekly
 
@@ -177,6 +221,8 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-22 — Sixth entry: Clueso, an AI video-editing MCP, tried for a real reason — sayname needs a marketing video — rather than filed for later.
+- 2026-09-21 — Fifth entry: ai-memory, a convincing README naming the agent-handoff problem, and the case for a memory that is just files in the repo rather than a server.
 - 2026-09-20 — Skipped: read the sources, found nothing worth writing about. Added the rule for it — `None` records the day as skipped instead of leaving the square blank, so a day below the floor is visible.
 - 2026-09-19 — Fourth entry: ruanyf/weekly — a years-old curated weekly living as a GitHub repo, a submission door I can actually knock on, and the case that information exchange is a return worth wanting without revenue.
 - 2026-09-18 — Third entry: Keysake, "Learn English as you type Chinese" — a one-sentence pitch worth stealing, and the input-boundary flaw underneath it.
@@ -185,6 +231,8 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 - 2026-09-16 — Started the habit and published the first entry: fugleramme, a niche bird-identifying photo frame, and the case for building small.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-22 — 第六条：Clueso，一个 AI 视频剪辑 MCP，因为一个真实的理由去试它——sayname 需要一个宣传视频——而不是存档等以后。
+- 2026-09-21 — 第五条：ai-memory，一篇有说服力的 README，说清了 agent 之间 handoff 的问题，以及「memory 就该是项目里的文件，而不是一个 server」这个想法。
 - 2026-09-20 — 跳过：来源读了，但没有找到值得写的东西。补上对应的规则——写 `None` 会把那天记为跳过，而不是留白，让低于下限的一天能被看见。
 - 2026-09-19 — 第四条：ruanyf/weekly——一个做了多年、以 GitHub repo 形式存在的周刊，一扇我真能敲的投稿门，以及"信息交换本身就是值得要的回报"这个想法。
 - 2026-09-18 — 第三条：Keysake，"Learn English as you type Chinese"——值得借用的一句话 pitch，以及它底下的输入边界问题。
