@@ -1,6 +1,6 @@
 ## Description
 
-{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-21, 2026-09-22" failed="2026-09-20" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
+{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-21, 2026-09-22, 2026-09-23" failed="2026-09-20, 2026-09-24" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
 
 {{< language en >}}
 A habit tracker, started 2026-09-16. Every day I read the top of all four trending sources — GitHub Trending, Product Hunt, Hacker News, Google Trends — then pick whichever ones I actually want to think about and write down what I could do with them: join it, build something similar, or steal the shape of it for my own work.
@@ -69,6 +69,26 @@ That records the day as **skipped** rather than leaving it blank. The floor is o
 {{< /language >}}
 
 ## Content
+
+### 2026-09-23 · Latitude 4
+
+[Latitude 4](https://www.producthunt.com/products/latitude-4) — found on Product Hunt.
+
+{{< language en >}}
+An agent-evaluation tool that rolls different agents' scores into one unified number while still letting you see the per-dimension breakdown underneath it. Who loves it: teams shipping agents who need one number for a dashboard and a real diagnosis for the engineer who has to fix it — the same two audiences, wanting the same evaluation for different reasons.
+
+Why it landed on me today is the open question it did not answer, and that I do not have an answer to either: **is my own benchmark work a ranking tool or an error-finding tool?** A single unified score is a ranking tool — good for "which is better." What I actually want first, on the benchmark I am building, might be closer to "where does it break and why," which is a different shape entirely, even if the two end up sharing an aggregation layer.
+
+What I do with it: not a copy, and not filed away either — a question to sit with while designing my own benchmark's output. I do not fully trust a single score yet; I want to discuss this with AI directly, and read [arXiv:2608.14808](https://arxiv.org/pdf/2608.14808) before committing to a shape.
+{{< /language >}}
+
+{{< language zh >}}
+一个 agent 评估工具，把不同 agent 的分数汇总成一个统一的数字，同时还能看到底下每个维度的拆解。谁会爱它：交付 agent 的团队——需要一个数字放到 dashboard 上，也需要一份给要修 bug 的工程师看的真实诊断，同一批人，出于不同的理由想要同一份评估。
+
+它今天打中我的地方，是它没有回答、我自己也没答案的那个问题：**我自己在做的 benchmark，到底是一个排名工具，还是一个找错误的工具？** 一个统一的分数是排名工具——适合回答"哪个更好"。而我自己在做的这个 benchmark，第一步想要的可能更接近"它在哪里、为什么会崩"，这是完全不同的形态，即便两者最终可能共用同一层聚合逻辑。
+
+我能拿它做什么：不是照抄，也不是存档了事——是一个值得带着走的问题，设计我自己 benchmark 的输出时用得上。我现在还不完全相信单一分数；打算先直接和 AI discuss 一下，也读一读 [arXiv:2608.14808](https://arxiv.org/pdf/2608.14808)，再决定形状。
+{{< /language >}}
 
 ### 2026-09-22 · Clueso
 
@@ -221,6 +241,8 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-24 — Skipped: no analysis written.
+- 2026-09-23 — Seventh entry: Latitude 4, unifying agent-evaluation scores into one number, and the open question of whether my own benchmark work wants to rank agents or find their errors.
 - 2026-09-22 — Sixth entry: Clueso, an AI video-editing MCP, tried for a real reason — sayname needs a marketing video — rather than filed for later.
 - 2026-09-21 — Fifth entry: ai-memory, a convincing README naming the agent-handoff problem, and the case for a memory that is just files in the repo rather than a server.
 - 2026-09-20 — Skipped: read the sources, found nothing worth writing about. Added the rule for it — `None` records the day as skipped instead of leaving the square blank, so a day below the floor is visible.
@@ -231,6 +253,8 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 - 2026-09-16 — Started the habit and published the first entry: fugleramme, a niche bird-identifying photo frame, and the case for building small.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-24 — 跳过：没有写分析。
+- 2026-09-23 — 第七条：Latitude 4，把 agent 评估的分数统一成一个数字，以及一个悬而未决的问题——我自己做的 benchmark 到底想排名，还是想找错误。
 - 2026-09-22 — 第六条：Clueso，一个 AI 视频剪辑 MCP，因为一个真实的理由去试它——sayname 需要一个宣传视频——而不是存档等以后。
 - 2026-09-21 — 第五条：ai-memory，一篇有说服力的 README，说清了 agent 之间 handoff 的问题，以及「memory 就该是项目里的文件，而不是一个 server」这个想法。
 - 2026-09-20 — 跳过：来源读了，但没有找到值得写的东西。补上对应的规则——写 `None` 会把那天记为跳过，而不是留白，让低于下限的一天能被看见。
