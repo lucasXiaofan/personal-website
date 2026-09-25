@@ -2,7 +2,7 @@
 
 {{< countdown target="2026-10-14T00:00:00-04:00" deadline="October 14, 2026 · 00:00 ET" label="30-day Dopamine Control Challenge" note="September 14–October 14, 2026." >}}
 
-{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
+{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
 
 {{< language en >}}
 A smaller, 30-day challenge supporting my ReferralChallenge: protect my attention so I spend more time learning, building, and moving. The aim is to make room for at least five hours of work in progress each day. “控制多巴胺” is my shorthand for changing my media habits.
@@ -138,6 +138,20 @@ That night, 09-21 relapsed further than any day before it — Bilibili, an NSFW 
 
 This is not a new rule to add on top of the old ones. It is the same rule from 09-19, made precise: not "podcast during meals" as a nice option, but **no screen at all during meals, phone included, talking allowed** — because the craving under the video craving is for someone or something to be present, and a conversation satisfies that more honestly than a feed does.
 
+### What fails (4): the cue is not just the meal — it is waking up
+
+Two more failures, 2026-09-23 and 2026-09-24, seven in a row now. Both add a piece the earlier fixes did not cover.
+
+**09-23 failed at home in the evening**, in the old shape: back from the day, video, games. The diary's own reaction to it, at 14:30 that day, is worth keeping verbatim in spirit — three things felt worth doing (the CS682 homework, the App Store submission, the benchmark research) and none of them won, and video did. That is decision paralysis wearing the costume of "nothing is compelling enough," and it opened the door the ledger usually opens. The diary then wrote the 09-22 meal fix out again, as a fresh intention for that night — "no phone or laptop while eating, podcast at most" — which means the rule from two days ago had not yet become automatic. Writing a fix down once is not the same as it holding; it may need to be visible at the actual moment of eating, not just written once in a note.
+
+**09-24 failed in the morning**, and this is the new information: woke up early, on schedule, and then watched Instagram and YouTube in bed until 1:30 p.m. before leaving the apartment. **This is not the meal cue.** It is a second, separate trigger — the transition from asleep to awake, phone already in hand, no reason yet to put it down. The 09-19 and 09-22 fixes were both built around eating; they say nothing about the first hour after waking, and that hour is apparently just as porous.
+
+So there are now two known cues, not one: **eating, and waking up.** Both share the same shape — a transition moment with no assigned first action — which suggests the fix is not really about food or about mornings specifically. It is about **deciding the first action of a transition in advance**, before the transition happens, so the phone is never the thing that fills the gap by default.
+
+### A related question, worth carrying rather than answering here
+
+09-23 also raised something upstream of any single day: *"每天要做的decision太多了，我的脑子已经开始遗忘很多事情了"* — too many daily decisions, and things are already being forgotten. The proposal in the diary is to set the broad shape of the week in advance and only work out the next day's detail the night before, rather than deciding everything fresh every morning. That is a planning problem, not a screen-time problem, but it is plausibly upstream of some of the failures above — a mind spending its decision budget on *what to do* has less left over for *how to resist the easy thing* by the time a transition moment arrives. Left here as a named question, not solved on this page.
+
 ### Daily review
 
 - Did I avoid shorts at home, entertainment video, manga, and games?
@@ -238,6 +252,20 @@ This is not a new rule to add on top of the old ones. It is the same rule from 0
 
 这不是在旧规则上面再加一条新的。这是把 09-19 的那条规则说精确了：不是"吃饭时放播客"这种可选的美化，而是**吃饭时完全不看屏幕，手机也算，但可以说话**——因为视频渴望底下真正的渴望，是想要有人、有什么东西在场，而一段对话比一个信息流更诚实地满足这一点。
 
+### 失败的样子（四）：线索不只是吃饭，还有醒来
+
+又是两次失败，2026 年 9 月 23 日和 9 月 24 日，现在连续七天了。两天都补上了之前的修法没盖到的一块。
+
+**09-23 是在晚上、在家里失败的**，还是老样子：一天回来，看视频，玩游戏。日记自己在当天 14:30 写下的反应值得原样留着：CS682 作业、App Store 提交、benchmark research，三件事都觉得值得做，结果没有一件赢，视频赢了。这是决策瘫痪披着"什么都不够吸引人"的外衣，而它打开的正是那本账平常会打开的那扇门。日记接着又把 09-22 那条吃饭的修法重新写了一遍，当作那天晚上的新打算——"吃饭不看手机电脑，最多听 podcast"——这说明两天前的那条规则还没有变成自动的。把修法写下来一次，和它真的能守住，是两件事；它可能需要在真正吃饭的那一刻被看到，而不是只在笔记里写过一次。
+
+**09-24 是在早上失败的**，这是新的信息：按计划早起了，然后在床上刷 Instagram 和 YouTube，一直刷到下午 1:30 才出门。**这不是吃饭那个 cue。** 这是第二个、独立的触发点——从睡着到醒来的那个切换点，手已经拿着手机，还没有任何理由把它放下。09-19 和 09-22 的修法都是围着吃饭设计的，对醒来后的第一个小时什么都没说，而这个小时看起来一样容易漏。
+
+所以现在已知的 cue 不是一个，是两个：**吃饭，和醒来。** 两者是同一个形状——一个没有被预先分配"第一个动作"的切换时刻——这说明真正的修法可能和食物、和早上都没什么关系。它关于的是：**提前决定好每一个切换时刻的第一个动作**，在切换发生之前就定好，这样手机就永远不会是那个默默填进空隙的默认选项。
+
+### 一个相关的问题，先记下来，不在这里解决
+
+09-23 还提出了一个比任何单独一天都更上游的问题："每天要做的 decision 太多了，我的脑子已经开始遗忘很多事情了。"日记里的提议是：提前定好一周的大致形状，第二天的细节留到前一晚再定，而不是每天早上都重新决定一遍。这是一个规划问题，不是一个屏幕时间问题，但它很可能是上面这些失败的上游之一——一个把决策预算都花在"该做什么"上的大脑，到了切换时刻真正需要"该怎么拒绝简单的那个选项"时，剩下的就不多了。先在这里把它当作一个被命名的问题留着，不在这一页解决。
+
 ### 每日回顾
 
 - 有没有做到在家不刷短视频、不看娱乐视频、不看漫画、不玩游戏？
@@ -265,6 +293,8 @@ This is not a new rule to add on top of the old ones. It is the same rule from 0
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-24 — Failed, seventh in a row. New cue found: waking up, not just eating — an hour of Instagram and YouTube in bed before leaving the apartment. The fix for a transition moment may need to be about deciding the first action in advance, not about food specifically.
+- 2026-09-23 — Failed, back to the old evening shape. The 09-22 meal fix was written out again as a fresh intention, which means it had not yet become automatic. Also noted, as an open question: too many daily decisions may be upstream of some of these failures.
 - 2026-09-22 — Failed, fifth in a row. The diary rejected the self-control framing and asked for an Atomic Habits fix instead. Rewrote the meal rule precisely: no screen at all during meals, phone included — talking is allowed, because the craving is for presence, not footage.
 - 2026-09-21 — Failed, and named the real target: not boredom, the ordinary itself — "平淡是我想要逃离的." Relapsed further that night into comparison and regret; the same counter-thought from 09-18 returned almost verbatim.
 - 2026-09-20 — Failed, and added what helps: gymnastics as a standing appointment outside the apartment, which is the strongest form of leaving it. The excuse this time was a hard stop at 11 — but a time limit is not a content rule.
@@ -278,6 +308,8 @@ This is not a new rule to add on top of the old ones. It is the same rule from 0
 - 2026-09-14 — Published the rules with a seven-minute selection limit. The September 13 diary proposed five minutes; this version uses the updated rule.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-24 — 失败，连续第七天。找到新的 cue：不只是吃饭，还有醒来——在床上刷了一个小时 Instagram 和 YouTube 才出门。对切换时刻的修法，可能得是"提前定好第一个动作"，而不是专门针对食物。
+- 2026-09-23 — 失败，回到了老的晚间模式。09-22 那条吃饭的修法又被当作新打算重写了一遍，说明它还没有变成自动的。也记下一个待解决的问题：每天太多 decision，可能是这些失败的上游之一。
 - 2026-09-22 — 失败，连续第五天。日记直接反对了「自我控制」这个框架，要求换成 atomic habits 式的解法。把吃饭那条规则改精确了：吃饭时完全不看屏幕，手机也算——但可以说话，因为渴望要的是陪伴，不是画面。
 - 2026-09-21 — 失败，第一次说出真正在躲的东西：不是无聊，是平淡本身——「平淡是我想要逃离的」。那天晚上破戒得更深，陷入比较和后悔；09-18 出现过的那句反驳几乎一字不差地又回来了。
 - 2026-09-20 — 失败，同时补上起作用的东西：体操——一个在公寓之外的固定约会，是「离开公寓」最强的形式。这次的借口是十一点有硬性截止，但时间限制不是内容规则。
