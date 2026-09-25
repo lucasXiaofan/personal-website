@@ -20,14 +20,14 @@ const vault = path.join(process.env.HOME || '', 'Documents/road');
 
 export const HABITS = {
   'dopamine-control-challenge': {
-    marker: /^Dopamine-Control-Challenge(?:\s*:\s*|\s+)/i,
+    marker: /^Dopamine-Control-Challenge(?:\s*[:：]\s*|\s+)/i,
     note: 'problem-solving-library/reusable/challenge-dopamine-control.md',
     // A verdict word is required; this habit records both outcomes.
     verdicts: { passed: /\b(success|succeeded|held|hold|pass(?:ed)?|done|ok)\b/i, failed: /\b(fail(?:ed)?|missed|broke|broken|lost)\b/i },
     entries: false,
   },
   'trending-analysis': {
-    marker: /^trending-analysis(?:\s*:\s*|\s+)/i,
+    marker: /^trending-analysis(?:\s*[:：]\s*|\s+)/i,
     note: 'problem-solving-library/reusable/habit-trending-analysis.md',
     // Writing the line is the habit; there is no failing verdict to parse.
     verdicts: null,
@@ -84,11 +84,21 @@ export function parseHabitLines(raw, date) {
       if (!prefix) continue;
       // Slice past the marker itself, not past the first colon: the colon is optional
       // ("#trending-analysis None") and a URL in the body carries colons of its own.
-      const body = text.slice(prefix[0].length).trim();
-      // An empty line is the habit written down but not yet decided — a day in progress,
-      // typically the challenge line placed in the morning. Record it as pending so the
-      // day still publishes, and leave the square uncoloured rather than guessing.
-      if (!body) { (found[name] ||= []).push({ dates: [date], verdict: null, body: '', pending: true }); continue; }
+      // Strip one leading separator after the marker — an ASCII or full-width colon
+      // (the diary uses both), with surrounding whitespace. A habit name with nothing
+      // else on the line, or a bare colon with nothing after it, both leave an empty body.
+      const body = text.slice(prefix[0].length).replace(/^\s*[:：]?\s*/, '');
+      // An empty body means two different things depending on the habit. For a habit
+      // that records a written entry (trending-analysis has habit.skipped), writing the
+      // tag with nothing after it means the day was skipped — same as writing "None" —
+      // because there is nothing to wait for; the writing either happened or it did not.
+      // For a habit that records a same-day verdict (the challenge), an empty body means
+      // the line was placed before the day was decided, so it is pending, not skipped.
+      if (!body) {
+        if (habit.skipped) { (found[name] ||= []).push({ dates: [date], verdict: 'failed', body: '' }); continue; }
+        (found[name] ||= []).push({ dates: [date], verdict: null, body: '', pending: true });
+        continue;
+      }
       const opening = head(body);
       let verdict = 'passed';
       if (habit.skipped && habit.skipped.test(opening)) verdict = 'failed';

@@ -46,6 +46,15 @@ test('a space before the colon still matches the habit marker', () => {
   const t = parseHabitLines('#trending-analysis : ruanyf weekly issue-412 (https://github.com/ruanyf/weekly)', '2026-09-19');
   assert.deepEqual(t['trending-analysis'][0].dates, ['2026-09-19']);
 });
+test('an empty trending line (no colon, no body) is skipped, not pending', () => {
+  const found = parseHabitLines('#trending-analysis \uff1a', '2026-09-24');
+  assert.equal(found['trending-analysis'][0].verdict, 'failed');
+  assert.equal(found['trending-analysis'][0].pending, undefined);
+});
+test('an empty challenge line stays pending, since it needs a same-day verdict', () => {
+  const found = parseHabitLines('#Dopamine-Control-Challenge :', '2026-09-24');
+  assert.equal(found['dopamine-control-challenge'][0].pending, true);
+});
 test('a trending day recorded as None is skipped, not written', () => {
   const found = parseHabitLines('#trending-analysis None, find nothing interesting', '2026-09-20');
   assert.equal(found['trending-analysis'][0].verdict, 'failed');
