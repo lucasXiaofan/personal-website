@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "id": "calculating-gradient-descent-20260926-1336",
+  "type": "reusable",
+  "kind": "knowledge",
+  "title": "Calculating Gradient Descent",
+  "date": "2026-09-26",
+  "updated": "2026-09-26",
+  "summary": "Derive the gradient of a single-example binary cross-entropy loss for a sigmoid neuron with no bias. The worked example shows each calculus rule, the vector gradient, and one gradient-descent update.",
+  "content": "content.md",
+  "tags": [
+    "reusable_version_1"
+  ],
+  "attachments": [
+    {
+      "path": "calculating-gradient-descent-20260926-1336-file-20260926133645985.png",
+      "alt": "Given input and weight vectors, sigmoid activation, binary cross-entropy loss, and learning rate",
+      "kind": "image"
+    }
+  ]
+}
