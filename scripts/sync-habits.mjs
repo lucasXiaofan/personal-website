@@ -21,14 +21,14 @@ const vault = path.join(process.env.HOME || '', 'Documents/road');
 export const HABITS = {
   'dopamine-control-challenge': {
     marker: /^Dopamine-Control-Challenge(?:\s*[:：]\s*|\s+)/i,
-    note: 'problem-solving-library/reusable/challenge-dopamine-control.md',
+    note: 'problem-solving-library/reusable/challenge_dopamine-control.md',
     // A verdict word is required; this habit records both outcomes.
     verdicts: { passed: /\b(success|succeeded|held|hold|pass(?:ed)?|done|ok)\b/i, failed: /\b(fail(?:ed)?|missed|broke|broken|lost)\b/i },
     entries: false,
   },
   'trending-analysis': {
     marker: /^trending-analysis(?:\s*[:：]\s*|\s+)/i,
-    note: 'problem-solving-library/reusable/habit-trending-analysis.md',
+    note: 'problem-solving-library/reusable/habit_trending-analysis.md',
     // Writing the line is the habit; there is no failing verdict to parse.
     verdicts: null,
     // ...but a day can be honestly skipped. "None, found nothing interesting" is the
@@ -73,13 +73,14 @@ export function parseDates(text, fallback) {
   return [single ? normalize(single[1]) : fallback];
 }
 
-export function parseHabitLines(raw, date) {
+export function parseHabitLines(raw, date, only = null) {
   const found = {};
   for (const line of raw.replace(/\r\n/g, '\n').split('\n')) {
     // Strip a list/checkbox prefix, then a leading '#': the diary writes these as tags
     // (#trending-analysis:) so Obsidian can index them, and the tag form must still sync.
     const text = line.trim().replace(/^[-*+]\s+(?:\[[ xX]\]\s*)?/, '').replace(/^#(?=[A-Za-z])/, '');
     for (const [name, habit] of Object.entries(HABITS)) {
+      if (only && name !== only) continue;
       const prefix = text.match(habit.marker);
       if (!prefix) continue;
       // Slice past the marker itself, not past the first colon: the colon is optional
@@ -99,10 +100,14 @@ export function parseHabitLines(raw, date) {
         (found[name] ||= []).push({ dates: [date], verdict: null, body: '', pending: true });
         continue;
       }
-      const opening = head(body);
+      const opening = head(body).replace(/^[!！\s]+/, '');
       let verdict = 'passed';
       if (habit.skipped && habit.skipped.test(opening)) verdict = 'failed';
       else if (habit.verdicts) {
+        if (/^not yet\b/i.test(opening)) {
+          (found[name] ||= []).push({ dates: [date], verdict: null, body, pending: true });
+          continue;
+        }
         const failed = habit.verdicts.failed.test(opening), passed = habit.verdicts.passed.test(opening);
         if (failed === passed) throw new Error(`${name}: the ${date} line needs exactly one verdict word (e.g. success or failed) before the first comma, got "${opening}".`);
         verdict = failed ? 'failed' : 'passed';
@@ -166,18 +171,23 @@ function run(label, command, args) {
 
 function main() {
   const argv = process.argv.slice(2);
-  const flags = new Set(argv.filter(a => a.startsWith('--')));
-  const positional = argv.filter(a => !a.startsWith('--'));
+  const onlyIndex = argv.indexOf('--only');
+  const only = onlyIndex === -1 ? null : argv[onlyIndex + 1];
+  if (onlyIndex !== -1 && !Object.hasOwn(HABITS, only)) throw new Error('--only requires a habit name: ' + Object.keys(HABITS).join(' or '));
+  const args = onlyIndex === -1 ? argv : argv.filter((_, i) => i !== onlyIndex && i !== onlyIndex + 1);
+  const flags = new Set(args.filter(a => a.startsWith('--')));
+  const positional = args.filter(a => !a.startsWith('--'));
   for (const flag of flags) if (!['--write', '--publish', '--help'].includes(flag)) throw new Error('Unknown flag: ' + flag);
   if (flags.has('--help')) {
-    console.log('Usage: node scripts/sync-habits.mjs <YYYY-MM-DD.md> [--write] [--publish]\nDefault: report what would change. --write edits the habit notes. --publish also stages and pushes them.');
+    console.log('Usage: node scripts/sync-habits.mjs <YYYY-MM-DD.md> [--only trending-analysis|dopamine-control-challenge] [--write] [--publish]\nDefault: report what would change. --write edits the habit notes. --publish also stages and pushes them.');
     return;
   }
   if (positional.length !== 1) throw new Error('Provide exactly one diary file. Use --help for usage.');
   const diary = path.resolve(positional[0]), date = path.basename(diary, '.md');
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error('Diary filename must be YYYY-MM-DD.md.');
 
-  const found = parseHabitLines(fs.readFileSync(diary, 'utf8'), date);
+  const parsed = parseHabitLines(fs.readFileSync(diary, 'utf8'), date, only);
+  const found = only ? (parsed[only] ? { [only]: parsed[only] } : {}) : parsed;
   if (!Object.keys(found).length) { console.log(`No habit lines in ${date}. Nothing to sync.`); return; }
 
   const touched = [], involved = [];

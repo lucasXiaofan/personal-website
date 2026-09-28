@@ -55,6 +55,18 @@ test('an empty challenge line stays pending, since it needs a same-day verdict',
   const found = parseHabitLines('#Dopamine-Control-Challenge :', '2026-09-24');
   assert.equal(found['dopamine-control-challenge'][0].pending, true);
 });
+test('an undecided challenge stays pending and a full-width exclamation does not hide failure', () => {
+  const pending = parseHabitLines('#dopamine-control-challenge ：not yet, decide tonight', '2026-09-28');
+  assert.equal(pending['dopamine-control-challenge'][0].pending, true);
+  const failed = parseHabitLines('#dopamine-control-challenge ：！failed, watched videos', '2026-09-25');
+  assert.equal(failed['dopamine-control-challenge'][0].verdict, 'failed');
+});
+test('single-habit parsing ignores the other habit while its verdict is undecided', () => {
+  const raw = '#trending-analysis ：VoiceStudio, local first\n#dopamine-control-challenge ：not yet, decide tonight';
+  const found = parseHabitLines(raw, '2026-09-28', 'trending-analysis');
+  assert.deepEqual(Object.keys(found), ['trending-analysis']);
+  assert.equal(found['trending-analysis'][0].verdict, 'passed');
+});
 test('a trending day recorded as None is skipped, not written', () => {
   const found = parseHabitLines('#trending-analysis None, find nothing interesting', '2026-09-20');
   assert.equal(found['trending-analysis'][0].verdict, 'failed');
