@@ -2,7 +2,7 @@
 
 {{< countdown target="2026-10-14T00:00:00-04:00" deadline="October 14, 2026 · 00:00 ET" label="30-day Dopamine Control Challenge" note="September 14–October 14, 2026." >}}
 
-{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
+{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-27" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
 
 {{< language en >}}
 A smaller, 30-day challenge supporting my ReferralChallenge: protect my attention so I spend more time learning, building, and moving. The aim is to make room for at least five hours of work in progress each day. “控制多巴胺” is my shorthand for changing my media habits.
@@ -36,7 +36,7 @@ I do not edit the heatmap by hand. Publishing the day's decision log runs `sync-
 每天早上看一遍规则；挑选学习视频时设定七分钟计时器，到时关闭 YouTube。晚上回顾有没有遵守规则，以及当天实际推进了什么。
 
 **如何记录一天。** 每篇日记里写一行：
-#Dopamine-Control-Challenge recognized by the tag
+#dopamine-control-challenge recognized by the tag
 
 ```
 #Dopamine-Control-Challenge: 2026-09-15 failed, 看了两个多小时 YouTube 和 B 站。
@@ -46,6 +46,15 @@ I do not edit the heatmap by hand. Publishing the day's decision log runs `sync-
 
 热力图不用手改。发布当天的决策日志时会运行 `sync-habits.mjs`，它读这一行，把日期放进 shortcode 的 `failed=` 或 `passed=`。日记是唯一的事实来源，网站只是它的呈现。
 {{< /language >}}
+
+### Agent update and publish guide / Agent 更新与发布
+
+1. Read only the dated diary’s `#dopamine-control-challenge` line. An explicit `failed`/`success` before the first comma is a result. Empty or `not yet` is **pending**: leave the heatmap square blank and do not infer success or failure from the morning’s events.
+2. In `~/Documents/github_repos/personal-website`, run `node scripts/sync-habits.mjs ~/Documents/road/FLOW/diary/YYYY-MM-DD.md --only dopamine-control-challenge` to preview, then `--write` to apply. For a new punctuation/verdict form the script cannot parse, edit `scripts/sync-habits.mjs` plus `scripts/test-sync-habits.mjs`, run `npm test`, and re-run the preview. Do not guess or manually colour the square.
+3. Update the bilingual reflections and change logs only for decided days. Stage with `node scripts/publish-reusable.mjs ~/Documents/road/problem-solving-library/reusable/challenge_dopamine-control.md`; inspect `entries/reusable/dopamine-control-challenge/content.md`, git diff, and validation. Keep the existing `reusable-id`; do not hand-edit generated `entry.json`.
+4. `--push` is allowed only when the user explicitly asks in the current conversation to upload/publish. It commits this imported case and pushes it. Confirm git status and remote commit. Do not use decision-log publishing as a shortcut: that can publish a separate diary plan.
+
+中文简述：只凭日记里已经写明的结论记成功或失败；空白、`not yet` 都是待定。先用 `--only dopamine-control-challenge` 预览，再 `--write`；遇到新格式先修脚本和测试。检查生成页面后，只有本轮用户明确要求上传时才 `--push`。尚未定论的日期不能填色。
 
 ## Content
 
@@ -87,6 +96,12 @@ Day two held, 2026-09-17, and it held on a different mechanism again — not an 
 The part that matters most is not in the schedule, though — it is the **mindset at night**. Do not litigate the day: not how much I learned, not whether I am ahead of anyone, not whether I got enough fun. That accounting is what sends me looking for a reward at 10 p.m.
 
 And the brain needs a **push** to make the turn. Home at 8, sit still for five minutes, and tell myself: two more hours and it is a disciplined day — that is doable. Those two hours are the whole hinge. Holding them is how the brain learns that **plain is survivable** — that an ordinary evening does not have to be paid for with something bright.
+
+### September 25 and 27: the commute is also a cue
+
+The September 25 diary records a failure even though I ate at school: Instagram began on the way home, then YouTube, Bilibili, and games followed at home. This narrows the earlier meal theory. **Leaving a structured place for an unstructured evening** may be the broader transition; changing the meal location alone did not solve it. The diary also says this was not a matter of making the to-do list prettier. I felt caught between shallow tasks and slow deep work, so the next useful experiment is an environmental cue or a clearly chosen question before the commute, not another demand for motivation.
+
+September 26 has an empty verdict and remains **pending**, not a success or failure. September 27 explicitly says **failed**, without a cause. Do not invent one.
 
 ### What fails: 6 p.m., and the ledger I open too early
 
@@ -237,6 +252,12 @@ So there are now two known cues, not one: **eating, and waking up.** Both share 
 
 这件事对这个挑战有特别的意义。规则第 7 条说娱乐是阅读和播客，**外加多运动**——但「多运动」一直是一条指令，不是一个地方。这是一个地方，里面有人，有固定的时间，而且在公寓之外。**这个挑战是在公寓里输掉的，而在别处有一个固定的约会，是「离开公寓」最强的版本。** 唯一要警惕的还是上面 20 号那条教训：这个约会不是它之前那几个小时的通行证。
 
+### 9 月 25 日和 27 日：回家路上也是一个 cue
+
+9 月 25 日日记明确记为失败，虽然晚饭是在学校吃的：回家路上开始刷 Instagram，回家接着看 YouTube、B 站并玩游戏。所以「只要不在公寓吃饭就好」并不够。更大的切换点可能是**从有结构的校园进入无结构的晚上**。日记也说，把待办清单写漂亮不是解法；琐事太多、深度思考又觉得进展太慢。下次值得试的是在通勤前选好一个具体问题，或设置看得见的环境提示，而不是再要求自己更有动力。
+
+9 月 26 日结论栏为空，保持**待定**，不算成功也不算失败。9 月 27 日只明确写了**失败**，没有原因，不替日记编一个。
+
 ### 失败的样子（三）：连续五天，渴望终于自己说出了名字
 
 2026 年 9 月 21 日和 9 月 22 日，连续五次失败，而 09-21 是这个模式第一次用自己的话说出它到底要什么："我甚至不想就单纯的吃饭，看看书，需要吃饭时看视频，需要有不同的刺激，放松就是找不同的刺激，平淡是我想要逃离的。"**我在躲的不是无聊，是平淡本身。** 这比上面所有规则加起来都更准，也意味着，如果真正的渴望是"新鲜刺激"本身，而不是"视频"这个具体形式，那规则第 7 条（"娱乐只有阅读和播客"）打的其实是错的靶子。
@@ -281,18 +302,20 @@ So there are now two known cues, not one: **eating, and waking up.** Both share 
 
 {{< language en >}}
 - [ReferralChallenge](https://lucasxiaofan.github.io/personal-website/reusable/referral-challenge/) — the larger challenge this supports.
-- [habit-trending-analysis](/reusable/trending-analysis-20260916-0942/) — the other daily habit. This one protects the attention that one spends.
-- [pipeline-decision-log-publishing](/reusable/decision-log-publishing-pipeline/) — publishing a day's decision log is what fills in the square above.
+- [Trending Analysis](https://lucasxiaofan.github.io/personal-website/reusable/trending-analysis-20260916-0942/) — the other daily habit. This one protects the attention that one spends.
+- [Decision Log Publishing](https://lucasxiaofan.github.io/personal-website/reusable/decision-log-publishing-pipeline/) — publishing a day's decision log is what fills in the square above.
 {{< /language >}}
 {{< language zh >}}
 - [ReferralChallenge](https://lucasxiaofan.github.io/personal-website/reusable/referral-challenge/) — 这个小挑战所支持的长期挑战。
-- [habit-trending-analysis](/reusable/trending-analysis-20260916-0942/) — 另一个每日习惯。这个守住注意力，那个花掉它。
-- [pipeline-decision-log-publishing](/reusable/decision-log-publishing-pipeline/) — 发布当天的决策日志，就是上面那个方格被填上的时刻。
+- [Trending Analysis](https://lucasxiaofan.github.io/personal-website/reusable/trending-analysis-20260916-0942/) — 另一个每日习惯。这个守住注意力，那个花掉它。
+- [Decision Log Publishing](https://lucasxiaofan.github.io/personal-website/reusable/decision-log-publishing-pipeline/) — 发布当天的决策日志，就是上面那个方格被填上的时刻。
 {{< /language >}}
 
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-27 — Failed; the diary gives no cause. September 26 remains pending.
+- 2026-09-25 — Failed. Instagram began on the commute despite eating at school, so the cue may be the transition into an unstructured evening, not the meal alone.
 - 2026-09-24 — Failed, seventh in a row. New cue found: waking up, not just eating — an hour of Instagram and YouTube in bed before leaving the apartment. The fix for a transition moment may need to be about deciding the first action in advance, not about food specifically.
 - 2026-09-23 — Failed, back to the old evening shape. The 09-22 meal fix was written out again as a fresh intention, which means it had not yet become automatic. Also noted, as an open question: too many daily decisions may be upstream of some of these failures.
 - 2026-09-22 — Failed, fifth in a row. The diary rejected the self-control framing and asked for an Atomic Habits fix instead. Rewrote the meal rule precisely: no screen at all during meals, phone included — talking is allowed, because the craving is for presence, not footage.
@@ -308,6 +331,8 @@ So there are now two known cues, not one: **eating, and waking up.** Both share 
 - 2026-09-14 — Published the rules with a seven-minute selection limit. The September 13 diary proposed five minutes; this version uses the updated rule.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-27 — 失败；日记没有说明原因。9 月 26 日仍待定。
+- 2026-09-25 — 失败。即使在学校吃饭，回家路上也开始刷 Instagram；cue 可能是进入无结构晚上的切换，而不只是吃饭。
 - 2026-09-24 — 失败，连续第七天。找到新的 cue：不只是吃饭，还有醒来——在床上刷了一个小时 Instagram 和 YouTube 才出门。对切换时刻的修法，可能得是"提前定好第一个动作"，而不是专门针对食物。
 - 2026-09-23 — 失败，回到了老的晚间模式。09-22 那条吃饭的修法又被当作新打算重写了一遍，说明它还没有变成自动的。也记下一个待解决的问题：每天太多 decision，可能是这些失败的上游之一。
 - 2026-09-22 — 失败，连续第五天。日记直接反对了「自我控制」这个框架，要求换成 atomic habits 式的解法。把吃饭那条规则改精确了：吃饭时完全不看屏幕，手机也算——但可以说话，因为渴望要的是陪伴，不是画面。
