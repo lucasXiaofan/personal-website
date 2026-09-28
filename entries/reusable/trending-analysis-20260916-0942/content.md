@@ -1,6 +1,6 @@
 ## Description
 
-{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-21, 2026-09-22, 2026-09-23" failed="2026-09-20, 2026-09-24" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
+{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-25, 2026-09-28" failed="2026-09-20, 2026-09-24, 2026-09-26, 2026-09-27" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
 
 {{< language en >}}
 A habit tracker, started 2026-09-16. Every day I read the top of all four trending sources — GitHub Trending, Product Hunt, Hacker News, Google Trends — then pick whichever ones I actually want to think about and write down what I could do with them: join it, build something similar, or steal the shape of it for my own work.
@@ -68,7 +68,48 @@ That records the day as **skipped** rather than leaving it blank. The floor is o
 **发布方式。** 这一页和决策日志同一趟更新：当天的日记发布时，那天所有的 `trending-analysis:` 行都搬到这里，热力图上那天变绿，条目追加到下面的日志里。只要写了至少一个，那天就是绿的——写三个不会更绿，这是故意的：这个习惯考的是出现，不是产量。
 {{< /language >}}
 
+### Agent update and publish guide / Agent 更新与发布
+
+1. Read the dated diary’s **Plan** for every day since the last published date. An empty `#trending-analysis` or `no` means skipped; never invent a product or claim all four sources were read. Add a bilingual `## YYYY-MM-DD · Product` section for each actual write-up, newest first, and dated change-log lines in both languages. The diary’s Log may add context, but do not publish unrelated private material.
+2. In `~/Documents/github_repos/personal-website`, run `node scripts/sync-habits.mjs ~/Documents/road/FLOW/diary/YYYY-MM-DD.md --only trending-analysis` for each day, inspect the report, then rerun with `--write`. The sync only changes heatmap dates, not analysis text. If parsing misses a real diary form, update `scripts/sync-habits.mjs` and `scripts/test-sync-habits.mjs`, run `npm test`, then rerun the sync. Do not hand-colour a date to hide a parser problem.
+3. Stage with `node scripts/publish-reusable.mjs ~/Documents/road/problem-solving-library/reusable/habit_trending-analysis.md`. Review `entries/reusable/trending-analysis-20260916-0942/content.md`, the git diff, and validation output. The vault note is the source; never edit generated `entry.json` or force a new ID.
+4. Only when the current user request explicitly authorizes upload/publish, run the same command with `--push`. It commits and pushes the imported case to `main`; verify `git status` and the remote commit. Never push unrelated working-tree changes by accident. The decision-log pipeline is separate; do not publish a diary plan merely to update this tracker.
+
+中文简述：先读日记并写中英双语案例；对每一天用 `--only trending-analysis` 预览、`--write` 同步热力图；脚本不认得新格式就改脚本和测试；先 stage 检查生成页面，只有本轮明确要求上传时才 `--push`。今天的多巴胺结论未定时，不要顺手发布那个页面。
+
 ## Content
+
+### 2026-09-28 · VoiceStudio
+
+[VoiceStudio](https://github.com/debpalash/VoiceStudio) — found on GitHub Trending; I had used it before.
+
+{{< language en >}}
+A local-first voice creation app with audiobook and story workflows, plus a local API and MCP for agents. I originally downloaded it to add speech to my stories. Seeing it trend again makes the idea feel timely: stronger personal hardware makes a local creative pipeline more plausible. That is my observation, not proof that all creative software is moving local.
+
+What I do with it: try it again in the actual story-making pipeline before deciding whether to build anything. If I make my own story-building app, the design target is **local-first, public, and friendly to coding agents**. The useful question is not merely how good one voice sounds; it is whether an agent can take a story through repeatable text-to-audio steps without a fragile manual UI.
+{{< /language >}}
+
+{{< language zh >}}
+一个本地优先的语音创作工具，支持故事和有声书流程，也提供给 agent 使用的本地 API 和 MCP。我以前下载它，就是想给自己的故事配音。今天再次在 trending 看到它，让我觉得这个方向更值得重访：个人硬件越来越强，本地创作流程更有可能成立。但这是我的观察，不等于所有创作软件都在转向本地。
+
+我会先把它重新放进真实的故事创作 pipeline 里试一遍，再决定要不要自己做。如果做故事构建 app，目标应该是**local-first、公开、对 coding agent 友好**。关键不只是单条声音好不好听，而是 agent 能不能不依赖脆弱的手工 UI，把故事稳定地变成音频。
+{{< /language >}}
+
+### 2026-09-25 · Bleetz Network
+
+[Bleetz Network](https://www.producthunt.com/products/bleetz-network) — found on Product Hunt.
+
+{{< language en >}}
+It pitches agent-to-agent matching between founders and simulated VC agents. The problem is real to me: finding a suitable investor or customer takes repetitive research, and parallel AI-assisted searching could make the first pass faster. Its own description says the VC agents are simulations, not the investors themselves, so a positive response is a lead, not actual investor interest.
+
+What I take from it is the workflow shape: **search broadly, filter for fit, then let a human decide which introductions deserve attention**. This could become my problem if I build a company. I want to learn more about how it judges fit and how often its suggestions are useful before treating the product's claims as validation.
+{{< /language >}}
+
+{{< language zh >}}
+它主打创始人的 agent 与模拟 VC 的 agent 互相匹配。我觉得问题是真实的：寻找合适的投资人或潜在客户，需要做很多重复研究，AI 并行搜索或许能加快第一轮筛选。但产品自己说的是**模拟**投资人 agent，所以一个 YES 是线索，不是真实投资意向。
+
+我想借的是流程形状：**广泛搜索、按匹配度筛选、最后由人决定哪些联系值得继续**。未来如果我创业，这也可能成为我自己的问题。在把它的宣传当成验证之前，我想先弄清它如何判断匹配，以及推荐到底有多有用。
+{{< /language >}}
 
 ### 2026-09-23 · Latitude 4
 
@@ -234,13 +275,17 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 
 ## Relevant Reusables
 
-- [challenge-dopamine-control](/reusable/dopamine-control-challenge/) — the other daily habit, tracked the same way. That one protects the attention this one spends.
-- [pipeline-reusable-building](/reusable/reusable-building-pipeline-20260914-1043/) — how this page gets from the vault to the site.
-- [pipeline-decision-log-publishing](/reusable/decision-log-publishing-pipeline/) — publishing a day's decision log is what fills in the square above.
+- [Dopamine Control Challenge](https://lucasxiaofan.github.io/personal-website/reusable/dopamine-control-challenge/) — the other daily habit, tracked the same way. That one protects the attention this one spends.
+- [Reusable Building Pipeline](https://lucasxiaofan.github.io/personal-website/reusable/reusable-building-pipeline-20260914-1043/) — how this page gets from the vault to the site.
+- [Decision Log Publishing](https://lucasxiaofan.github.io/personal-website/reusable/decision-log-publishing-pipeline/) — publishing a day's decision log is what fills in the square above.
 
 ## Change Logs
 
 {{< language en >}}
+- 2026-09-28 — VoiceStudio: revisiting a local-first voice tool for my story pipeline, with a coding-agent-friendly public app as the possible build direction.
+- 2026-09-27 — Skipped: diary says “no”; no analysis.
+- 2026-09-26 — No analysis recorded; the diary marker is empty.
+- 2026-09-25 — Bleetz Network: investor discovery as parallel research and fit filtering, with simulated agent responses kept distinct from real investor interest.
 - 2026-09-24 — Skipped: no analysis written.
 - 2026-09-23 — Seventh entry: Latitude 4, unifying agent-evaluation scores into one number, and the open question of whether my own benchmark work wants to rank agents or find their errors.
 - 2026-09-22 — Sixth entry: Clueso, an AI video-editing MCP, tried for a real reason — sayname needs a marketing video — rather than filed for later.
@@ -253,6 +298,10 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 - 2026-09-16 — Started the habit and published the first entry: fugleramme, a niche bird-identifying photo frame, and the case for building small.
 {{< /language >}}
 {{< language zh >}}
+- 2026-09-28 — VoiceStudio：重访本地优先的语音工具，试进故事创作流程；可能做一个公开、对 coding agent 友好的 app。
+- 2026-09-27 — 跳过：日记写的是「no」，没有分析。
+- 2026-09-26 — 未记录分析；日记标记为空。
+- 2026-09-25 — Bleetz Network：把寻找投资人看作并行搜索与匹配筛选，同时区分模拟 agent 的回应和真实投资意向。
 - 2026-09-24 — 跳过：没有写分析。
 - 2026-09-23 — 第七条：Latitude 4，把 agent 评估的分数统一成一个数字，以及一个悬而未决的问题——我自己做的 benchmark 到底想排名，还是想找错误。
 - 2026-09-22 — 第六条：Clueso，一个 AI 视频剪辑 MCP，因为一个真实的理由去试它——sayname 需要一个宣传视频——而不是存档等以后。
