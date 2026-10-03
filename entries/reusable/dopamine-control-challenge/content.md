@@ -2,7 +2,7 @@
 
 {{< countdown target="2026-10-14T00:00:00-04:00" deadline="October 14, 2026 · 00:00 ET" label="30-day Dopamine Control Challenge" note="September 14–October 14, 2026." >}}
 
-{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-27" passed="2026-09-16, 2026-09-17" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
+{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-27, 2026-09-30, 2026-10-01, 2026-10-02" passed="2026-09-16, 2026-09-17, 2026-09-29" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
 
 {{< language en >}}
 A smaller, 30-day challenge supporting my ReferralChallenge: protect my attention so I spend more time learning, building, and moving. The aim is to make room for at least five hours of work in progress each day. “控制多巴胺” is my shorthand for changing my media habits.
@@ -49,7 +49,7 @@ I do not edit the heatmap by hand. Publishing the day's decision log runs `sync-
 
 ### Agent update and publish guide / Agent 更新与发布
 
-1. Read only the dated diary’s `#dopamine-control-challenge` line. An explicit `failed`/`success` before the first comma is a result. Empty or `not yet` is **pending**: leave the heatmap square blank and do not infer success or failure from the morning’s events.
+1. Read only the dated diary’s `#dopamine-control-challenge` line. An explicit `failed`/`success` before the first comma is a result. `not yet` is **pending**: leave the heatmap square blank and do not infer success or failure from the morning’s events. A tag followed by nothing counts as **failed** (rule since 2026-10-03; the `update-diary` skill applies it).
 2. In `~/Documents/github_repos/personal-website`, run `node scripts/sync-habits.mjs ~/Documents/road/FLOW/diary/YYYY-MM-DD.md --only dopamine-control-challenge` to preview, then `--write` to apply. For a new punctuation/verdict form the script cannot parse, edit `scripts/sync-habits.mjs` plus `scripts/test-sync-habits.mjs`, run `npm test`, and re-run the preview. Do not guess or manually colour the square.
 3. Update the bilingual reflections and change logs only for decided days. Stage with `node scripts/publish-reusable.mjs ~/Documents/road/problem-solving-library/reusable/challenge_dopamine-control.md`; inspect `entries/reusable/dopamine-control-challenge/content.md`, git diff, and validation. Keep the existing `reusable-id`; do not hand-edit generated `entry.json`.
 4. `--push` is allowed only when the user explicitly asks in the current conversation to upload/publish. It commits this imported case and pushes it. Confirm git status and remote commit. Do not use decision-log publishing as a shortcut: that can publish a separate diary plan.
