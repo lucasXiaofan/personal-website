@@ -1,6 +1,6 @@
 ## Description
 
-{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-25, 2026-09-28" failed="2026-09-20, 2026-09-24, 2026-09-26, 2026-09-27" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
+{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-25, 2026-09-28, 2026-10-01" failed="2026-09-20, 2026-09-24, 2026-09-26, 2026-09-27, 2026-09-29, 2026-09-30, 2026-10-02" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
 
 {{< language en >}}
 A habit tracker, started 2026-09-16. Every day I read the top of all four trending sources — GitHub Trending, Product Hunt, Hacker News, Google Trends — then pick whichever ones I actually want to think about and write down what I could do with them: join it, build something similar, or steal the shape of it for my own work.
