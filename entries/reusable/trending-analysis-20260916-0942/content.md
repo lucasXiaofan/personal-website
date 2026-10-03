@@ -79,6 +79,22 @@ That records the day as **skipped** rather than leaving it blank. The floor is o
 
 ## Content
 
+### 2026-10-01 · Directus
+
+[Directus](https://www.producthunt.com/products/directus) — found on Product Hunt. Related: [NVIDIA/OpenShell](https://github.com/NVIDIA/OpenShell).
+
+{{< language en >}}
+Directus connects different databases and APIs to agents. The need feels real to me: as agents take on more parts of daily life, managing what they can reach, conveniently and safely, will matter more. The launch video was also well made. NVIDIA's OpenShell points at a similar problem.
+
+What I do with it: file it as evidence that agent access management is a growing space with real opportunities. I have not tried the product, so this is a direction to watch, not validation.
+{{< /language >}}
+
+{{< language zh >}}
+Directus 把不同的数据库和 API 连接给 agent 使用。我觉得这个需求是真实的：agent 进入生活的部分会越来越多，如何让它们既方便又安全地访问东西，会有很多机会。宣传视频也做得很好。NVIDIA 的 OpenShell 也指向类似的问题。
+
+我会把它记作一个信号：agent 的访问管理是个在成长、有机会的方向。我还没试过这个产品，所以这是值得观察的方向，不是已验证的结论。
+{{< /language >}}
+
 ### 2026-09-28 · VoiceStudio
 
 [VoiceStudio](https://github.com/debpalash/VoiceStudio) — found on GitHub Trending; I had used it before.
@@ -282,6 +298,10 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 ## Change Logs
 
 {{< language en >}}
+- 2026-10-02 — Skipped: the diary marker is empty.
+- 2026-10-01 — Directus: connecting databases and APIs to agents, and the growing need to manage agent access safely.
+- 2026-09-30 — Skipped: the diary marker is empty.
+- 2026-09-29 — Skipped: the diary marker is empty.
 - 2026-09-28 — VoiceStudio: revisiting a local-first voice tool for my story pipeline, with a coding-agent-friendly public app as the possible build direction.
 - 2026-09-27 — Skipped: diary says “no”; no analysis.
 - 2026-09-26 — No analysis recorded; the diary marker is empty.
@@ -298,6 +318,10 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 - 2026-09-16 — Started the habit and published the first entry: fugleramme, a niche bird-identifying photo frame, and the case for building small.
 {{< /language >}}
 {{< language zh >}}
+- 2026-10-02 — 跳过：日记标记为空。
+- 2026-10-01 — Directus：把数据库和 API 连接给 agent，以及安全管理 agent 访问权限的需求。
+- 2026-09-30 — 跳过：日记标记为空。
+- 2026-09-29 — 跳过：日记标记为空。
 - 2026-09-28 — VoiceStudio：重访本地优先的语音工具，试进故事创作流程；可能做一个公开、对 coding agent 友好的 app。
 - 2026-09-27 — 跳过：日记写的是「no」，没有分析。
 - 2026-09-26 — 未记录分析；日记标记为空。
