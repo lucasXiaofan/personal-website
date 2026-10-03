@@ -163,6 +163,12 @@ Two more failures, 2026-09-23 and 2026-09-24, seven in a row now. Both add a pie
 
 So there are now two known cues, not one: **eating, and waking up.** Both share the same shape — a transition moment with no assigned first action — which suggests the fix is not really about food or about mornings specifically. It is about **deciding the first action of a transition in advance**, before the transition happens, so the phone is never the thing that fills the gap by default.
 
+### September 28 – October 2: one held day, then the morning again
+
+September 28 says **not yet** and stays pending. September 29 is **success**, the first held day since September 17. September 30 had an empty verdict and counts as **failed** by the empty-tag rule; the diary's note that day was discouraged, not a cause. October 1 failed: I woke early, started on Instagram, then YouTube and Bilibili, and did not feel like repenting. October 2 failed again the moment I woke up, with little struggle.
+
+The October 2 note is the useful part. Next time, the choice at waking is: go out, or sit and idle, or make something, and I want to build the feeling that **even idling is better than breaking**. The fear in the same note is that I would watch videos once I got home anyway. This confirms the September 24 finding: waking up is a cue, and the first action has to be decided before the phone is in my hand.
+
 ### A related question, worth carrying rather than answering here
 
 09-23 also raised something upstream of any single day: *"每天要做的decision太多了，我的脑子已经开始遗忘很多事情了"* — too many daily decisions, and things are already being forgotten. The proposal in the diary is to set the broad shape of the week in advance and only work out the next day's detail the night before, rather than deciding everything fresh every morning. That is a planning problem, not a screen-time problem, but it is plausibly upstream of some of the failures above — a mind spending its decision budget on *what to do* has less left over for *how to resist the easy thing* by the time a transition moment arrives. Left here as a named question, not solved on this page.
@@ -283,6 +289,12 @@ So there are now two known cues, not one: **eating, and waking up.** Both share 
 
 所以现在已知的 cue 不是一个，是两个：**吃饭，和醒来。** 两者是同一个形状——一个没有被预先分配"第一个动作"的切换时刻——这说明真正的修法可能和食物、和早上都没什么关系。它关于的是：**提前决定好每一个切换时刻的第一个动作**，在切换发生之前就定好，这样手机就永远不会是那个默默填进空隙的默认选项。
 
+### 9 月 28 日至 10 月 2 日：守住一天，然后又是早晨
+
+9 月 28 日写的是 **not yet**，保持待定。9 月 29 日是 **success**，是 9 月 17 日以来第一个守住的日子。9 月 30 日结论栏为空，按空标签规则记为**失败**；那天日记的情绪是沮丧，没有写原因。10 月 1 日失败：早起先刷 Instagram，然后 YouTube 和 B 站，也不想悔改。10 月 2 日一醒来就破戒，几乎没有挣扎。
+
+10 月 2 日那条最有用。下次醒来时的选择是：出门、发呆，或者创造点什么，我想建立一种感觉：**哪怕发呆，也比破戒好**。同一条里的担心是回家后可能又去看视频。这印证了 9 月 24 日的发现：醒来是一个 cue，第一个动作必须在手机到手之前就定好。
+
 ### 一个相关的问题，先记下来，不在这里解决
 
 09-23 还提出了一个比任何单独一天都更上游的问题："每天要做的 decision 太多了，我的脑子已经开始遗忘很多事情了。"日记里的提议是：提前定好一周的大致形状，第二天的细节留到前一晚再定，而不是每天早上都重新决定一遍。这是一个规划问题，不是一个屏幕时间问题，但它很可能是上面这些失败的上游之一——一个把决策预算都花在"该做什么"上的大脑，到了切换时刻真正需要"该怎么拒绝简单的那个选项"时，剩下的就不多了。先在这里把它当作一个被命名的问题留着，不在这一页解决。
@@ -314,6 +326,10 @@ So there are now two known cues, not one: **eating, and waking up.** Both share 
 ## Change Logs
 
 {{< language en >}}
+- 2026-10-02 — Failed on waking again; the note proposes going out, idling, or making something, and building the feeling that idling beats breaking.
+- 2026-10-01 — Failed: Instagram on waking, then YouTube and Bilibili.
+- 2026-09-30 — Empty verdict, counted as failed (empty-tag rule).
+- 2026-09-29 — Success, first held day since September 17. September 28 stays pending.
 - 2026-09-27 — Failed; the diary gives no cause. September 26 remains pending.
 - 2026-09-25 — Failed. Instagram began on the commute despite eating at school, so the cue may be the transition into an unstructured evening, not the meal alone.
 - 2026-09-24 — Failed, seventh in a row. New cue found: waking up, not just eating — an hour of Instagram and YouTube in bed before leaving the apartment. The fix for a transition moment may need to be about deciding the first action in advance, not about food specifically.
@@ -331,6 +347,10 @@ So there are now two known cues, not one: **eating, and waking up.** Both share 
 - 2026-09-14 — Published the rules with a seven-minute selection limit. The September 13 diary proposed five minutes; this version uses the updated rule.
 {{< /language >}}
 {{< language zh >}}
+- 2026-10-02 — 又在醒来时失败；日记提出出门、发呆或创造点什么，并建立“发呆也比破戒好”的感觉。
+- 2026-10-01 — 失败：醒来先刷 Instagram，然后 YouTube 和 B 站。
+- 2026-09-30 — 结论为空，按空标签规则记为失败。
+- 2026-09-29 — 成功，9 月 17 日以来第一个守住的日子。9 月 28 日仍待定。
 - 2026-09-27 — 失败；日记没有说明原因。9 月 26 日仍待定。
 - 2026-09-25 — 失败。即使在学校吃饭，回家路上也开始刷 Instagram；cue 可能是进入无结构晚上的切换，而不只是吃饭。
 - 2026-09-24 — 失败，连续第七天。找到新的 cue：不只是吃饭，还有醒来——在床上刷了一个小时 Instagram 和 YouTube 才出门。对切换时刻的修法，可能得是"提前定好第一个动作"，而不是专门针对食物。
