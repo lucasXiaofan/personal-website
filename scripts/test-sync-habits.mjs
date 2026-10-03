@@ -35,10 +35,10 @@ test('a habit line written as an Obsidian tag still syncs', () => {
   const checked = parseHabitLines('- [ ] #Dopamine-Control-Challenge: success, no video', '2026-09-18');
   assert.equal(checked['dopamine-control-challenge'][0].verdict, 'passed');
 });
-test('an empty habit line is pending, not an error, and colours nothing', () => {
+test('an empty habit line counts as failed, not an error', () => {
   const found = parseHabitLines('#Dopamine-Control-Challenge :   ', '2026-09-19');
-  assert.equal(found['dopamine-control-challenge'][0].pending, true);
-  assert.equal(found['dopamine-control-challenge'][0].verdict, null);
+  assert.equal(found['dopamine-control-challenge'][0].pending, undefined);
+  assert.equal(found['dopamine-control-challenge'][0].verdict, 'failed');
 });
 test('a space before the colon still matches the habit marker', () => {
   const found = parseHabitLines('#Dopamine-Control-Challenge : failed, watched video at 6pm', '2026-09-18');
@@ -51,9 +51,9 @@ test('an empty trending line (no colon, no body) is skipped, not pending', () =>
   assert.equal(found['trending-analysis'][0].verdict, 'failed');
   assert.equal(found['trending-analysis'][0].pending, undefined);
 });
-test('an empty challenge line stays pending, since it needs a same-day verdict', () => {
+test('an empty challenge line is failed; only an explicit "not yet" is pending', () => {
   const found = parseHabitLines('#Dopamine-Control-Challenge :', '2026-09-24');
-  assert.equal(found['dopamine-control-challenge'][0].pending, true);
+  assert.equal(found['dopamine-control-challenge'][0].verdict, 'failed');
 });
 test('an undecided challenge stays pending and a full-width exclamation does not hide failure', () => {
   const pending = parseHabitLines('#dopamine-control-challenge ：not yet, decide tonight', '2026-09-28');

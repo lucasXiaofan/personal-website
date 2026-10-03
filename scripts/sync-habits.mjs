@@ -93,11 +93,13 @@ export function parseHabitLines(raw, date, only = null) {
       // that records a written entry (trending-analysis has habit.skipped), writing the
       // tag with nothing after it means the day was skipped — same as writing "None" —
       // because there is nothing to wait for; the writing either happened or it did not.
-      // For a habit that records a same-day verdict (the challenge), an empty body means
-      // the line was placed before the day was decided, so it is pending, not skipped.
+      // For a habit that records a same-day verdict (the challenge), an empty body also
+      // counts as failed (see below). Only an explicit "not yet" stays pending.
       if (!body) {
         if (habit.skipped) { (found[name] ||= []).push({ dates: [date], verdict: 'failed', body: '' }); continue; }
-        (found[name] ||= []).push({ dates: [date], verdict: null, body: '', pending: true });
+        // Owner's rule (2026-10-03): a tag left empty is a failed day. A bare tag means the
+        // day was never accounted for, and an honest tracker records that as a miss.
+        (found[name] ||= []).push({ dates: [date], verdict: 'failed', body: '', empty: true });
         continue;
       }
       const opening = head(body).replace(/^[!！\s]+/, '');
