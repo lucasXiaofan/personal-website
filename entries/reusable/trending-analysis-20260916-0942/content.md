@@ -1,6 +1,6 @@
 ## Description
 
-{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-25, 2026-09-28, 2026-10-01" failed="2026-09-20, 2026-09-24, 2026-09-26, 2026-09-27, 2026-09-29, 2026-09-30, 2026-10-02" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
+{{< heatmap start="2026-09-16" end="2026-10-16" passed="2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-25, 2026-09-28, 2026-10-01, 2026-10-03, 2026-10-05" failed="2026-09-20, 2026-09-24, 2026-09-26, 2026-09-27, 2026-09-29, 2026-09-30, 2026-10-02, 2026-10-04, 2026-10-06" label="Trending Analysis · daily habit" passed-label="analysed" failed-label="skipped" note="Updated whenever the decision log is published: the diary's trending-analysis line for that day fills in the square." >}}
 
 {{< language en >}}
 A habit tracker, started 2026-09-16. Every day I read the top of all four trending sources — GitHub Trending, Product Hunt, Hacker News, Google Trends — then pick whichever ones I actually want to think about and write down what I could do with them: join it, build something similar, or steal the shape of it for my own work.
@@ -78,6 +78,38 @@ That records the day as **skipped** rather than leaving it blank. The floor is o
 中文简述：先读日记并写中英双语案例；对每一天用 `--only trending-analysis` 预览、`--write` 同步热力图；脚本不认得新格式就改脚本和测试；先 stage 检查生成页面，只有本轮明确要求上传时才 `--push`。今天的多巴胺结论未定时，不要顺手发布那个页面。
 
 ## Content
+
+### 2026-10-05 · r/ClaudeAI
+
+[r/ClaudeAI top posts](https://www.reddit.com/r/ClaudeAI/top/) — found on Reddit.
+
+{{< language en >}}
+People show their projects on Reddit, and the ClaudeAI community has many AI creations. This could be my current trending analysis: a good place to learn from others and to share my own work. I also thought about AI memory again: for my coding I still need discipline, and on top of that discipline a light-weight memory.
+
+What I do with it: treat the subreddit as a recurring source of trending analysis and a place to share my work. The AI-memory thought is a direction, not a conclusion.
+{{< /language >}}
+
+{{< language zh >}}
+大家会在 Reddit 上展示自己的项目，ClaudeAI 社区里有很多 AI 作品。这可以作为我当前的趋势分析来源：既是向别人学习的好地方，也是分享自己作品的地方。我也再次想到了 AI memory：我写代码仍然需要 discipline，并且在 discipline 之上需要一个轻量的 memory。
+
+我会把这个 subreddit 当作持续的趋势分析来源和分享作品的地方。AI memory 的想法是一个方向，不是结论。
+{{< /language >}}
+
+### 2026-10-03 · Handy
+
+[Handy](https://github.com/cjpais/handy) — found on GitHub.
+
+{{< language en >}}
+I used Handy, a speech-to-text tool, and it works well. It has speech-to-text models that stream: while I keep recording it keeps translating, so even if it is slow it continuously outputs text as I speak. I find that genuinely useful.
+
+What I do with it: a practical note on a tool I actually used, not a market claim.
+{{< /language >}}
+
+{{< language zh >}}
+我用了 Handy 这个语音转文字工具，挺好用的。它有一些支持流式输出的 speech-to-text 模型：我一直在录音，它也在不停地转写，所以哪怕比较慢，只要我在说，它就会持续输出文字。我觉得这个很管用。
+
+我会把它记作一个我真正用过的工具的使用笔记，不是市场判断。
+{{< /language >}}
 
 ### 2026-10-01 · Directus
 
@@ -298,6 +330,10 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 ## Change Logs
 
 {{< language en >}}
+- 2026-10-06 — Skipped: the diary marker is empty.
+- 2026-10-05 — r/ClaudeAI: a place to learn from and share AI creations, plus a renewed thought on discipline with a light-weight memory.
+- 2026-10-04 — Skipped: the diary marker is empty.
+- 2026-10-03 — Handy: a streaming speech-to-text tool I actually used.
 - 2026-10-02 — Skipped: the diary marker is empty.
 - 2026-10-01 — Directus: connecting databases and APIs to agents, and the growing need to manage agent access safely.
 - 2026-09-30 — Skipped: the diary marker is empty.
@@ -318,6 +354,10 @@ I do not need to keep aiming at something generalized like GPT-6. One person's p
 - 2026-09-16 — Started the habit and published the first entry: fugleramme, a niche bird-identifying photo frame, and the case for building small.
 {{< /language >}}
 {{< language zh >}}
+- 2026-10-06 — 跳过：日记标记为空。
+- 2026-10-05 — r/ClaudeAI：学习和分享 AI 作品的地方，以及对"discipline 加轻量 memory"的再思考。
+- 2026-10-04 — 跳过：日记标记为空。
+- 2026-10-03 — Handy：我真正用过的流式语音转文字工具。
 - 2026-10-02 — 跳过：日记标记为空。
 - 2026-10-01 — Directus：把数据库和 API 连接给 agent，以及安全管理 agent 访问权限的需求。
 - 2026-09-30 — 跳过：日记标记为空。
