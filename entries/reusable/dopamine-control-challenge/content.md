@@ -2,7 +2,7 @@
 
 {{< countdown target="2026-10-14T00:00:00-04:00" deadline="October 14, 2026 · 00:00 ET" label="30-day Dopamine Control Challenge" note="September 14–October 14, 2026." >}}
 
-{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-27, 2026-09-30, 2026-10-01, 2026-10-02" passed="2026-09-16, 2026-09-17, 2026-09-29" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
+{{< heatmap start="2026-09-14" end="2026-10-14" failed="2026-09-14, 2026-09-15, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-09-30, 2026-10-01, 2026-10-02, 2026-10-03, 2026-10-04, 2026-10-05" passed="2026-09-16, 2026-09-17, 2026-09-29, 2026-10-06" label="Dopamine Control Challenge · daily result" note="Filled from the daily diary: each day's entry carries a line starting Dopamine-Control-Challenge:, and that line's verdict is what colours the square." >}}
 
 {{< language en >}}
 A smaller, 30-day challenge supporting my ReferralChallenge: protect my attention so I spend more time learning, building, and moving. The aim is to make room for at least five hours of work in progress each day. “控制多巴胺” is my shorthand for changing my media habits.
@@ -101,7 +101,7 @@ And the brain needs a **push** to make the turn. Home at 8, sit still for five m
 
 The September 25 diary records a failure even though I ate at school: Instagram began on the way home, then YouTube, Bilibili, and games followed at home. This narrows the earlier meal theory. **Leaving a structured place for an unstructured evening** may be the broader transition; changing the meal location alone did not solve it. The diary also says this was not a matter of making the to-do list prettier. I felt caught between shallow tasks and slow deep work, so the next useful experiment is an environmental cue or a clearly chosen question before the commute, not another demand for motivation.
 
-September 26 has an empty verdict and remains **pending**, not a success or failure. September 27 explicitly says **failed**, without a cause. Do not invent one.
+September 26 has an empty verdict, which now counts as **failed** by the empty-tag rule (it was pending until 2026-10-07). September 27 explicitly says **failed**, without a cause. Do not invent one.
 
 ### What fails: 6 p.m., and the ledger I open too early
 
@@ -168,6 +168,12 @@ So there are now two known cues, not one: **eating, and waking up.** Both share 
 September 28 says **not yet** and stays pending. September 29 is **success**, the first held day since September 17. September 30 had an empty verdict and counts as **failed** by the empty-tag rule; the diary's note that day was discouraged, not a cause. October 1 failed: I woke early, started on Instagram, then YouTube and Bilibili, and did not feel like repenting. October 2 failed again the moment I woke up, with little struggle.
 
 The October 2 note is the useful part. Next time, the choice at waking is: go out, or sit and idle, or make something, and I want to build the feeling that **even idling is better than breaking**. The fear in the same note is that I would watch videos once I got home anyway. This confirms the September 24 finding: waking up is a cue, and the first action has to be decided before the phone is in my hand.
+
+### October 3 – 6: the table, and a held day
+
+October 3 failed: I even recorded a video saying I would watch YouTube, then watched YouTube and Bilibili anyway, and made no plan. October 4 had an empty verdict and counts as **failed**. October 5 failed too, though the morning had gone well: when I ate back at my desk I slid into YouTube and Bilibili, because the work desk is where watching video has become a habit. The fix I wrote down is to eat at the dining table, not at the workstation.
+
+October 6 is **success**, the first held day since September 29. What held: leave early, be home no more than two hours before sleep, read or listen to a podcast, and eat at the table without the computer, which worked the day before. The reason the diary gives is the useful part: I did it because I could, not for a lofty reason or a long-term discipline plan. Don't worry about tomorrow; drop the idea that discipline must last, and make today's one simple decision.
 
 ### A related question, worth carrying rather than answering here
 
@@ -262,7 +268,7 @@ The October 2 note is the useful part. Next time, the choice at waking is: go ou
 
 9 月 25 日日记明确记为失败，虽然晚饭是在学校吃的：回家路上开始刷 Instagram，回家接着看 YouTube、B 站并玩游戏。所以「只要不在公寓吃饭就好」并不够。更大的切换点可能是**从有结构的校园进入无结构的晚上**。日记也说，把待办清单写漂亮不是解法；琐事太多、深度思考又觉得进展太慢。下次值得试的是在通勤前选好一个具体问题，或设置看得见的环境提示，而不是再要求自己更有动力。
 
-9 月 26 日结论栏为空，保持**待定**，不算成功也不算失败。9 月 27 日只明确写了**失败**，没有原因，不替日记编一个。
+9 月 26 日结论栏为空，按空标签规则现记为**失败**（2026-10-07 前一直待定）。9 月 27 日只明确写了**失败**，没有原因，不替日记编一个。
 
 ### 失败的样子（三）：连续五天，渴望终于自己说出了名字
 
@@ -295,6 +301,12 @@ The October 2 note is the useful part. Next time, the choice at waking is: go ou
 
 10 月 2 日那条最有用。下次醒来时的选择是：出门、发呆，或者创造点什么，我想建立一种感觉：**哪怕发呆，也比破戒好**。同一条里的担心是回家后可能又去看视频。这印证了 9 月 24 日的发现：醒来是一个 cue，第一个动作必须在手机到手之前就定好。
 
+### 10 月 3 日至 6 日：餐桌，和守住的一天
+
+10 月 3 日失败：回家还专门录了一个视频说我要看 YouTube，结果照样看了 YouTube 和 B 站，也没做任何计划。10 月 4 日结论栏为空，记为**失败**。10 月 5 日也失败，虽然早上做得不错：回到工作桌前吃饭，又习惯性地开始看 YouTube 和 B 站，因为工作桌已经养成了看视频的习惯。日记里写下的对策是：吃饭就在餐桌上吃，不要回到工作座位上吃。
+
+10 月 6 日是 **success**，是 9 月 29 日以来第一个守住的日子。起作用的是：早出门，回家后离睡觉不超过两小时，看书、听 podcast，吃饭在餐桌上不看电脑，这一点前一天已经做到了。日记给出的原因才是最有用的：因为我能做到，不是为了什么高尚的理由或长久的自律计划。不要担心明天做不到，放弃"自律必须长久"这个想法，只做今天这个简单的决定。
+
 ### 一个相关的问题，先记下来，不在这里解决
 
 09-23 还提出了一个比任何单独一天都更上游的问题："每天要做的 decision 太多了，我的脑子已经开始遗忘很多事情了。"日记里的提议是：提前定好一周的大致形状，第二天的细节留到前一晚再定，而不是每天早上都重新决定一遍。这是一个规划问题，不是一个屏幕时间问题，但它很可能是上面这些失败的上游之一——一个把决策预算都花在"该做什么"上的大脑，到了切换时刻真正需要"该怎么拒绝简单的那个选项"时，剩下的就不多了。先在这里把它当作一个被命名的问题留着，不在这一页解决。
@@ -326,6 +338,10 @@ The October 2 note is the useful part. Next time, the choice at waking is: go ou
 ## Change Logs
 
 {{< language en >}}
+- 2026-10-06 — Success, first held day since September 29: left early, home within two hours of sleep, ate at the table. Reason given: because I could.
+- 2026-10-05 — Failed: ate at the work desk and slid into YouTube and Bilibili; the fix is to eat at the dining table.
+- 2026-10-04 — Empty verdict, counted as failed (empty-tag rule).
+- 2026-10-03 — Failed: recorded a video about watching YouTube, then watched YouTube and Bilibili with no plan.
 - 2026-10-02 — Failed on waking again; the note proposes going out, idling, or making something, and building the feeling that idling beats breaking.
 - 2026-10-01 — Failed: Instagram on waking, then YouTube and Bilibili.
 - 2026-09-30 — Empty verdict, counted as failed (empty-tag rule).
@@ -347,6 +363,10 @@ The October 2 note is the useful part. Next time, the choice at waking is: go ou
 - 2026-09-14 — Published the rules with a seven-minute selection limit. The September 13 diary proposed five minutes; this version uses the updated rule.
 {{< /language >}}
 {{< language zh >}}
+- 2026-10-06 — 成功，9 月 29 日以来第一个守住的日子：早出门，回家后离睡觉不到两小时，吃饭在餐桌上。日记给的原因：因为我能做到。
+- 2026-10-05 — 失败：在工作桌前吃饭，滑进 YouTube 和 B 站；对策是在餐桌上吃饭。
+- 2026-10-04 — 结论栏为空，按空标签规则记为失败。
+- 2026-10-03 — 失败：专门录了一个说要看 YouTube 的视频，结果照样看了 YouTube 和 B 站，没有计划。
 - 2026-10-02 — 又在醒来时失败；日记提出出门、发呆或创造点什么，并建立“发呆也比破戒好”的感觉。
 - 2026-10-01 — 失败：醒来先刷 Instagram，然后 YouTube 和 B 站。
 - 2026-09-30 — 结论为空，按空标签规则记为失败。
